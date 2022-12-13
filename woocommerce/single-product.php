@@ -100,7 +100,7 @@ get_template_part('template-parts/layouts/sticky-socials');
 					</div> -->
 					<script>
 						jQuery('.legal-price-info').appendTo('.artikelnummer');
-						jQuery('.tax-info').prepend('*');
+						jQuery('p.wc-gzd-additional-info').prepend('*');
 					</script>
 				</div>
 			</div>
