@@ -80,12 +80,16 @@ get_template_part('template-parts/layouts/sticky-socials');
 						
 						<?php do_action( 'woocommerce_single_product_summary' );?>
 					</div>
-					<div class="p text-uppercase mb-3 artikelnummer" style="font-size: 12px;
-						color:#000;
-						letter-spacing: 0.2rem;
-						font-family:'Bebas Neue';"
-					>
-						Artikel-Nr.: <?= $sku; ?>
+					<div class="product_meta custom p text-uppercase mb-3 artikelnummer" style="font-size: 12px;
+					color:#000;
+					letter-spacing: 0.2rem;
+					font-family:'Bebas Neue';>
+
+						<?php if ( wc_product_sku_enabled() && ( $product->get_sku() || $product->is_type( 'variable' ) ) ) : ?>
+				
+							<span class="sku_wrapper"><?php esc_html_e( 'SKU:', 'woocommerce' ); ?> <span class="sku"><?php echo ( $sku = $product->get_sku() ) ? $sku : esc_html__( 'N/A', 'woocommerce' ); ?></span></span>
+						<?php endif; ?>
+				
 					</div>
 					<!-- <div class="p text-uppercase mb-3" style="font-size: 12px;
 						color:#000;

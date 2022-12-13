@@ -370,3 +370,4 @@ function my_email_body_function_customer($name,$email,$message,$datenschutz) {
 	return ob_get_contents();
 	ob_get_clean();
   }
+
