@@ -441,17 +441,18 @@ ul {
 }
 
 // *** Related Products ***
-.single-product .yith-wcwl-wishlistexistsbrowse a::before{
+div.row.related-products.text-center.mt-5.ms-5.me-5.pt-5.pb-5 .yith-wcwl-wishlistexistsbrowse a::before{
     content:url('/wp-content/uploads/2022/11/favourite-herz-icon-shop.png');
     margin-top:17px;  
     margin-left:5px;
     transform:scale(.8);
     display:block;
 }
-.single-product .yith-wcwl-wishlistexistsbrowse .feedback{
+
+div.row.related-products.text-center.mt-5.ms-5.me-5.pt-5.pb-5 .yith-wcwl-wishlistexistsbrowse .feedback{
     display:none;
 }
-.single-product .yith-wcwl-wishlistexistsbrowse a{
+div.row.related-products.text-center.mt-5.ms-5.me-5.pt-5.pb-5 .yith-wcwl-wishlistexistsbrowse a{
     font-size: 0;
 }
 .woocommerce ul.products.columns-5 li.product:hover .product-btn-wishlist, .woocommerce ul.products.columns-5 li.product:hover .product-btn-wishlist{
