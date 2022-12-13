@@ -1,0 +1,40 @@
+/* *** Footer *** */
+.row-footer-siegel{
+    margin-top:-30rem;
+    margin-bottom: -5rem;
+}
+.row-footer-siegel{
+    margin-top:-30rem;
+    margin-bottom: -10rem!important;
+}
+.connect .h2{
+    font-size: 80px;
+    letter-spacing: 0.3rem;
+}
+.menu-item::marker{
+    content:"—————";
+    margin-right: 100px;
+    width: 200px;
+    letter-spacing:0;
+    color:#000;
+}
+.navbar-footer .menu-item{
+    padding-left:1rem;
+    font-family: 'Bebas Neue';
+    font-size: 14px;
+    letter-spacing: 0.2rem;
+    margin-left: 20px;
+    line-height: 1.7rem;
+}
+
+.menu-item:hover::marker{
+    content:"——————————";
+}
+
+.current-menu-item::marker{
+    content:"——————————";
+}
+
+.footer-col-arrow-to-top{
+    margin-bottom: -5rem;
+}

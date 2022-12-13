@@ -1,0 +1,90 @@
+/* *** Verantwortung einzeln *** */
+
+.col-verantwortung-einzeln{
+    margin-top:-10rem;
+    padding-top:7rem;
+    padding-left:7rem;
+    padding-right:7rem;
+}
+
+/* *** Verantwortung *** */
+
+.coffee-balance-bild{
+    z-index: 4;
+}
+.true-coffee-siegel{
+    z-index:4;
+}
+.col-verantwortung{
+    margin-top:-10rem;
+    padding:7rem;
+}
+.col-verantwortung .h2, .col-verantwortung-einzeln .h2{
+    font-size: 80px;
+}
+.row-verantwortung{
+    margin-top:-20rem;
+}
+.col-verantwortung-kategorie{
+    background-image: url('/wp-content/uploads/2022/11/schwarzer-Rahmen.png');
+    background-size: contain;
+    background-repeat:no-repeat;
+    height: 550px;
+    margin-top:-10rem;
+    margin-left: 5rem;
+    z-index: -1;
+}
+.col-verantwortung-kategorie .h3{
+    line-height: 4rem;
+    font-size: 80px;
+}
+.col-verantwortung-kategorie-text-right .h3{
+    line-height: 4rem;
+    font-size: 80px;
+}
+.col-verantwortung-kategorie-text-top .h3{
+    line-height: 4rem;
+    font-size: 80px;
+}
+.col-verantwortung-kategorie .h3, .col-verantwortung-kategorie-text-top .h3, 
+.col-verantwortung-kategorie .btn, .col-verantwortung-kategorie-text-top .btn,
+.col-verantwortung-kategorie .h4, .col-verantwortung-kategorie-text-top .h4{
+    margin-left: -2rem;
+}
+
+.col-verantwortung-kategorie-text-top{
+    background-image: url('/wp-content/uploads/2022/11/schwarzer-Rahmen.png');
+    background-size: contain;
+    background-repeat:no-repeat;
+    height: 500px;
+    margin-bottom:-10rem;
+    margin-left: 5rem;
+}
+.col-verantwortung-kategorie-text-right{
+    background-image: url('/wp-content/uploads/2022/11/schwarzer-Rahmen.png');
+    background-size: contain;
+    background-repeat:no-repeat;
+    height: 560px;
+    margin-left: 5rem;
+    z-index: -2;
+    margin-top:-5rem;
+}
+
+.col-verantwortung-kategorie-text-right-img{
+    margin-top:-10rem;
+    z-index:3;
+}
+.col-verantwortung-kategorie-text-right .h3, .col-verantwortung-kategorie-text-right .h4, .col-verantwortung-kategorie-text-right .btn{
+    margin-left: 15rem;
+}
+.row-verantwortung-kategorie-text-right{
+    margin-top:-10rem;
+    
+}
+.row-verantwortung-kategorie-text-right, .col-verantwortung-kategorie-text-right, .row-verantwortung-kategorie-text-right-zwei, .col-verantwortung-kategorie-text-right-first, .row-verantwortung-kategorie-text-right-drei, .col-verantwortung-kategorie-text-right-zwei{
+    z-index:2;
+}
+
+.row-verantwortung-eins, .col-verantwortung-eins, .row-verantwortung-eins-eins, .col-verantwortung-kategorie, .row-verantwortung-eins-btn{
+    z-index:3;
+}

@@ -1,0 +1,348 @@
+@import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css");
+
+:root{
+    --bs-link-color:#000;
+    --bs-body-font-family: 'Bebas Neue';
+
+    
+
+}
+
+.container{
+    max-width: 100%;
+}
+
+.a{
+    text-decoration: none;
+}
+
+.headline{
+    color:#000;
+}
+
+.subline{
+    color:#000;
+}
+
+.h1{
+    font-size: 130px;
+    color:#000;
+}
+
+.h2{
+    font-size:60px;
+    color:#000;
+}
+
+.h3{
+    font-size:40px;
+    color:#000;
+}
+
+.btn-primary{
+    background-color: transparent;
+    color: #000;
+    border-radius: 0;
+    border-color: #000;
+    text-transform: uppercase;
+    letter-spacing: 3.6px;
+}
+.btn-no-border{
+    background-color: transparent;
+    color: #000;
+    border:0;
+    text-transform: uppercase;
+    letter-spacing: 3.6px;
+}
+
+.btn-white{
+    background-color: transparent;
+    color: #fff;
+    border-radius: 0;
+    border-color: #fff;
+    text-transform: uppercase;
+    letter-spacing: 3.6px;
+}
+/* *** Offcanvas *** */
+
+.offcanvas{
+    width: 100%!important;
+}
+
+.btn-close{
+    color:#fff!important;
+}
+
+/* *** Header *** */
+.offcanvas-toggle{
+    z-index: 2;
+}
+
+
+/* *** Hero *** */
+
+
+.hero-text{
+    z-index: 2;
+    margin-top: -15rem;
+}
+
+.hero{
+    height: 70rem;
+    transform:translateY(-10rem);
+    margin-top:-10rem;
+}
+
+.hero-col-3{
+    background-image: url(/wp-content/uploads/2022/12/Hero-Header.jpg);
+    background-size: contain;
+    background-repeat: no-repeat;
+    transform:translateX(-7rem);
+    margin-top:10rem;
+}
+
+.hero-col-3 .btn{
+    margin-top: -25rem;
+    margin-left: 14rem;
+}
+
+.hero .p{
+    color:#000;
+    font-size:15px;
+    letter-spacing: 3.6px;
+    margin-left: 7rem;
+}
+
+/* *** Coffe Circle *** */
+.row-zum-shop{
+    margin-top:-40rem;
+    margin-bottom:-17rem;
+}
+.row-zum-shop-btn{
+    z-index: 2;
+}
+.row-zum-shop img{
+    margin-top:-15rem;
+}
+.row-zum-shop-btn .btn{
+    padding-right:10rem;
+}
+.coffe-circle-headline{
+    margin-left: 5rem;
+    margin-right: 10rem;
+}
+.coffe-circle-headline-col{
+    background: linear-gradient( 270deg, #EDEDED 50%, transparent 50%) no-repeat;
+}
+.illu-2{
+    background-image: url(/wp-content/uploads/2022/11/Coffee-Kreislauf-2-Illustration.png);
+    background-size: 415px 216px;
+    background-repeat: no-repeat;
+    background-position: right bottom;
+}
+body > div > main > div:nth-child(3) > div.col-6 > div.row.illu-2 > div > div{
+    margin-left: -5rem;
+    margin-right: 5rem;
+}
+.illu-3{
+    background-image:url(/wp-content/uploads/2022/11/Coffee-Kreislauf-3-Illustration.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: right;
+}
+.illu-4{
+    background-image: url(/wp-content/uploads/2022/11/Coffee-Kreislauf-4.png);
+    background-size:contain;
+    background-repeat:no-repeat;
+    background-position: center;
+    height: 500px;
+}
+.illu-5{
+    background-image: url(/wp-content/uploads/2022/11/Coffee-Kreislauf-Illustration-5.png);
+    background-size:contain;
+    background-repeat:no-repeat;
+    background-position: left;
+    z-index: 2;
+    background-color: white ;
+    height: 1000px;
+    padding-bottom: 15rem;
+
+}
+.text-in-square{
+    width: 200px;
+}
+.text-in-square-small{
+    width: 300px;
+}
+.schmuck-text-ueberlagerung{
+    z-index: 2;
+    background: linear-gradient( 90deg, #fff 80%, transparent 50%) no-repeat;
+}
+/* *** Schmuck Text *** */
+.row-schmuck-text{
+    margin-top:-35rem;
+    height: 1200px;
+}
+.col-schmuck-text{
+    background-image: url(/wp-content/uploads/2022/11/Hintergrund-Schmucktext.png);
+    background-size:cover;
+    background-repeat:no-repeat;
+}
+
+/* *** Verantwortung *** */
+.col-verantwortung{
+    margin-top:-10rem;
+    padding:7rem;
+}
+.row-verantwortung{
+    margin-top:-20rem;
+}
+.col-verantwortung-kategorie{
+    background-image: url(/assets/images/schwarzer\ Rahmen.png);
+    background-size: contain;
+    background-repeat:no-repeat;
+    height: 450px;
+    margin-top:-10rem;
+    margin-left: 5rem;
+    z-index: -1;
+}
+.col-verantwortung-kategorie .h3, .col-verantwortung-kategorie-text-top .h3, 
+.col-verantwortung-kategorie .btn, .col-verantwortung-kategorie-text-top .btn,
+.col-verantwortung-kategorie .h4, .col-verantwortung-kategorie-text-top .h4{
+    margin-left: -2rem;
+}
+
+.col-verantwortung-kategorie-text-top{
+    background-image: url(/wp-content/uploads/2022/11/schwarzer-Rahmen.png);
+    background-size: contain;
+    background-repeat:no-repeat;
+    height: 450px;
+    margin-bottom:-10rem;
+    margin-left: 5rem;
+    z-index: -1;
+}
+.col-verantwortung-kategorie-text-right{
+    background-image: url(/wp-content/uploads/2022/11/schwarzer-Rahmen.png);
+    background-size: contain;
+    background-repeat:no-repeat;
+    height: 375px;
+    margin-left: 5rem;
+    z-index: -2;
+    margin-top:-5rem;
+}
+.col-verantwortung-kategorie-text-right-img{
+    margin-top:-10rem;
+    z-index:-1;
+}
+.col-verantwortung-kategorie-text-right .h3, .col-verantwortung-kategorie-text-right .h4, .col-verantwortung-kategorie-text-right .btn{
+    margin-left: -9rem;
+}
+.row-verantwortung-kategorie-text-right{
+    margin-top:-10rem;
+}
+
+/* *** Produkte *** */
+
+.row-produkte{
+    background-image: url(/wp-content/uploads/2022/11/hintergrundfarbflache-grau-unsere-produkte.png);
+    background-size: contain;
+    background-repeat:no-repeat;
+    background-position: center;
+    margin-top:-5rem;
+    padding-top:10rem;
+    padding-bottom:7rem;
+}
+
+.produkte-img{
+    margin-top: -30rem;
+}
+
+.produkte-bild-bg{
+    background-image: url(/wp-content/uploads/2022/12/Produktebild-1.jpg);
+    background-size: cover;
+    background-repeat:no-repeat;
+    background-position: center;
+}
+.produkte-black-bg{
+    padding-top:10rem;
+    padding-left:5rem;
+    padding-right:5rem;
+    padding-bottom:10rem;
+    margin-top:10rem;
+    margin-left: -10rem;
+}
+.produkte-bild-bg-2{
+    background-image: url(/wp-content/uploads/2022/12/Produktebild-2.jpg);
+    background-size: cover;
+    background-repeat:no-repeat;
+    background-position: center;
+    z-index: -1;
+    margin-left: -10rem;
+}
+.produkte-white-bg{
+    padding-top:10rem;
+    padding-left:5rem;
+    padding-right:5rem;
+    padding-bottom:10rem;
+    margin-bottom:10rem;
+    z-index: 2;
+
+}
+.card-title:before{
+    content:"-";
+    margin-right:1rem;
+}
+.card-title:after{
+    content:"-";
+    margin-left:1rem;
+}
+.row-produkte-3-karten{
+    background: linear-gradient( 360deg, #EDEDED 64%, transparent 50%) no-repeat;
+}
+
+/* *** Zitat *** */
+.row-zitat{
+    padding-top:20rem;
+    padding-bottom: 20rem;
+}
+
+/* *** So einfach ** */
+.row-so-einfach{
+    background-image: url(/wp-content/uploads/2022/11/Hintergrund-Dekotext-1.png);
+    background-size:60rem;
+    background-repeat: no-repeat;
+    background-position: top left;
+}
+.col-so-einfach{
+    margin-top:15rem;
+    margin-left:5rem;
+    margin-right: 5rem;
+    margin-bottom: 5rem;
+}
+.so-einfach-feature-col{
+    background-image: url(/wp-content/uploads/2022/11/Texthintergrundfarbflache-grau-service.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center center;
+}
+
+/* *** Testimonials ** */
+.row-testimonials{
+    background-image: url(/wp-content/uploads/2022/11/Hintergrundtext-1.png);
+    background-size: 60rem;
+    background-repeat: no-repeat;
+    background-position: top right;
+    margin-top:-20rem;
+}
+.col-testimonials-1{
+    background-image: url(/wp-content/uploads/2022/11/Kaffeebohnen-Illustration-.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: bottom left;
+    margin-top:20rem;
+}
+.col-testimonials-2{
+    margin-right: 5rem;
+    margin-top:20rem;
+    margin-bottom: 20rem;
+}

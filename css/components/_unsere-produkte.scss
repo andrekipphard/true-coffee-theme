@@ -1,0 +1,87 @@
+/* *** Unsere Produkte einzeln *** */
+.row-produkte-einzeln{
+    background-image: url('/wp-content/uploads/2022/11/hintergrundfarbflache-grau-unsere-produkte-3-e1668420059260.png');
+    background-size: contain;
+    background-repeat:no-repeat;
+    background-position: center;
+    margin-top:-25rem;
+    padding-top:10rem;
+    padding-bottom:7rem;
+}
+
+
+/* *** Unsere Produkte *** */
+
+.row-produkte{
+    background-image: url('/wp-content/uploads/2022/11/hintergrundfarbflache-grau-unsere-produkte-3-e1668420059260.png');
+    background-size: contain;
+    background-repeat:no-repeat;
+    background-position: center;
+    margin-top:-5rem;
+    padding-top:10rem;
+    padding-bottom:7rem;
+}
+
+.produkte-img{
+    margin-top: -30rem;
+}
+
+.produkte-bild-bg{
+    background-image: url('/wp-content/uploads/2022/12/Produktebild-1.jpg');
+    background-size: cover;
+    background-repeat:no-repeat;
+    background-position: center;
+}
+.produkte-black-bg{
+    padding-top:10rem;
+    padding-left:5rem;
+    padding-right:5rem;
+    padding-bottom:10rem;
+    margin-top:10rem;
+    margin-left: -10rem;
+}
+.produkte-black-bg .h3{
+    line-height: 6rem;
+    font-size: 80px;
+}
+.produkte-bild-bg-2{
+    background-image: url('/wp-content/uploads/2022/12/Produktebild-2.jpg');
+    background-size: cover;
+    background-repeat:no-repeat;
+    background-position: center;
+    z-index: -1;
+    margin-left: -10rem;
+}
+.produkte-white-bg .h3{
+    line-height: 6rem;
+    font-size: 80px;
+}
+.produkte-white-bg{
+    padding-top:10rem;
+    padding-left:5rem;
+    padding-right:5rem;
+    padding-bottom:10rem;
+    margin-bottom:10rem;
+    z-index: 2;
+
+}
+.card-title:before{
+    content:"-";
+    margin-right:1rem;
+}
+.card-title:after{
+    content:"-";
+    margin-left:1rem;
+}
+
+.col-produkte-3-karten{
+    background: linear-gradient( 360deg, #EDEDED 70%, transparent 50%) no-repeat;
+}
+
+.row-produkte-3-karten{
+    margin-top:-20rem;
+}
+
+.row-punkte-linie{
+    margin-top:-20rem;
+}

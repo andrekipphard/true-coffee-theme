@@ -1,0 +1,22 @@
+/* *** Hero *** */
+
+.single-hero-text{
+    z-index: 2;
+    margin-top: 10rem;
+}
+
+.single-hero{
+    height: 70rem;
+    transform:translateY(-10rem);
+    margin-top:-10rem;
+    margin-bottom: -10rem;
+}
+
+.single-hero-col-3{
+    background-image: url('/wp-content/uploads/2022/12/Herobild-2.jpg');
+    background-size: contain;
+    background-repeat: no-repeat;
+    transform:translateX(-7rem);
+    margin-top:10rem;
+    z-index:-1;
+}

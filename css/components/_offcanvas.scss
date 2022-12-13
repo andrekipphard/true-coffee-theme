@@ -1,0 +1,45 @@
+/* *** Offcanvas *** */
+.offcanvas{
+    width: 100%!important;
+
+    
+    .bi{
+        color:#fff!important;
+    }
+   /* .menu-item{
+        font-size: 30px;
+        letter-spacing:10px;
+        line-height: 75px;
+        color:#fff;
+    }*/
+    /*.nav-menu .list-group-item:hover{
+        border:solid 1px white!important;
+        border-radius:0px!important;
+    }*/
+    .btn-close{
+        background-image:url('/wp-content/uploads/2022/11/loschen.png');
+        opacity: 1;
+        height: 30px;
+        width: 30px;
+        background-size: cover;
+    }
+    .menu-item > a{
+        font-size: 30px;
+        letter-spacing:10px;
+        line-height: 75px;
+        color:#fff;
+        padding:2rem;
+        width: 100%;
+        font-family: 'Bebas Neue';
+    }   
+    .menu-item:hover{
+        border:solid 1px white!important;
+        border-radius:0px!important;
+    }
+}
+
+
+
+
+
+

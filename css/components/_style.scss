@@ -1,0 +1,762 @@
+@import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css");
+
+:root{
+    --bs-link-color:#000;
+    --bs-body-font-family: 'roboto condensed';
+    --bs-link-hover-color:#000;
+    --bs-dark-rgb:#000;
+    --bs-btn-disabled-bg:rgb(187, 187, 187);
+    --bs-btn-disabled-border-color: rgb(187, 187, 187);
+}
+.alert{
+    border-radius:0;
+}
+.logo{
+    z-index:999;
+}
+.p{
+    font-family:'roboto condensed';
+}
+.carousel-dark .carousel-indicators [data-bs-target]{
+    height: 10px;
+    width: 10px;
+    border-radius: 50%;
+}
+.carousel-indicators{
+    position: relative;
+}
+.container{
+    max-width: 100%;
+}
+
+.a{
+    text-decoration: none;
+}
+
+.h1{
+    font-size: 120px;
+    color:#000;
+    line-height: 7.5rem;
+    font-family:'Bebas Neue';
+}
+
+.h2{
+    font-size:100px;
+    color:#000;
+    line-height:6rem;
+    font-family:'Bebas Neue';
+}
+
+.h3{
+    font-size:80px;
+    color:#000;
+    line-height: 7.5rem;
+    font-family:'Bebas Neue';
+}
+
+.h4{
+    font-size: 16px;
+    color:#000;
+    letter-spacing: 0.3rem;
+    font-family:'Bebas Neue';
+}
+.btn:disabled{
+    background-color:rgb(187, 187, 187);
+    border-color:rgb(187, 187, 187);
+}
+.btn{
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+    z-index:999;
+}
+.btn-primary{
+    background-color: transparent;
+    color: #000;
+    border-radius: 0;
+    border-color: #000;
+    text-transform: uppercase;
+    letter-spacing: 3.6px;
+    z-index:999;
+}
+.btn-primary:hover{
+    background-color:#000;
+    color:#fff;
+    border-color:#000;
+}
+.btn-no-border{
+    background-color: transparent;
+    color: #000;
+    border:0;
+    text-transform: uppercase;
+    letter-spacing: 3.6px;
+}
+
+.btn-white{
+    background-color: transparent;
+    color: #fff;
+    border-radius: 0;
+    border-color: #fff;
+    text-transform: uppercase;
+    letter-spacing: 3.6px;
+}
+.btn-white:hover{
+    background-color:#fff;
+    color:#000;
+}
+
+// *** Projektgebiete *** 
+.projektgebiete .card-text{
+    font-family: 'roboto condensed';
+}
+
+.projektgebiete .bi{
+    font-style:normal;
+}
+.projektgebiete .card-body .bi{
+    font-size: 16px;
+    letter-spacing: 0.2rem;
+    font-family:'Bebas Neue';
+    font-weight: 600;
+}
+.projektgebiete .card-title{
+    font-family:'Bebas Neue';
+    font-size: 50px;
+}
+.projektgebiete .card-title:before{
+    display:none;
+}
+.projektgebiete .card-title:after{
+    display:none;
+}
+
+// *** Woocommerce Kategorie Titel links ***
+
+.woocommerce_kategorie_titel_links_produkte > .col-4 > h3{
+    font-size: 40px;
+}
+.woocommerce_kategorie_titel_links .h2{
+    font-size:250px;
+    line-height: 12rem;
+    word-spacing:100vw;
+}
+
+// *** Kontakt ***
+
+.form-control{
+    border-color:#000;
+    border-radius: 0px;
+}
+
+.form-check-input[type=checkbox]{
+    border-color:#000;
+    border-radius:0px;
+}
+.page-id-219 .single-hero{
+    margin-bottom: 0px;
+}
+.ohnohoney{
+    opacity: 0;
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 0;
+    width: 0;
+    z-index: -1;
+}
+// *** Sidebar Shop ***
+.wc-block-product-categories-list--depth-0{
+    font-size:80px;
+    color:#000;
+    font-family:'Bebas Neue';
+}
+
+.wc-block-product-categories-list--depth-1{
+    font-size:16px;
+    letter-spacing: 3px;
+    line-height: 3rem;
+}
+
+ol {
+    list-style-type: none;
+}
+
+ul {
+    list-style-type: none;
+}
+
+
+//*** Product Archive ***
+.archive .yith-wcwl-wishlistexistsbrowse a::before{
+    content:url('/wp-content/uploads/2022/11/favourite-herz-icon-shop.png');
+    margin-top:35px;  
+    margin-left:20px;
+    transform:scale(.8);
+    display:block;
+}
+.archive .yith-wcwl-wishlistaddedbrowse a::before{
+    content:url('/wp-content/uploads/2022/11/favourite-herz-icon-shop.png');
+    margin-top:35px;  
+    margin-left:20px;
+    transform:scale(.8);
+    display:block;
+}
+.archive .yith-wcwl-wishlistexistsbrowse .feedback{
+    display:none;
+}
+.archive .yith-wcwl-wishlistexistsbrowse a{
+    font-size: 0;
+}
+.archive .yith-wcwl-wishlistaddedbrowse .feedback{
+    display:none;
+}
+.archive .yith-wcwl-wishlistaddedbrowse a{
+    font-size:0;
+}
+
+
+
+
+
+
+.woocommerce ul.products.columns-3 li.product:hover .product-btn-wishlist, .woocommerce-page ul.products.columns-3 li.product:hover .product-btn-wishlist{
+    background-color:rgba(0,0,0,0.7);
+}
+
+.woocommerce ul.products li.product a{
+    visibility: hidden;
+}
+
+.woocommerce ul.products.columns-3 li.product:hover a, .woocommerce-page ul.products.columns-3 li.product:hover a{
+    visibility: visible;
+    border:0;
+}
+.archive .add_to_wishlist::before{
+    content:url('/wp-content/uploads/2022/11/favourite-herz-icon-shop.png');
+    margin-top:0px;
+    transform:scale(.8);
+    display:block;
+}
+.archive .add_to_wishlist{
+    background-color:transparent!important;
+}
+.archive .yith-wcwl-add-button>a i{
+    display:none;
+}
+.archive .add_to_wishlist span{
+    display:none;
+}
+
+.archive .yith-wcwl-add-to-wishlist{
+    margin-top: -2rem;
+    margin-left: -2rem;
+}
+
+.next:before{
+    content:url('/wp-content/uploads/2022/11/Nacher-Button-mit-Pfeil-e1669375406723.png');
+    display:block;
+
+}
+.prev:before{
+    content:url('/wp-content/uploads/2022/11/Vorher-Button-mit-Pfeil--e1669375427843.png');
+    display:block;
+
+}
+.woocommerce nav.woocommerce-pagination ul li:not(:first-child):not(:last-child) a{
+    display:none;
+}
+.woocommerce nav.woocommerce-pagination ul li span{
+    display:none;
+}
+.woocommerce nav.woocommerce-pagination ul, .woocommerce nav.woocommerce-pagination ul li{
+    border:0;
+}
+.woocommerce nav.woocommerce-pagination ul li a:hover{
+    background:transparent;
+}
+.woocommerce nav.woocommerce-pagination ul li {
+    font-size: 0;
+}
+
+.wc-block-product-categories-list--depth-0 .wc-block-product-categories-list-item a{
+    border-bottom: solid #000 1px;
+    display: flex;
+    flex-direction: column;
+
+}
+
+.wc-block-product-categories-list--depth-1 .wc-block-product-categories-list-item a{
+    border-bottom: 0;
+
+}
+.wc-block-product-categories-list--depth-2 .wc-block-product-categories-list-item a{
+    border-bottom: 0;
+
+}
+.wc-block-product-categories-list--depth-3 .wc-block-product-categories-list-item a{
+    border-bottom: 0;
+
+}
+
+.wc-block-product-categories-list--depth-1{
+    margin-top:2rem;
+}
+
+.wc-block-product-categories-list--depth-0 .wc-block-product-categories-list-item{
+    margin-bottom: 5rem;
+}
+.wc-block-product-categories-list--depth-1 .wc-block-product-categories-list-item{
+    margin-bottom: 0rem;
+}
+.wc-block-product-categories-list--depth-2 .wc-block-product-categories-list-item{
+    margin-bottom: 0rem;
+}
+.wc-block-product-categories-list--depth-3 .wc-block-product-categories-list-item{
+    margin-bottom: 0rem;
+}
+
+.wc-block-product-categories-list--depth-0 .wc-block-product-categories-list-item__name{
+    margin-left:5rem;
+}
+.wc-block-product-categories-list--depth-1 .wc-block-product-categories-list-item__name{
+    margin-left:3.2rem;
+}
+.wc-block-product-categories-list--depth-2 .wc-block-product-categories-list-item__name{
+    margin-left:3.2rem;
+}
+.wc-block-product-categories-list--depth-3 .wc-block-product-categories-list-item__name{
+    margin-left:3.2rem;
+}
+.buy-btn-col, .wishlist-btn-col{
+    z-index: 2;
+}
+
+
+// *** Product Page ***
+.nav-tabs .nav-item .nav-link{
+    font-size: 40px;
+    text-transform: uppercase;
+    font-family:'Bebas Neue';
+}
+
+.versprechen{
+    font-size:40px;
+    font-family:'Bebas Neue';
+}
+
+.hilf-mit{
+    font-size:80px;
+    font-family:'Bebas Neue';
+    line-height: 5rem;
+}
+
+.abschnitt-hilf-mit{
+    margin-bottom: 10rem;
+}
+.yith-wcwl-wishlistexistsbrowse{
+    font-size: 12px;
+    color:#000;
+    letter-spacing: 0.2rem;
+    font-family:'Bebas Neue';
+}
+.yith-wcwl-wishlistexistsbrowse a{
+    text-decoration: underline;
+}
+.var_info{
+    display:inline;
+}
+
+.single-product .single-hero{
+    height: auto;
+}
+.woocommerce div.product p.price, .woocommerce div.product span.price{
+    font-size: 16px;
+    color:#000;
+    letter-spacing: 0.3rem;
+    font-family:'Bebas Neue';
+}
+.woocommerce div.product form.cart .button{
+    padding-left: 2.7rem;
+    padding-right: 2.6rem;
+    z-index:999;
+    background-color: transparent;
+    color: #000;
+    border-radius: 0;
+    border:solid 1px #000;
+    text-transform: uppercase;
+    letter-spacing: 3.6px;
+    margin-left:15px;
+    height: 37px;
+}
+.woocommerce div.product form.cart .button:hover{
+    background-color:#000;
+    color:#fff;
+    border-color:#000;
+}
+.woocommerce .quantity .qty{
+    border-radius: 0;
+    border:solid 1px #000;
+    height: 37px;
+}
+.woocommerce a.button.alt{
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+    z-index:999;
+    background-color: transparent;
+    color: #000;
+    border-radius: 0;
+    border:solid 1px #000;
+    text-transform: uppercase;
+    letter-spacing: 3.6px;
+}
+.woocommerce a.button.alt:hover{
+    background-color:#000;
+    color:#fff;
+    border-color:#000;
+    
+}
+.woocommerce div.product form.cart .variations select{
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+    padding-top:.5rem;
+    padding-bottom:.5rem;
+    border-radius: 0;
+    border:solid 1px #000;
+    text-transform: uppercase;
+    letter-spacing: 3.6px;
+    margin-bottom: 1rem;
+    min-width: 50%;
+    max-width: 50%;
+}
+.woocommerce div.product form.cart .variations{
+    margin-bottom: 0rem;
+}
+.variations .label{
+    display:none;
+}
+.related-products h2{
+    display:none;
+}
+.related-products{
+    margin-bottom: 10rem;
+}
+
+// *** Related Products ***
+.single-product .yith-wcwl-wishlistexistsbrowse a::before{
+    content:url('/wp-content/uploads/2022/11/favourite-herz-icon-shop.png');
+    margin-top:17px;  
+    margin-left:5px;
+    transform:scale(.8);
+    display:block;
+}
+.single-product .yith-wcwl-wishlistexistsbrowse .feedback{
+    display:none;
+}
+.single-product .yith-wcwl-wishlistexistsbrowse a{
+    font-size: 0;
+}
+.woocommerce ul.products.columns-5 li.product:hover .product-btn-wishlist, .woocommerce ul.products.columns-5 li.product:hover .product-btn-wishlist{
+    background-color:rgba(0,0,0,0.7);
+}
+
+
+.woocommerce ul.products li.product a{
+    visibility: hidden;
+}
+
+.woocommerce ul.products.columns-5 li.product:hover a, .woocommerce-page ul.products.columns-5 li.product:hover a{
+    visibility: visible;
+    border:0;
+}
+// *** Cart ***
+
+.entry-header{
+    display:none;
+}
+
+.cart_totals h2{
+    font-size: 40px;
+    color:#000;
+    
+    font-family:'Bebas Neue';
+}
+.woocommerce-cart table.cart td.actions .coupon .input-text{
+    width:10rem;
+}
+
+.cart-hero{
+   // height: 70rem;
+   // transform:translateY(-10rem);
+    margin-top:-10rem;
+   // margin-bottom: -10rem;
+}
+
+.woocommerce .cart-collaterals .cart_totals, .woocommerce-page .cart-collaterals .cart_totals{
+    float:left;
+}
+
+// *** Checkout ***
+
+.woocommerce-info{
+    background-color:#fff;
+    border:1px solid #000;
+}
+
+.woocommerce-info::before{
+    color:#000;
+}
+
+.woocommerce form.checkout_coupon, .woocommerce form.login, .woocommerce form.register{
+    border:1px solid #000;
+    border-radius:0;
+}
+
+.woocommerce form .form-row input.input-text, .woocommerce form .form-row textarea, .select2-container--default .select2-selection--single{
+    border-radius: 0;
+    border:1px solid #000;
+    padding:.5rem;
+}
+
+.woocommerce .woocommerce-form-login .woocommerce-form-login__submit{
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+    padding-top:.5rem;
+    padding-bottom:.5rem;
+    border-radius: 0;
+    border:solid 1px #000;
+    text-transform: uppercase;
+    letter-spacing: 3.6px;
+    background-color:#fff;
+    color:#000;
+}
+.woocommerce .woocommerce-form-login .woocommerce-form-login__submit:hover{
+    background-color:#000;
+    color:#fff;
+}
+.woocommerce #respond input#submit, .woocommerce a.button, .woocommerce button.button, .woocommerce input.button{
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+    padding-top:.5rem;
+    padding-bottom:.5rem;
+    border-radius: 0;
+    border:solid 1px #000;
+    text-transform: uppercase;
+    letter-spacing: 3.6px;
+    background-color:#fff;
+    color:#000;
+}
+.woocommerce #respond input#submit:hover, .woocommerce a.button:hover, .woocommerce button.button:hover, .woocommerce input.button:hover{
+    background-color:#000;
+    color:#fff;
+}
+.select2-container .select2-selection--single{
+    height: auto;
+}
+.select2-container--default .select2-selection--single .select2-selection__arrow{
+    border-radius: 0px;
+    border-left: 1px solid #000;
+    padding:.5rem;
+    height: 45px;
+    width: 45px;
+}
+.select2-container--default .select2-selection--single .select2-selection__arrow b{
+    border-color: #000 transparent transparent transparent;
+}
+.select2-container--default.select2-container--open .select2-selection--single .select2-selection__arrow b{
+    border-color: transparent transparent #000 transparent;
+}
+.select2-container--default .select2-search--dropdown .select2-search__field{
+    border:1px solid #000;
+    border-radius: 0;
+}
+.select2-dropdown{
+    border:1px solid #000;
+    border-radius: 0;
+}
+.select2-container--default .select2-results__option[aria-selected=true], .select2-container--default .select2-results__option[data-selected=true]{
+    background-color:#000;
+    color:#fff;
+}
+
+#place_order{
+    display: block;
+    text-align: center;
+    margin-bottom: 1em;
+    font-size: 1.25em;
+    padding: 1em;
+    border-radius: 0;
+    border:solid 1px #000;
+    text-transform: uppercase;
+    letter-spacing: 3.6px;
+    background-color:#fff;
+    color:#000;
+    font-weight: 500;
+    width: 100%;
+}
+#place_order:hover{
+    background-color:#000;
+    color:#fff;
+}
+
+#add_payment_method #payment ul.payment_methods, .woocommerce-cart #payment ul.payment_methods, .woocommerce-checkout #payment ul.payment_methods{
+    border-bottom:0;
+}
+#add_payment_method #payment, .woocommerce-cart #payment, .woocommerce-checkout #payment{
+    background:#fff;
+}
+.woocommerce table.shop_table{
+    border:0;
+}
+.woocommerce-checkout .shop_table{
+    background-color:#fff!important;
+    border-color:#000;
+}
+
+#add_payment_method .cart-collaterals .cart_totals tr td, #add_payment_method .cart-collaterals .cart_totals tr th, .woocommerce-cart .cart-collaterals .cart_totals tr td, .woocommerce-cart .cart-collaterals .cart_totals tr th, .woocommerce-checkout .cart-collaterals .cart_totals tr td, .woocommerce-checkout .cart-collaterals .cart_totals tr th{
+    border-top:1px solid #000;
+    padding-top:1.5rem;
+    padding-bottom:1.5rem;
+}
+.woocommerce table.shop_table tbody th, .woocommerce table.shop_table tfoot td, .woocommerce table.shop_table tfoot th, .woocommerce table.shop_table td{
+    border-top:1px solid #000;
+    padding-top:1.5rem;
+    padding-bottom:1.5rem;
+}
+.woocommerce table.shop_table th{
+    padding-top:1.5rem;
+    padding-bottom:1.5rem;
+}
+.woocommerce table.shop_table{
+    border-collapse:collapse;
+}
+.woocommerce-error{
+    background-color:#fff;
+    border:1px solid #b81c23;
+}
+
+
+
+
+
+// *** Wishlist ***
+table.wishlist_table tbody td, table.wishlist_table thead th{
+    border:0;
+}
+.nobr{
+    font-weight: 700;
+    padding: 9px 12px;
+    line-height: 1.5em;
+    font-family: var(--bs-body-font-family);
+    font-size: var(--bs-body-font-size);
+    color: var(--bs-body-color);
+}
+table.wishlist_table td{
+    padding: 9px 12px;
+    line-height: 1.5em;
+    font-family: var(--bs-body-font-family);
+    font-size: var(--bs-body-font-size);
+    color: var(--bs-body-color);
+    text-align: left;
+}
+table.wishlist_table td .amount, table.wishlist_table td .wishlist-in-stock, table.wishlist_table td a{
+    padding: 9px 12px;
+}
+
+.yith-wcwl-share h4.yith-wcwl-share-title{
+    font-weight: 700;
+    padding: 9px 12px;
+    line-height: 1.5em;
+    font-family: var(--bs-body-font-family);
+    font-size: var(--bs-body-font-size);
+    color: var(--bs-body-color);
+}
+.yith-wcwl-share ul{
+    padding: 9px 12px;
+}
+.woocommerce a.remove{
+    padding:0px;
+}
+
+.wishlist_table .product-add-to-cart a{
+    background-color: transparent;
+    color: #000;
+    border-radius: 0;
+    border:1px solid #000;
+    border-color: #000;
+    text-transform: uppercase;
+    letter-spacing: 3.6px;
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+    display:block!important;
+}
+
+.wishlist_table .product-add-to-cart a:hover{
+    background-color:#000;
+    color:#fff;
+}
+.woocommerce-message{
+    background-color:#fff;
+    border:1px solid #000;
+}
+// *** My Account ***
+
+.woocommerce-account .woocommerce-MyAccount-content, .woocommerce-account .woocommerce-MyAccount-navigation{
+    width: 100%;
+    float:left;
+}
+li.woocommerce-MyAccount-navigation-link.woocommerce-MyAccount-navigation-link.is-active a{
+    background-color:#000;
+    color:#fff;
+}
+.woocommerce-MyAccount-navigation-link a{
+    display:block;
+    padding:9px 12px;
+}
+.woocommerce-MyAccount-navigation-link a:hover{
+    background-color:#000;
+    color:#fff;
+}
+.woocommerce-MyAccount-navigation-link:not(:last-child) a{
+    border-bottom: 1px solid #000;
+
+}
+.woocommerce-account .addresses .title .edit{
+    background-color: transparent;
+    color: #000;
+    border-radius: 0;
+    border:1px solid #000;
+    border-color: #000;
+    text-transform: uppercase;
+    letter-spacing: 3.6px;
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+    display:block!important;
+}
+.woocommerce-account .addresses .title .edit:hover{
+    background-color:#000;
+    color:#fff;
+}
+
+
+// *** Thank you ***
+.woocommerce .woocommerce-customer-details address{
+    border:1px solid #000;
+    border-radius: 0;
+    padding:1rem;
+}
+
+// *** Side Cart ***
+.xoo-wsc-footer a{
+    background-color: transparent;
+    color: #000;
+    border-radius: 0;
+    border:1px solid #000;
+    border-color: #000;
+    text-transform: uppercase;
+    letter-spacing: 3.6px;
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+}
+ .xoo-wsc-footer a:hover{
+    background-color:#000;
+    color:#fff;
+}
