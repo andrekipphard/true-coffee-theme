@@ -207,7 +207,7 @@ get_template_part('template-parts/layouts/sticky-socials');
 
 	</div>
 
-	<div class="row ms-5 me-5 mt-5" style="background-image:url('/wp-content/uploads/2022/12/Hintergrundbild-fuer-Titel.jpg'); background-size:70rem; background-position:top right; background-repeat:no-repeat;">
+	<div class="row ms-5 me-5 mt-5" style="background-image:url('/wp-content/uploads/2022/12/Hintergrundbild-für-Titel.jpg'); background-size:70rem; background-position:top right; background-repeat:no-repeat;">
 
 		<div class="col-7 abschnitt-hilf-mit">
 			
