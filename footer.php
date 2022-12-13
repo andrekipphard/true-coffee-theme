@@ -17,7 +17,7 @@
 			<div class="row connect mt-5 pt-5">
 				
 				<div class="col">
-
+					
 					<div class="h2 text-uppercase text-center">
 						We'd love to connect
 					</div>
