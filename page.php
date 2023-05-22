@@ -113,6 +113,10 @@ get_template_part('template-parts/layouts/sticky-socials');
 
 								get_template_part('template-parts/layouts/'. get_row_layout() );
 
+							elseif( get_row_layout() == 'leadform'):
+
+								get_template_part('template-parts/layouts/'. get_row_layout() );
+
 							endif; 
 
 						endwhile;

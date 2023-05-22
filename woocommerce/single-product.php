@@ -21,6 +21,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 }
 
 $product = wc_get_product();
+$excerpt = $product->get_short_description() ?: get_post_field( 'post_excerpt', $product->get_id() );
 $product_id = $product->get_id();
 $price = $product->get_price();
 $weight = $product->get_weight();
@@ -56,6 +57,9 @@ get_template_part('template-parts/layouts/sticky-socials');
 			
 			<div class="row">
 				<div class="col single-hero-col bg-white p-5" style="--bs-bg-opacity:1;">
+				<?php
+
+woocommerce_output_all_notices();	?>
 					<div class="h1 text-uppercase mb-3">
 					<?php the_title( '<h1 class="product_title entry-title">', '</h1>' );?>
 					</div>
@@ -77,8 +81,8 @@ get_template_part('template-parts/layouts/sticky-socials');
 					?> 
 					</div>
 					<div class="p mb-3">
-						
 						<?php do_action( 'woocommerce_single_product_summary' );?>
+						
 					</div>
 					<div class="product_meta custom p text-uppercase mb-3 artikelnummer" style="font-size: 12px;
 					color:#000;
@@ -91,13 +95,12 @@ get_template_part('template-parts/layouts/sticky-socials');
 						<?php endif; ?>
 				
 					</div>
-					<!-- <div class="p text-uppercase mb-3" style="font-size: 12px;
+					<div class="p text-uppercase mb-3" style="font-size: 12px;
 						color:#000;
 						letter-spacing: 0.2rem;
 						font-family:'Bebas Neue';"
 					>
-						*inkl. MwSt. zzgl. Versandkosten NOCH HARDCODE
-					</div> -->
+					</div>
 					<script>
 						jQuery('.legal-price-info').appendTo('.artikelnummer');
 						jQuery('p.wc-gzd-additional-info').prepend('*');
@@ -107,7 +110,14 @@ get_template_part('template-parts/layouts/sticky-socials');
 		
 		</div>
 
-		<div class="col-6 d-flex align-items-end justify-content-end single-hero-col-3" style="background-image:url('/wp-content/uploads/2022/12/Produktebild-1.jpg');">
+		<div class="col-6 d-flex align-items-end justify-content-end single-hero-col-3" style="background-image:url('<?php
+$product = wc_get_product();
+$image_html = $product->get_image();
+preg_match('/<img.+src=[\'"](?P<src>.+?)[\'"].*>/i', $image_html, $matches);
+echo isset($matches['src']) ? $matches['src'] : '';
+?>');">
+
+
 			<div class="row me-5 mb-5">
 				<?php if(!empty($prev)&&!empty($next)):?>
 					<div class="col-6">		
@@ -139,7 +149,12 @@ get_template_part('template-parts/layouts/sticky-socials');
 			</ul>
 			<div class="tab-content pt-5 pb-5 bg-black text-white" id="myTabContent">
 				<div class="tab-pane ms-5 mt-5 ps-4 fade show active" id="produkt-details-tab-pane" role="tabpanel" aria-labelledby="produkt-details" tabindex="0">
-					<div class="row">
+					<div class="row mb-5 pe-5">
+						<div class="col ps-5 pe-5">
+						<?php echo $excerpt;?>
+						</div>
+					</div>
+					<div class="row pt-5">
 						<div class="col-4 ps-5 pe-5 border-end border-light">
 							<div class="p h4 text-white mb-4">
 								Geschmackprofil

@@ -1,5 +1,7 @@
 
+
 <?php
+
 /**
  * The Template for displaying product archives, including the main shop page which is a post type archive
  *
@@ -66,60 +68,86 @@ get_template_part('template-parts/layouts/sticky-socials');
 
 </div>
 
-<div class="row mt-5">
-	<div class="col-4 me-5 pe-5">
-		<?php get_sidebar('shop');?>
-	</div>
 
-	<div class="col-7 ms-5 ps-5">
-	<?php
-		if ( woocommerce_product_loop() ) {
 
-			/**
-			 * Hook: woocommerce_before_shop_loop.
-			 *
-			 * @hooked woocommerce_output_all_notices - 10
-			 * @hooked woocommerce_result_count - 20
-			 * @hooked woocommerce_catalog_ordering - 30
-			 */
-			
+<?php
+	// Get all product categories
+	$product_categories = get_terms( 'product_cat' );
+
+	// Check if any categories were found
+	if ( ! empty( $product_categories ) && ! is_wp_error( $product_categories ) ) {
+
+	// Output the category tabs
+	echo '<div class="row mt-5 mx-5">';
+	echo '<div class="col-12">';
+	echo '<div class="d-flex align-items-start">';
+	echo '<div class="col-4">';
+	echo '<div class="nav flex-column nav-pills me-3" id="v-pills-tab" role="tablist" aria-orientation="vertical">';
+
+	foreach ( $product_categories as $category ) {
+		$active = ( $category === reset( $product_categories ) ) ? 'active' : ''; // Set the first category as active
+		$class = ( $category->parent === 0 ) ? 'nav-pill-main-category' : 'nav-pill-sub-category'; // Add a custom class to main categories
+		echo '<button class="nav-link ' . $active . ' ' . $class . '" id="v-pills-' . $category->slug . '-tab" data-bs-toggle="pill" data-bs-target="#v-pills-' . $category->slug . '" type="button" role="tab" aria-controls="v-pills-' . $category->slug . '" aria-selected="' . ( $active ? 'true' : 'false' ) . '">' . $category->name . '</button>';
+	  }
+	  
+	
+	echo '</div>';
+	
+	echo '</div>';
+	echo '<div class="col-7 offset-1">';
+
+	// Output the category content
+	echo '<div class="tab-content" id="v-pills-tabContent">';
+
+	foreach ( $product_categories as $category ) {
+		$active = ( $category === reset( $product_categories ) ) ? 'show active' : ''; // Set the first category as active
+		echo '<div class="tab-pane fade ' . $active . '" id="v-pills-' . $category->slug . '" role="tabpanel" aria-labelledby="v-pills-' . $category->slug . '-tab">';
+
+		// Get the products for this category
+		$products = new WP_Query( array(
+		'post_type' => 'product',
+		'tax_query' => array(
+			array(
+			'taxonomy' => 'product_cat',
+			'field' => 'slug',
+			'terms' => $category->slug
+			)
+		)
+		) );
+
+		// Check if any products were found
+		if ( $products->have_posts() ) {
+
 
 			woocommerce_product_loop_start();
-
-			if ( wc_get_loop_prop( 'total' ) ) {
-				while ( have_posts() ) {
-					the_post();
-
-					/**
-					 * Hook: woocommerce_shop_loop.
-					 */
-					do_action( 'woocommerce_shop_loop' );
-
-					wc_get_template_part( 'content', 'product' );
-				}
+			
+			while ( $products->have_posts() ) {
+				$products->the_post();
+		
+				// Hook: woocommerce_shop_loop.
+				do_action( 'woocommerce_shop_loop' );
+				// Include the product content template.
+				wc_get_template_part( 'content', 'product' );
 			}
-
+		
 			woocommerce_product_loop_end();
-
-			/**
-			 * Hook: woocommerce_after_shop_loop.
-			 *
-			 * @hooked woocommerce_pagination - 10
-			 */
-			do_action( 'woocommerce_after_shop_loop' );
 		} else {
-			/**
-			 * Hook: woocommerce_no_products_found.
-			 *
-			 * @hooked wc_no_products_found - 10
-			 */
-			do_action( 'woocommerce_no_products_found' );
+			echo '<p>No products found for this category.</p>';
 		}
-	?>
-	</div>
-</div>
+		
 
+		echo '</div>';
+	}
 
+	echo '</div>';
+	echo '</div>';
+	echo '</div>';
+	echo '</div>';
+	echo '</div>';
+	}
+?>
+
+´
 <?php
 
 

@@ -1,13 +1,20 @@
 /* *** Testimonials ** */
 .row-testimonials{
-    background-image: url('/wp-content/uploads/2022/11/Hintergrundtext-1.png');
+    /*background-image: url('/wp-content/uploads/2022/11/Hintergrundtext-1.png');
     background-size: 60rem;
     background-repeat: no-repeat;
-    background-position: top right;
+    background-position: 100% 5%;*/
     margin-top:-20rem;
+    z-index: 1;
+    position: relative;
+    .carousel-control-prev{
+        justify-content: start;
+    }
+    .carousel-control-next{
+        justify-content:end;
+    }
 }
 .col-testimonials-1{
-    background-image: url('/wp-content/uploads/2022/11/Kaffeebohnen-Illustration-.png');
     background-size: 1000px;
     background-repeat: no-repeat;
     background-position: bottom left;
@@ -22,4 +29,9 @@
 }
 .row-testimonials .p{
     font-size: 18px;
+}
+.testimonial-bg{
+    background-size: 60rem;
+    background-repeat: repeat;
+    background-position: center;
 }

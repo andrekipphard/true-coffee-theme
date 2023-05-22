@@ -13,7 +13,6 @@
 }
 
 .hero-col-3{
-    background-image: url('/wp-content/uploads/2022/12/Hero-Header.jpg');
     background-size: contain;
     background-repeat: no-repeat;
     transform:translateX(-7rem);
@@ -32,8 +31,8 @@ margin-left: 60%;
 
 .hero .p{
     color:#000;
-    font-size:15px;
+    font-size:20px;
     letter-spacing: 2px;
     margin-left: 7rem;
-    font-weight: bold;
+    font-family: "Bebas Neue";
 }

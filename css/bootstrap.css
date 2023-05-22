@@ -10984,6 +10984,25 @@ textarea.form-control-lg {
   margin-top: -12rem;
 }
 
+.hamburger-btn, .header {
+  position: -webkit-sticky; /* Safari */
+  position: sticky !important;
+  top: 2vw;
+  z-index: 999;
+}
+
+.logo {
+  position: fixed;
+  top: 20;
+  left: 20;
+  opacity: 1;
+  transition: opacity 0s ease-out;
+}
+
+body.scrolled .logo {
+  opacity: 0;
+}
+
 /* *** Hero *** */
 .hero-text {
   z-index: 2;
@@ -10997,7 +11016,6 @@ textarea.form-control-lg {
 }
 
 .hero-col-3 {
-  background-image: url("/wp-content/uploads/2022/12/Hero-Header.jpg");
   background-size: contain;
   background-repeat: no-repeat;
   transform: translateX(-7rem);
@@ -11015,10 +11033,10 @@ textarea.form-control-lg {
 }*/
 .hero .p {
   color: #000;
-  font-size: 15px;
+  font-size: 20px;
   letter-spacing: 2px;
   margin-left: 7rem;
-  font-weight: bold;
+  font-family: "Bebas Neue";
 }
 
 /* *** Coffe Circle *** */
@@ -11039,6 +11057,7 @@ textarea.form-control-lg {
   padding-right: 10rem;
   letter-spacing: 3px;
   margin-top: 100px;
+  font-family: "Bebas Neue";
 }
 
 .coffe-circle-headline {
@@ -11052,7 +11071,6 @@ textarea.form-control-lg {
 }
 
 .illu-2 {
-  background-image: url("/wp-content/uploads/2022/11/Coffee-Kreislauf-2-Illustration.png");
   background-size: 415px 216px;
   background-repeat: no-repeat;
   background-position: right bottom;
@@ -11068,14 +11086,12 @@ body > div > main > div:nth-child(3) > div.col-6 > div.row.illu-2 > div > div {
 }
 
 .illu-3 {
-  background-image: url("/wp-content/uploads/2022/11/Coffee-Kreislauf-3-Illustration.png");
   background-size: contain;
   background-repeat: no-repeat;
   background-position: right;
 }
 
 .illu-4 {
-  background-image: url("/wp-content/uploads/2022/11/Coffee-Kreislauf-4.png");
   background-size: contain;
   background-repeat: no-repeat;
   background-position: center;
@@ -11083,7 +11099,6 @@ body > div > main > div:nth-child(3) > div.col-6 > div.row.illu-2 > div > div {
 }
 
 .illu-5 {
-  background-image: url("/wp-content/uploads/2022/11/Coffee-Kreislauf-Illustration-5.png");
   background-size: contain;
   background-repeat: no-repeat;
   background-position: left;
@@ -11126,7 +11141,6 @@ body > div > main > div:nth-child(3) > div.col-6 > div.row.illu-2 > div > div {
 }
 
 .col-schmuck-text {
-  background-image: url("/wp-content/uploads/2022/11/Hintergrund-Schmucktext.png");
   background-size: cover;
   background-repeat: no-repeat;
   z-index: -2;
@@ -11154,10 +11168,6 @@ body > div > main > div:nth-child(3) > div.col-6 > div.row.illu-2 > div > div {
   padding: 7rem;
 }
 
-.col-verantwortung .h2, .col-verantwortung-einzeln .h2 {
-  font-size: 80px;
-}
-
 .row-verantwortung {
   margin-top: -20rem;
 }
@@ -11167,24 +11177,9 @@ body > div > main > div:nth-child(3) > div.col-6 > div.row.illu-2 > div > div {
   background-size: contain;
   background-repeat: no-repeat;
   height: 550px;
-  margin-top: -10rem;
+  margin-top: -5rem;
   margin-left: 5rem;
   z-index: -1;
-}
-
-.col-verantwortung-kategorie .h3 {
-  line-height: 4rem;
-  font-size: 80px;
-}
-
-.col-verantwortung-kategorie-text-right .h3 {
-  line-height: 4rem;
-  font-size: 80px;
-}
-
-.col-verantwortung-kategorie-text-top .h3 {
-  line-height: 4rem;
-  font-size: 80px;
 }
 
 .col-verantwortung-kategorie .h3, .col-verantwortung-kategorie-text-top .h3,
@@ -11198,7 +11193,7 @@ body > div > main > div:nth-child(3) > div.col-6 > div.row.illu-2 > div > div {
   background-size: contain;
   background-repeat: no-repeat;
   height: 500px;
-  margin-bottom: -10rem;
+  margin-bottom: -5rem;
   margin-left: 5rem;
 }
 
@@ -11207,7 +11202,7 @@ body > div > main > div:nth-child(3) > div.col-6 > div.row.illu-2 > div > div {
   background-size: contain;
   background-repeat: no-repeat;
   height: 560px;
-  margin-left: 5rem;
+  margin-left: 10rem;
   z-index: -2;
   margin-top: -5rem;
 }
@@ -11260,7 +11255,6 @@ body > div > main > div:nth-child(3) > div.col-6 > div.row.illu-2 > div > div {
 }
 
 .produkte-bild-bg {
-  background-image: url("/wp-content/uploads/2022/12/Produktebild-1.jpg");
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
@@ -11275,23 +11269,12 @@ body > div > main > div:nth-child(3) > div.col-6 > div.row.illu-2 > div > div {
   margin-left: -10rem;
 }
 
-.produkte-black-bg .h3 {
-  line-height: 6rem;
-  font-size: 80px;
-}
-
 .produkte-bild-bg-2 {
-  background-image: url("/wp-content/uploads/2022/12/Produktebild-2.jpg");
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
   z-index: -1;
   margin-left: -10rem;
-}
-
-.produkte-white-bg .h3 {
-  line-height: 6rem;
-  font-size: 80px;
 }
 
 .produkte-white-bg {
@@ -11325,15 +11308,14 @@ body > div > main > div:nth-child(3) > div.col-6 > div.row.illu-2 > div > div {
   margin-top: -20rem;
 }
 
+.card-title {
+  font-family: "Bebas Neue";
+}
+
 /* *** Zitat *** */
 .row-zitat {
   padding-top: 10rem;
   padding-bottom: 10rem;
-}
-
-.row-zitat > .col-8 > h2, .row-zitat > .col-8 > .h2 {
-  font-size: 60px;
-  line-height: 4rem;
 }
 
 /* *** So einfach ** */
@@ -11342,6 +11324,8 @@ body > div > main > div:nth-child(3) > div.col-6 > div.row.illu-2 > div > div {
   background-size: 60rem;
   background-repeat: no-repeat;
   background-position: top left;
+  z-index: 2;
+  position: relative;
 }
 
 .col-so-einfach {
@@ -11353,33 +11337,29 @@ body > div > main > div:nth-child(3) > div.col-6 > div.row.illu-2 > div > div {
 
 .so-einfach-feature-col {
   background-image: url("/wp-content/uploads/2022/11/Texthintergrundfarbflache-grau-service.png");
-  background-size: contain;
+  background-size: 350px 500px;
   background-repeat: no-repeat;
   background-position: center center;
 }
 
-.col-so-einfach .h2 {
-  font-size: 80px;
-  line-height: 6rem;
-}
-
-.col-so-einfach .h3 {
-  font-size: 50px;
-  line-height: 4rem;
-  word-spacing: 100vw;
-}
-
 /* *** Testimonials ** */
 .row-testimonials {
-  background-image: url("/wp-content/uploads/2022/11/Hintergrundtext-1.png");
+  /*background-image: url('/wp-content/uploads/2022/11/Hintergrundtext-1.png');
   background-size: 60rem;
   background-repeat: no-repeat;
-  background-position: top right;
+  background-position: 100% 5%;*/
   margin-top: -20rem;
+  z-index: 1;
+  position: relative;
+}
+.row-testimonials .carousel-control-prev {
+  justify-content: start;
+}
+.row-testimonials .carousel-control-next {
+  justify-content: end;
 }
 
 .col-testimonials-1 {
-  background-image: url("/wp-content/uploads/2022/11/Kaffeebohnen-Illustration-.png");
   background-size: 1000px;
   background-repeat: no-repeat;
   background-position: bottom left;
@@ -11398,6 +11378,12 @@ body > div > main > div:nth-child(3) > div.col-6 > div.row.illu-2 > div > div {
   font-size: 18px;
 }
 
+.testimonial-bg {
+  background-size: 60rem;
+  background-repeat: repeat;
+  background-position: center;
+}
+
 /* *** Footer *** */
 .row-footer-siegel {
   margin-top: -30rem;
@@ -11407,11 +11393,6 @@ body > div > main > div:nth-child(3) > div.col-6 > div.row.illu-2 > div > div {
 .row-footer-siegel {
   margin-top: -30rem;
   margin-bottom: -10rem !important;
-}
-
-.connect .h2 {
-  font-size: 80px;
-  letter-spacing: 0.3rem;
 }
 
 .menu-item::marker {
@@ -11452,6 +11433,14 @@ body > div > main > div:nth-child(3) > div.col-6 > div.row.illu-2 > div > div {
   --bs-btn-disabled-border-color: rgb(187, 187, 187);
 }
 
+.sticky-top {
+  z-index: 998;
+}
+
+body {
+  overflow-x: hidden;
+}
+
 .alert {
   border-radius: 0;
 }
@@ -11483,23 +11472,28 @@ body > div > main > div:nth-child(3) > div.col-6 > div.row.illu-2 > div > div {
 }
 
 .h1 {
-  font-size: 120px;
-  color: #000;
-  line-height: 7.5rem;
-  font-family: "Bebas Neue";
-}
-
-.h2 {
   font-size: 100px;
   color: #000;
   line-height: 6rem;
   font-family: "Bebas Neue";
 }
 
-.h3 {
+.h2 {
   font-size: 80px;
   color: #000;
-  line-height: 7.5rem;
+  line-height: 5rem;
+  font-family: "Bebas Neue";
+}
+
+.verantwortung-h2 {
+  font-size: 250px;
+  line-height: 12rem;
+}
+
+.h3 {
+  font-size: 60px;
+  color: #000;
+  line-height: 4rem;
   font-family: "Bebas Neue";
 }
 
@@ -11529,6 +11523,7 @@ body > div > main > div:nth-child(3) > div.col-6 > div.row.illu-2 > div > div {
   text-transform: uppercase;
   letter-spacing: 3.6px;
   z-index: 999;
+  font-family: "Bebas Neue";
 }
 
 .btn-primary:hover {
@@ -11543,6 +11538,8 @@ body > div > main > div:nth-child(3) > div.col-6 > div.row.illu-2 > div > div {
   border: 0;
   text-transform: uppercase;
   letter-spacing: 3.6px;
+  font-family: "Bebas Neue";
+  font-size: 2rem;
 }
 
 .btn-white {
@@ -11585,16 +11582,6 @@ body > div > main > div:nth-child(3) > div.col-6 > div.row.illu-2 > div > div {
 
 .projektgebiete .card-title:after {
   display: none;
-}
-
-.woocommerce_kategorie_titel_links_produkte > .col-4 > h3, .woocommerce_kategorie_titel_links_produkte > .col-4 > .h3 {
-  font-size: 40px;
-}
-
-.woocommerce_kategorie_titel_links .h2 {
-  font-size: 250px;
-  line-height: 12rem;
-  word-spacing: 100vw;
 }
 
 .form-control {
@@ -11641,35 +11628,40 @@ ul {
   list-style-type: none;
 }
 
-.archive .yith-wcwl-wishlistexistsbrowse a::before {
-  content: url("/wp-content/uploads/2022/11/favourite-herz-icon-shop.png");
-  margin-top: 35px;
-  margin-left: 20px;
-  transform: scale(0.8);
+a.added_to_cart.wc-forward {
+  position: absolute;
+  color: white;
+  margin-left: -50px;
+  margin-top: 30px;
+}
+
+.archive .yith-wcwl-wishlistexistsbrowse a::before, .related-products .yith-wcwl-wishlistexistsbrowse a::before {
+  content: url("data:image/svg+xml;base64, ICAgIDxzdmcgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB3aWR0aD0iMzIiIGhlaWdodD0iMzIiIGZpbGw9IiNmZmYiIGNsYXNzPSJiaSBiaS1jdXAiIHZpZXdCb3g9IjAgMCAxNiAxNiI+CiAgPHBhdGggZmlsbC1ydWxlPSJldmVub2RkIiBkPSJNLjExIDMuMTg3QS41LjUgMCAwIDEgLjUgM2gxM2EuNS41IDAgMCAxIC40ODguNjA4bC0uMjIuOTkxYTMuMDAxIDMuMDAxIDAgMCAxLTEuMyA1Ljg1NGwtLjEzMi41OUEyLjUgMi41IDAgMCAxIDkuODk2IDEzSDQuMTA0YTIuNSAyLjUgMCAwIDEtMi40NC0xLjk1OEwuMDEyIDMuNjA4YS41LjUgMCAwIDEgLjA5OC0uNDJabTEyLjU3NCA2LjI4OGEyIDIgMCAwIDAgLjg2Ni0zLjg5OWwtLjg2NiAzLjlaTTEuMTI0IDRsMS41MTYgNi44MjVBMS41IDEuNSAwIDAgMCA0LjEwNCAxMmg1Ljc5MmExLjUgMS41IDAgMCAwIDEuNDY0LTEuMTc1TDEyLjg3NyA0SDEuMTIzWiIvPgo8L3N2Zz4=");
+  margin-top: 50px;
+  margin-left: 33px;
   display: block;
 }
 
 .archive .yith-wcwl-wishlistaddedbrowse a::before {
-  content: url("/wp-content/uploads/2022/11/favourite-herz-icon-shop.png");
-  margin-top: 35px;
-  margin-left: 20px;
-  transform: scale(0.8);
+  content: url("data:image/svg+xml;base64, ICAgIDxzdmcgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB3aWR0aD0iMzIiIGhlaWdodD0iMzIiIGZpbGw9IiNmZmYiIGNsYXNzPSJiaSBiaS1jdXAiIHZpZXdCb3g9IjAgMCAxNiAxNiI+CiAgPHBhdGggZmlsbC1ydWxlPSJldmVub2RkIiBkPSJNLjExIDMuMTg3QS41LjUgMCAwIDEgLjUgM2gxM2EuNS41IDAgMCAxIC40ODguNjA4bC0uMjIuOTkxYTMuMDAxIDMuMDAxIDAgMCAxLTEuMyA1Ljg1NGwtLjEzMi41OUEyLjUgMi41IDAgMCAxIDkuODk2IDEzSDQuMTA0YTIuNSAyLjUgMCAwIDEtMi40NC0xLjk1OEwuMDEyIDMuNjA4YS41LjUgMCAwIDEgLjA5OC0uNDJabTEyLjU3NCA2LjI4OGEyIDIgMCAwIDAgLjg2Ni0zLjg5OWwtLjg2NiAzLjlaTTEuMTI0IDRsMS41MTYgNi44MjVBMS41IDEuNSAwIDAgMCA0LjEwNCAxMmg1Ljc5MmExLjUgMS41IDAgMCAwIDEuNDY0LTEuMTc1TDEyLjg3NyA0SDEuMTIzWiIvPgo8L3N2Zz4=");
+  margin-top: 50px;
+  margin-left: 33px;
   display: block;
 }
 
-.archive .yith-wcwl-wishlistexistsbrowse .feedback {
+.archive .yith-wcwl-wishlistexistsbrowse .feedback, .related-products .yith-wcwl-wishlistexistsbrowse .feedback {
   display: none;
 }
 
-.archive .yith-wcwl-wishlistexistsbrowse a {
+.archive .yith-wcwl-wishlistexistsbrowse a, .related-products .yith-wcwl-wishlistexistsbrowse a {
   font-size: 0;
 }
 
-.archive .yith-wcwl-wishlistaddedbrowse .feedback {
+.archive .yith-wcwl-wishlistaddedbrowse .feedback, .related-products .yith-wcwl-wishlistaddedbrowse .feedback {
   display: none;
 }
 
-.archive .yith-wcwl-wishlistaddedbrowse a {
+.archive .yith-wcwl-wishlistaddedbrowse a, .related-products .yith-wcwl-wishlistaddedbrowse a {
   font-size: 0;
 }
 
@@ -11687,10 +11679,10 @@ ul {
 }
 
 .archive .add_to_wishlist::before {
-  content: url("/wp-content/uploads/2022/11/favourite-herz-icon-shop.png");
+  content: url("data:image/svg+xml;base64, ICAgIDxzdmcgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB3aWR0aD0iMzIiIGhlaWdodD0iMzIiIGZpbGw9IiNmZmYiIGNsYXNzPSJiaSBiaS1jdXAiIHZpZXdCb3g9IjAgMCAxNiAxNiI+CiAgPHBhdGggZmlsbC1ydWxlPSJldmVub2RkIiBkPSJNLjExIDMuMTg3QS41LjUgMCAwIDEgLjUgM2gxM2EuNS41IDAgMCAxIC40ODguNjA4bC0uMjIuOTkxYTMuMDAxIDMuMDAxIDAgMCAxLTEuMyA1Ljg1NGwtLjEzMi41OUEyLjUgMi41IDAgMCAxIDkuODk2IDEzSDQuMTA0YTIuNSAyLjUgMCAwIDEtMi40NC0xLjk1OEwuMDEyIDMuNjA4YS41LjUgMCAwIDEgLjA5OC0uNDJabTEyLjU3NCA2LjI4OGEyIDIgMCAwIDAgLjg2Ni0zLjg5OWwtLjg2NiAzLjlaTTEuMTI0IDRsMS41MTYgNi44MjVBMS41IDEuNSAwIDAgMCA0LjEwNCAxMmg1Ljc5MmExLjUgMS41IDAgMCAwIDEuNDY0LTEuMTc1TDEyLjg3NyA0SDEuMTIzWiIvPgo8L3N2Zz4=");
   margin-top: 0px;
-  transform: scale(0.8);
   display: block;
+  margin-top: 18px;
 }
 
 .archive .add_to_wishlist {
@@ -11798,6 +11790,53 @@ ul {
   z-index: 2;
 }
 
+.nav-pills .nav-link.active {
+  background-color: white;
+  color: black;
+}
+
+.nav-pills .nav-link.active::after {
+  content: "";
+  display: inline-block;
+  width: 1rem;
+  height: 1rem;
+  background-image: url("data:image/svg+xml,<svg width='1em' height='1em' viewBox='0 0 16 16' class='bi bi-chevron-right' fill='currentColor' xmlns='http://www.w3.org/2000/svg'><path fill-rule='evenodd' d='M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708z'/></svg>");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.nav-link.active.nav-pill-main-category::after {
+  width: 3rem;
+  height: 3rem;
+}
+
+.nav-pills {
+  font-family: "Bebas Neue";
+}
+
+.nav-pills .nav-link {
+  text-align: left;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.nav-pill-sub-category {
+  letter-spacing: 3px;
+  font-size: 16px;
+}
+
+.nav-pill-main-category {
+  font-size: 80px;
+  border-bottom: solid 1px black !important;
+  border-radius: 0px !important;
+  margin-bottom: 2rem;
+}
+
+.nav-pill-main-category:not(:first-child) {
+  margin-top: 3rem;
+}
+
 .nav-tabs .nav-item .nav-link {
   font-size: 40px;
   text-transform: uppercase;
@@ -11857,6 +11896,7 @@ ul {
   letter-spacing: 3.6px;
   margin-left: 15px;
   height: 37px;
+  font-family: "Bebas Neue";
 }
 
 .woocommerce div.product form.cart .button:hover {
@@ -11919,24 +11959,48 @@ ul {
   margin-bottom: 10rem;
 }
 
-div.row.related-products.text-center.mt-5.ms-5.me-5.pt-5.pb-5 .yith-wcwl-wishlistexistsbrowse a::before {
-  content: url("/wp-content/uploads/2022/11/favourite-herz-icon-shop.png");
-  margin-top: 17px;
-  margin-left: 5px;
-  transform: scale(0.8);
+.related-products .yith-wcwl-wishlistaddedbrowse a::before {
+  content: url("data:image/svg+xml;base64, ICAgIDxzdmcgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB3aWR0aD0iMzIiIGhlaWdodD0iMzIiIGZpbGw9IiNmZmYiIGNsYXNzPSJiaSBiaS1jdXAiIHZpZXdCb3g9IjAgMCAxNiAxNiI+CiAgPHBhdGggZmlsbC1ydWxlPSJldmVub2RkIiBkPSJNLjExIDMuMTg3QS41LjUgMCAwIDEgLjUgM2gxM2EuNS41IDAgMCAxIC40ODguNjA4bC0uMjIuOTkxYTMuMDAxIDMuMDAxIDAgMCAxLTEuMyA1Ljg1NGwtLjEzMi41OUEyLjUgMi41IDAgMCAxIDkuODk2IDEzSDQuMTA0YTIuNSAyLjUgMCAwIDEtMi40NC0xLjk1OEwuMDEyIDMuNjA4YS41LjUgMCAwIDEgLjA5OC0uNDJabTEyLjU3NCA2LjI4OGEyIDIgMCAwIDAgLjg2Ni0zLjg5OWwtLjg2NiAzLjlaTTEuMTI0IDRsMS41MTYgNi44MjVBMS41IDEuNSAwIDAgMCA0LjEwNCAxMmg1Ljc5MmExLjUgMS41IDAgMCAwIDEuNDY0LTEuMTc1TDEyLjg3NyA0SDEuMTIzWiIvPgo8L3N2Zz4=");
+  margin-top: 24px;
+  margin-left: 20px;
   display: block;
 }
 
-div.row.related-products.text-center.mt-5.ms-5.me-5.pt-5.pb-5 .yith-wcwl-wishlistexistsbrowse .feedback {
+.related-products .yith-wcwl-wishlistexistsbrowse a::before {
+  content: url("data:image/svg+xml;base64, ICAgIDxzdmcgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB3aWR0aD0iMzIiIGhlaWdodD0iMzIiIGZpbGw9IiNmZmYiIGNsYXNzPSJiaSBiaS1jdXAiIHZpZXdCb3g9IjAgMCAxNiAxNiI+CiAgPHBhdGggZmlsbC1ydWxlPSJldmVub2RkIiBkPSJNLjExIDMuMTg3QS41LjUgMCAwIDEgLjUgM2gxM2EuNS41IDAgMCAxIC40ODguNjA4bC0uMjIuOTkxYTMuMDAxIDMuMDAxIDAgMCAxLTEuMyA1Ljg1NGwtLjEzMi41OUEyLjUgMi41IDAgMCAxIDkuODk2IDEzSDQuMTA0YTIuNSAyLjUgMCAwIDEtMi40NC0xLjk1OEwuMDEyIDMuNjA4YS41LjUgMCAwIDEgLjA5OC0uNDJabTEyLjU3NCA2LjI4OGEyIDIgMCAwIDAgLjg2Ni0zLjg5OWwtLjg2NiAzLjlaTTEuMTI0IDRsMS41MTYgNi44MjVBMS41IDEuNSAwIDAgMCA0LjEwNCAxMmg1Ljc5MmExLjUgMS41IDAgMCAwIDEuNDY0LTEuMTc1TDEyLjg3NyA0SDEuMTIzWiIvPgo8L3N2Zz4=");
+  margin-top: 36px;
+  margin-left: 5px;
+  display: block;
+}
+
+.related-products .yith-wcwl-add-button a::before {
+  margin-top: -24px;
+  display: block;
+  content: url("data:image/svg+xml;base64, ICAgIDxzdmcgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB3aWR0aD0iMzIiIGhlaWdodD0iMzIiIGZpbGw9IiNmZmYiIGNsYXNzPSJiaSBiaS1jdXAiIHZpZXdCb3g9IjAgMCAxNiAxNiI+CiAgPHBhdGggZmlsbC1ydWxlPSJldmVub2RkIiBkPSJNLjExIDMuMTg3QS41LjUgMCAwIDEgLjUgM2gxM2EuNS41IDAgMCAxIC40ODguNjA4bC0uMjIuOTkxYTMuMDAxIDMuMDAxIDAgMCAxLTEuMyA1Ljg1NGwtLjEzMi41OUEyLjUgMi41IDAgMCAxIDkuODk2IDEzSDQuMTA0YTIuNSAyLjUgMCAwIDEtMi40NC0xLjk1OEwuMDEyIDMuNjA4YS41LjUgMCAwIDEgLjA5OC0uNDJabTEyLjU3NCA2LjI4OGEyIDIgMCAwIDAgLjg2Ni0zLjg5OWwtLjg2NiAzLjlaTTEuMTI0IDRsMS41MTYgNi44MjVBMS41IDEuNSAwIDAgMCA0LjEwNCAxMmg1Ljc5MmExLjUgMS41IDAgMCAwIDEuNDY0LTEuMTc1TDEyLjg3NyA0SDEuMTIzWiIvPgo8L3N2Zz4=");
+}
+
+.related-products .add_to_wishlist i, .add_to_wishlist span {
   display: none;
 }
 
-div.row.related-products.text-center.mt-5.ms-5.me-5.pt-5.pb-5 .yith-wcwl-wishlistexistsbrowse a {
+.related-products .add_to_wishlist:hover {
+  background-color: transparent !important;
+}
+
+.related-products .yith-wcwl-wishlistexistsbrowse .feedback {
+  display: none;
+}
+
+.related-products .yith-wcwl-wishlistexistsbrowse a {
   font-size: 0;
 }
 
 .woocommerce ul.products.columns-5 li.product:hover .product-btn-wishlist, .woocommerce ul.products.columns-5 li.product:hover .product-btn-wishlist {
   background-color: rgba(0, 0, 0, 0.7);
+}
+
+.related-products .feedback {
+  display: none;
 }
 
 .woocommerce ul.products li.product a {
@@ -12285,12 +12349,7 @@ li.woocommerce-MyAccount-navigation-link.woocommerce-MyAccount-navigation-link.i
   background-repeat: no-repeat;
   height: 800px;
   margin-top: -5rem;
-  box-shadow: inset 0 0 0 2000px rgba(0, 0, 0, 0.5);
-}
-
-.verantwortung-h2 {
-  font-size: 250px;
-  line-height: 12rem;
+  box-shadow: inset 0 0 0 2000px rgba(0, 0, 0, 0.2);
 }
 
 .text-in-bild-titel-links-bg-image {
@@ -12300,26 +12359,70 @@ li.woocommerce-MyAccount-navigation-link.woocommerce-MyAccount-navigation-link.i
   background-repeat: no-repeat;
   height: 800px;
   margin-top: -5rem;
-  box-shadow: inset 0 0 0 2000px rgba(0, 0, 0, 0.5);
-}
-
-.verantwortung-h2 {
-  font-size: 250px;
-  line-height: 12rem;
-}
-
-.alleinstellungsmerkmale .h3 {
-  font-size: 60px;
-  line-height: 4rem;
+  box-shadow: inset 0 0 0 2000px rgba(0, 0, 0, 0.2);
 }
 
 .alleinstellungsmerkmale .col-3 {
   background-image: url("/wp-content/uploads/2022/11/Hintergrundfarbfläche-grau-für-textboxen.png");
   background-position: right;
-  background-size: contain;
+  background-size: 500px 100%;
   background-repeat: no-repeat;
 }
 
 .alleinstellungsmerkmal {
   font-size: 1.1rem;
+}
+
+input[type=text i], input[type=email i], input[type=number i] {
+  width: 300px;
+  border: 1px solid #000;
+  padding-left: 20px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  padding-right: 20px;
+}
+
+input[type=text i]::-moz-placeholder, input[type=email i]::-moz-placeholder, input[type=number i]::-moz-placeholder {
+  font-family: "Bebas Neue";
+  text-transform: uppercase;
+  letter-spacing: 3px;
+}
+
+input[type=text i]:-ms-input-placeholder, input[type=email i]:-ms-input-placeholder, input[type=number i]:-ms-input-placeholder {
+  font-family: "Bebas Neue";
+  text-transform: uppercase;
+  letter-spacing: 3px;
+}
+
+input[type=text i]::placeholder, input[type=email i]::placeholder, input[type=number i]::placeholder {
+  font-family: "Bebas Neue";
+  text-transform: uppercase;
+  letter-spacing: 3px;
+}
+
+.step {
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #000;
+  border: none;
+  border-radius: 50%;
+  display: inline-block;
+  opacity: 0.25;
+}
+
+.step.active {
+  opacity: 1;
+}
+
+.tab {
+  display: none;
+}
+
+input.invalid {
+  background-color: #ffdddd;
+}
+
+.tab h4, .tab .h4 {
+  letter-spacing: 1px !important;
 }/*# sourceMappingURL=bootstrap.css.map */

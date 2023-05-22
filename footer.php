@@ -28,7 +28,7 @@
 
 			<div class="row pb-5 mb-5">
 
-				<div class="col-9">
+				<div class="col-9 d-flex">
 					<img src="/wp-content/uploads/2022/11/Kontaktanfrage-1.png" class="img-fluid">
 				</div>
 
@@ -81,7 +81,7 @@
 				</div>
 
 				<div class="col-7">
-					<img src="/wp-content/uploads/2022/11/true-coffee-siegel.png" style="width:50rem;" class="image-fluid">
+					<img src="/wp-content/uploads/2023/03/siegel-true-coffee-kon-04.png" style="width:50rem;" class="image-fluid">
 				</div>
 
 			</div>
@@ -144,7 +144,7 @@
 
 <?php wp_footer(); ?>
 
-<script src="/docs/5.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
+
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
     
 </body>

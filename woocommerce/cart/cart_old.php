@@ -12,12 +12,11 @@
  *
  * @see     https://docs.woocommerce.com/document/template-structure/
  * @package WooCommerce\Templates
- * @version 7.4.0
+ * @version 7.0.1
  */
 
 defined( 'ABSPATH' ) || exit;
-
- ?>
+?>
 
 
 
@@ -44,9 +43,7 @@ defined( 'ABSPATH' ) || exit;
 
         <div class="col-11 bg-white d-flex">
             <div class="col-7">
-                
                 <div class="col bg-white p-5" style="--bs-bg-opacity:1;">
-                <?php do_action( 'woocommerce_before_cart' );?>
                     <div class="h1 text-center text-uppercase mb-3">
                         Warenkorb
                     </div>
@@ -185,16 +182,11 @@ defined( 'ABSPATH' ) || exit;
 
                                         <?php if ( wc_coupons_enabled() ) { ?>
                                             <div class="coupon">
-                                                <input type="text" style="height:38px" name="coupon_code" class="input-text border-dark" id="coupon_code" value="" placeholder="<?php esc_attr_e( 'Coupon code', 'woocommerce' ); ?>" /> <button type="submit" class="btn-primary btn <?php echo esc_attr( wc_wp_theme_get_element_class_name( 'button' ) ? ' ' . wc_wp_theme_get_element_class_name( 'button' ) : '' ); ?>" name="apply_coupon" value="<?php esc_attr_e( 'Apply coupon', 'woocommerce' ); ?>"><?php esc_attr_e( 'Apply coupon', 'woocommerce' ); ?></button>
+                                                <label for="coupon_code"><?php esc_html_e( 'Coupon:', 'woocommerce' ); ?></label> <input type="text" name="coupon_code" class="input-text border-dark" id="coupon_code" value="" placeholder="<?php esc_attr_e( 'Coupon code', 'woocommerce' ); ?>" /> <button type="submit" class="btn-primary btn <?php echo esc_attr( wc_wp_theme_get_element_class_name( 'button' ) ? ' ' . wc_wp_theme_get_element_class_name( 'button' ) : '' ); ?>" name="apply_coupon" value="<?php esc_attr_e( 'Apply coupon', 'woocommerce' ); ?>"><?php esc_attr_e( 'Apply coupon', 'woocommerce' ); ?></button>
                                                 <?php do_action( 'woocommerce_cart_coupon' ); ?>
                                             </div>
                                         <?php } ?>
 
-                                        
-                                    </td>
-                                </tr>
-                                <tr>
-                                <td colspan="6" class="actions border-dark pt-4 pb-4">
                                         <button type="submit" class="btn btn-primary <?php echo esc_attr( wc_wp_theme_get_element_class_name( 'button' ) ? ' ' . wc_wp_theme_get_element_class_name( 'button' ) : '' ); ?>" name="update_cart" value="<?php esc_attr_e( 'Update cart', 'woocommerce' ); ?>"><?php esc_html_e( 'Update cart', 'woocommerce' ); ?></button>
 
                                         <?php do_action( 'woocommerce_cart_actions' ); ?>
@@ -238,5 +230,3 @@ defined( 'ABSPATH' ) || exit;
     </div>
 </div>
 
-
-<?php do_action( 'woocommerce_after_cart' ); ?>

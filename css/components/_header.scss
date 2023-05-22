@@ -14,3 +14,19 @@
     max-width: 10px;
     margin-top:-12rem;
 }
+.hamburger-btn, .header{
+    position: -webkit-sticky; /* Safari */
+    position:sticky!important;
+    top:2vw;
+    z-index:999;
+}
+.logo{
+    position: fixed;
+    top: 20;
+    left: 20;
+    opacity: 1;
+    transition: opacity 0s ease-out;
+}
+body.scrolled .logo {
+    opacity: 0;
+  }

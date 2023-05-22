@@ -1,7 +1,23 @@
+<?php
+    $background_image = get_sub_field('background_image');
+    $text_box_eins = get_sub_field('text_box_eins');
+    $text_box_zwei = get_sub_field('text_box_zwei');
+    $headline = get_sub_field('headline');
+    $headline_left = get_sub_field('headline_left');
+    $headline_right = get_sub_field('headline_right');
+    $headline_left_text = get_sub_field('headline_left_text');
+    $headline_right_text_eins = get_sub_field('headline_right_text_eins');
+    $headline_right_text_zwei = get_sub_field('headline_right_text_zwei');
+    $text_center = get_sub_field('text_center');
+    $illu_2 = get_sub_field('illu_2');
+    $illu_3 = get_sub_field('illu_3');
+    $illu_4 = get_sub_field('illu_4');
+    $illu_5 = get_sub_field('illu_5');
+?>
 <div class="row row-zum-shop pt-5 pb-5">
 
     <div class="col-6 ps-0">
-        <img src="/wp-content/uploads/2022/11/Caffe-Kreislauf-1-illustration-e1667836750906.png">
+        <img src="<?= wp_get_attachment_image_url($background_image, 'large');?>">
     </div>
 
     <div class="col d-flex justify-content-end">
@@ -27,7 +43,7 @@
             <div class="col-3 offset-3">
 
                 <div class="p text-uppercase border border-dark p-4 bg-white text-in-square">
-                    Angebaut in naturbelassenen Mischkulturen und mit der Hand gepflückt. 100% Bio Fairtrade.
+                    <?= $text_box_eins; ?>
                 </div>
 
             </div>
@@ -38,12 +54,12 @@
 
         </div>
 
-        <div class="row illu-2">
+        <div class="row illu-2" style="background-image:url('<?= wp_get_attachment_image_url($illu_2, 'large');?>');">
 
             <div class="col-3 offset-8 pb-5">
 
                 <div class="p text-uppercase border border-dark p-4 bg-white mb-5 illu-2-p text-in-square">
-                    In unserer schonenden langzeitröstung unseres Röstmeisters entfalten sich alle Aromen in Gänze.
+                    <?= $text_box_zwei; ?>
                 </div>
 
             </div>
@@ -52,10 +68,10 @@
 
     </div>
 
-    <div class="col-4 offset-2 align-self-end pb-5 pt-5 coffe-circle-headline-col">
+    <div class="col-5 offset-1 align-self-end pb-5 pt-5 ps-5 coffe-circle-headline-col">
         
         <div class="h2 text-uppercase text-end coffe-circle-headline">
-            Unser Circle of Coffe
+            <?= $headline; ?>
         </div>
     
     </div>
@@ -71,7 +87,7 @@
     <div class="col-1 d-flex justify-content-center align-self-center">
         
         <div class="h3 text-uppercase">
-            Privat
+            <?= $headline_left; ?>
         </div>
     
     </div>
@@ -79,7 +95,7 @@
     <div class="col-1 d-flex justify-content-center offset-1 align-self-center">
         
         <div class="h3 text-uppercase">
-            Büro
+            <?= $headline_right; ?>
         </div>
 
     </div>
@@ -92,22 +108,22 @@
 
 <div class="row">
     
-    <div class="col-5 illu-3 d-flex justify-content-center align-items-start">
+    <div class="col-5 illu-3 d-flex justify-content-center align-items-start" style="background-image:url('<?= wp_get_attachment_image_url($illu_3, 'large');?>');">
         
         <div class="p text-uppercase border border-dark p-4 bg-white text-in-square">
-            Ob ganze Bohne oder mit deinem Wunschmalgrad gemalen - wir verpacken 100% aluminiumfrei.
+            <?= $headline_left_text; ?>
         </div>
 
     </div>
 
-    <div class="col-7 illu-4">
+    <div class="col-7 illu-4" style="background-image:url('<?= wp_get_attachment_image_url($illu_4, 'large');?>');">
         
         <div class="row">
             
             <div class="col-5 offset-1 d-flex justify-content-center align-items-start">
                 
                 <div class="p text-uppercase border border-dark p-4 bg-white text-in-square mt-5 ms-5">
-                    Ob Vollautomat oder traditioneller Siebträger, zusammen mit unserem Kaffee und Service bekommst du das Sorglospaket.
+                    <?= $headline_right_text_eins; ?>
                 </div>
 
             </div>
@@ -115,7 +131,7 @@
             <div class="col-5 pt-5 mt-5 d-flex justify-content-end align-items-start">
                 
                 <div class="p text-uppercase border border-dark p-4 bg-white text-in-square">
-                    Die beste Verpackung ist keine Verpackung. Wir liefern unseren Kaffee in luftdichten Metalleimern.
+                    <?= $headline_right_text_zwei; ?>
                 </div>
 
             </div>
@@ -129,33 +145,23 @@
 <div class="row mb-5">
     
     <div class="col-2 align-self-center">
-        
-        <div class="col border-dark border-top border-bottom border-end">
-            
-            <div class="row">
+        <?php if(have_rows('logos')):?>
+            <div class="col border-dark border-top border-bottom border-end">
                 
-                <div class="col d-flex justify-content-end pe-5">
-                    <img class="border-bottom border-dark pt-5 pb-5" src="/wp-content/uploads/2022/11/fairtrade-siegel.png" style="width: 150px;">
-                </div>
+                    <?php while(have_rows('logos')): the_row();
+                        $logo = get_sub_field('logo');
+                    ?>
+                        <div class="row">
+                            
+                            <div class="col d-flex justify-content-end pe-5">
+                                <img class="border-bottom border-dark pt-5 pb-5" src="<?= wp_get_attachment_image_url($logo, 'large');?>" style="width: 150px;">
+                            </div>
 
-            </div>
-
-            <div class="row">
+                        </div>
+                    <?php endwhile;?>
             
-                <div class="col d-flex justify-content-end pe-5">
-                    <img class="border-bottom border-dark pt-5 pb-5" src="/wp-content/uploads/2022/11/Bio-Siegel-logo.png" style="width: 150px;">
-                </div>
-
             </div>
-            
-            <div class="row">
-                <div class="col d-flex justify-content-end pe-5">
-                    <img class="pt-5 pb-5" src="/wp-content/uploads/2022/11/Kindernothilfe-siegel.png" style="width: 150px;">
-                </div>
-
-            </div>
-        
-        </div>
+        <?php endif;?>
 
     </div>
     
@@ -163,10 +169,10 @@
         <img src="/wp-content/uploads/2022/11/Pfeil-4.png">
     </div>
 
-    <div class="col-3 d-flex align-items-end justify-content-center illu-5">
+    <div class="col-3 d-flex align-items-end justify-content-center illu-5" style="background-image:url('<?= wp_get_attachment_image_url($illu_5, 'large');?>');">
         
         <div class="p text-uppercase border border-dark p-4 bg-white text-in-square-small">
-            1 Euro pro Kilogramm Kaffee fliesst in soziale Projekte der Kindernothilfe in den Herkunftsländern unserer Rohkaffees.
+            <?= $text_center; ?>
         </div>
 
     </div>

@@ -1,3 +1,11 @@
+<?php
+    $image = get_sub_field('image');
+    $siegel = get_sub_field('siegel');
+    $headline = get_sub_field('headline');
+    $subline = get_sub_field('subline');
+    $button_text = get_sub_field('button_text');
+    $button_url = get_sub_field('button_url');
+?>
 <div class="row row-verantwortung-eins">
 
     <div class="col-7">
@@ -9,11 +17,11 @@
         <div class="row">
 
             <div class="col-4 coffee-balance-bild">
-                <img src="/wp-content/uploads/2022/12/Coffee-balance-Bild-1.png" style="width: 500px;">
+                <img src="<?= wp_get_attachment_image_url($image, 'large');?>" style="width: 500px;">
             </div>
 
             <div class="col-2 true-coffee-siegel d-flex align-items-end">
-                <img src="/wp-content/uploads/2022/11/true-coffee-siegel.png" style="width: 450px;">
+                <img src="<?= wp_get_attachment_image_url($siegel, 'large');?>" style="width: 450px;">
             </div>
 
         </div>
@@ -24,9 +32,9 @@
             
                 <div class="row">
                 
-                    <div class="col-7 pb-3 pt-4" style="background: linear-gradient( 90deg, #EDEDED 70%, transparent 50%) no-repeat;">
+                    <div class="col-7 pb-3 " style="background: linear-gradient( 90deg, #EDEDED 70%, transparent 50%) no-repeat;">
                         <div class="h3 text-uppercase">
-                            Coffee Balance <br> Bio Fairtrade
+                            <?= $headline;?>
                         </div>
 
                     </div>
@@ -38,7 +46,7 @@
                     <div class="col-6 pb-3" style="background: linear-gradient( 90deg, #EDEDED 70%, transparent 50%) no-repeat;">
                     
                         <div class="h4 text-uppercase">
-                            Kategorie: Kaffee
+                            <?= $subline; ?>
                         </div>
                     
                     </div>
@@ -49,8 +57,8 @@
                 
                     <div class="col-6 pb-3 mb-4" style="background: linear-gradient( 90deg, #EDEDED 70%, transparent 50%) no-repeat;">
                     
-                        <a href="/shop/"><div class="btn btn-primary">
-                            Jetzt entdecken
+                        <a href="<?= $button_url; ?>"><div class="btn btn-primary">
+                            <?= $button_text; ?>
                         </div></a>
                 
                     </div>

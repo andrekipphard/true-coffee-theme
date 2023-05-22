@@ -19,9 +19,6 @@
     margin-top:-10rem;
     padding:7rem;
 }
-.col-verantwortung .h2, .col-verantwortung-einzeln .h2{
-    font-size: 80px;
-}
 .row-verantwortung{
     margin-top:-20rem;
 }
@@ -30,22 +27,11 @@
     background-size: contain;
     background-repeat:no-repeat;
     height: 550px;
-    margin-top:-10rem;
+    margin-top:-5rem;
     margin-left: 5rem;
     z-index: -1;
 }
-.col-verantwortung-kategorie .h3{
-    line-height: 4rem;
-    font-size: 80px;
-}
-.col-verantwortung-kategorie-text-right .h3{
-    line-height: 4rem;
-    font-size: 80px;
-}
-.col-verantwortung-kategorie-text-top .h3{
-    line-height: 4rem;
-    font-size: 80px;
-}
+
 .col-verantwortung-kategorie .h3, .col-verantwortung-kategorie-text-top .h3, 
 .col-verantwortung-kategorie .btn, .col-verantwortung-kategorie-text-top .btn,
 .col-verantwortung-kategorie .h4, .col-verantwortung-kategorie-text-top .h4{
@@ -57,7 +43,7 @@
     background-size: contain;
     background-repeat:no-repeat;
     height: 500px;
-    margin-bottom:-10rem;
+    margin-bottom:-5rem;
     margin-left: 5rem;
 }
 .col-verantwortung-kategorie-text-right{
@@ -65,7 +51,7 @@
     background-size: contain;
     background-repeat:no-repeat;
     height: 560px;
-    margin-left: 5rem;
+    margin-left: 10rem;
     z-index: -2;
     margin-top:-5rem;
 }

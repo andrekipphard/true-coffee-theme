@@ -14,11 +14,17 @@
 <html <?php language_attributes(); ?>>
 <head>
 	<!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous"> -->
-	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
-	<link href="/css/style.css" rel="stylesheet">
+	
+
 	<meta charset="<?php bloginfo( 'charset' ); ?>">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="profile" href="https://gmpg.org/xfn/11"> 
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+	<script src="<?php echo get_template_directory_uri(); ?>/js/leadform.js"></script>
+
+
+
+	
 
 	<?php wp_head(); ?>
 </head>
@@ -45,10 +51,9 @@
 
 					<div class="col d-flex justify-content-end">
 
-						<!-- *** DAS HIER MUSS STICKY RECHTS *** -->
-						<button type="button" class="btn btn-primary bg-transparent border-0 align-self-start offcanvas-toggle" data-bs-toggle="offcanvas" data-bs-target="#offcanvasExample" aria-controls="offcanvasExample">
+						<button type="button" class="hamburger-btn btn btn-primary bg-transparent border-0 align-self-start offcanvas-toggle" data-bs-toggle="offcanvas" data-bs-target="#offcanvasExample" aria-controls="offcanvasExample">
 							
-							<img src="/wp-content/uploads/2022/11/Menu.png" style="width: 5rem;">
+							<img src="/wp-content/uploads/2022/11/Menu.png" style="width: 4rem;">
 							<!-- <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" fill="#000" class="bi bi-justify" viewBox="0 0 16 16">
 			  					
 								<path fill-rule="evenodd" d="M2 12.5a.5.5 0 0 1 .5-.5h11a.5.5 0 0 1 0 1h-11a.5.5 0 0 1-.5-.5zm0-3a.5.5 0 0 1 .5-.5h11a.5.5 0 0 1 0 1h-11a.5.5 0 0 1-.5-.5zm0-3a.5.5 0 0 1 .5-.5h11a.5.5 0 0 1 0 1h-11a.5.5 0 0 1-.5-.5zm0-3a.5.5 0 0 1 .5-.5h11a.5.5 0 0 1 0 1h-11a.5.5 0 0 1-.5-.5z"></path>
@@ -56,7 +61,6 @@
 							</svg> -->
 
 						</button>
-						<!-- *** STICKY RECHTS ENDE -->
 
 		<!-- *** Offcanvas *** -->
 
@@ -136,3 +140,14 @@
 				</div>
 
 			</header><!-- #masthead -->
+<script>
+	const body = document.querySelector('body');
+
+window.addEventListener('scroll', () => {
+  if (window.scrollY > 0) {
+    body.classList.add('scrolled');
+  } else {
+    body.classList.remove('scrolled');
+  }
+});
+	</script>

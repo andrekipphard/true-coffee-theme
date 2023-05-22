@@ -1,27 +1,29 @@
+<?php
+    $headline = get_sub_field('headline');
+    $subline = get_sub_field('subline');
+    $text = get_sub_field('text');
+    $button_text = get_sub_field('button_text');
+    $button_url = get_sub_field('button_url');
+?>
 <div class="row row-produkte-einzeln">
 
-    <div class="col-4 offset-2 pt-5 pb-5">
+    <div class="col-5 offset-2 pt-5 pb-5">
 
         <div class="h2 text-uppercase">
-            Unsere Produkte
+            <?= $headline; ?>
         </div>
 
         <div class="h4 text-uppercase mb-5">
-            Frisch geröstet für Zuhause. Für deine Besten Wohlfühlmomente
+            <?= $subline; ?>
         </div>
 
         <div class="p mb-5">
-            Für unsere Kaffees beziehen wir nur handverlesene Bohnen höchster Qualität aus Honduras, Peru und Indien, die Bio und Fairtrade zertifiziert sind. 
-            <br><br>
-            Auf den reichen vulkanischen Böden im Hochland der Ocotepeque Region im Westen Honduras, angebaut in nachhaltigen Kooperativen, ist der Kaffeeanbau geprägt von einem besonderen Gespür für Natur und Sein. Mit seiner milden Süße in Begleitung von fruchtiger Säure und der Note von dunkler Schokolade zeigt sich unser Arabica von seiner besten Seite. 
-            <br><br>
-            Die tropische Gebirgsregion Keralas in Südindien gehört zu den artenreichsten der Welt. Sie bringt einen edlen Robusta Kaffee hervor, der durch seine Milde und würzigen Aromen besticht. Er ist ausgewogen und zeichnet sich durch sein angenehm weiches Mundgefühl aus. Da er über wenig Säure, jedoch umso mehr Körper verfügt, ist er besonders gut für intensive Espressoröstungen geeignet. 
-            <br><br>
-            Diese besonderen Bohnen werden von unserem Röstmeister mit Hingabe in einer schonenden Langzeit-Trommelröstung zu den Kaffees, die Dir Deine perfekten Genussmomente schenken.
+            <?= $text; ?>
+            
         </div>
 
-        <a href="/shop/"><div class="btn btn-primary">
-            Alle Produkte entdecken
+        <a href="<?= $button_url; ?>"><div class="btn btn-primary">
+            <?= $button_text; ?>
         </div></a>
 
     </div>

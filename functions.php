@@ -370,3 +370,47 @@ function my_email_body_function_customer($name,$email,$message,$datenschutz) {
 	return ob_get_contents();
 	ob_get_clean();
   }
+
+  add_action('wp_ajax_get_products_by_category', 'get_products_by_category');
+add_action('wp_ajax_nopriv_get_products_by_category', 'get_products_by_category');
+
+function get_products_by_category() {
+  $categoryId = $_GET['product_cat'];
+  $args = array(
+    'post_type' => 'product',
+    'posts_per_page' => -1,
+    'tax_query' => array(
+      array(
+        'taxonomy' => 'product_cat',
+        'field' => 'term_id',
+        'terms' => $categoryId
+      )
+    )
+  );
+  $products = new WP_Query($args);
+  ob_start();
+  if ($products->have_posts()) {
+    woocommerce_product_loop_start();
+    while ($products->have_posts()) {
+      $products->the_post();
+      wc_get_template_part('content', 'product');
+    }
+    woocommerce_product_loop_end();
+  } else {
+    wc_get_template('loop/no-products-found.php');
+  }
+  $html = ob_get_clean();
+  echo $html;
+  wp_die();
+}
+
+add_filter( 'woocommerce_short_description', 'custom_short_description', 10, 1 );
+function custom_short_description( $post_excerpt ) {
+    global $post;
+    $post_excerpt = $post->post_excerpt;
+    if ( strlen( $post_excerpt ) > 200 ) {
+        $post_excerpt = substr( $post_excerpt, 0, 200 ) . '...';
+    }
+    return $post_excerpt;
+}
+

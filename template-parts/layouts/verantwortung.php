@@ -1,3 +1,29 @@
+<?php
+    $video_url = get_sub_field('video_url');
+    $headline = get_sub_field('headline');
+    $subline = get_sub_field('subline');
+    $headline_text = get_sub_field('headline_text');
+    $headline_button_text = get_sub_field('headline_button_text');
+    $headline_button_url = get_sub_field('headline_button_url');
+    $box_eins_headline = get_sub_field('box_eins_headline');
+    $box_eins_subline = get_sub_field('box_eins_subline');
+    $box_eins_button_text = get_sub_field('box_eins_button_text');
+    $box_eins_button_url = get_sub_field('box_eins_button_url');
+    $box_eins_image = get_sub_field('box_eins_image');
+    $box_eins_siegel = get_sub_field('box_eins_siegel');
+    $box_zwei_headline = get_sub_field('box_zwei_headline');
+    $box_zwei_subline = get_sub_field('box_zwei_subline');
+    $box_zwei_button_text = get_sub_field('box_zwei_button_text');
+    $box_zwei_button_url = get_sub_field('box_zwei_button_url');
+    $box_zwei_image = get_sub_field('box_zwei_image');
+    $box_zwei_siegel = get_sub_field('box_zwei_siegel');
+    $box_drei_headline = get_sub_field('box_drei_headline');
+    $box_drei_subline = get_sub_field('box_drei_subline');
+    $box_drei_button_text = get_sub_field('box_drei_button_text');
+    $box_drei_button_url = get_sub_field('box_drei_button_url');
+    $box_drei_image = get_sub_field('box_drei_image');
+    $box_drei_siegel = get_sub_field('box_drei_siegel');
+?>
 <div class="row row-verantwortung">
 
     <div class="col offset-2">
@@ -5,7 +31,10 @@
         <div class="row">
 
             <div class="col">
-                <img src="/wp-content/uploads/2022/12/bild-unsere-verantwortung.jpg" style="width: 1200px;">
+                <video width="1200px" height="auto" autoplay="" preload="" muted="" loop="" playsinline="">
+                <source src="<?= $video_url; ?>" type="video/mp4">
+                Ihr Browser unterstützt das Video-Tag nicht.
+                </video>
             </div>
 
         </div>
@@ -15,21 +44,19 @@
             <div class="col-7 col-verantwortung bg-white">
 
                 <div class="h2 text-uppercase mb-3">
-                    Unsere Verantwortung
+                    <?= $headline; ?>
                 </div>
 
                 <div class="h4 text-uppercase mb-5">
-                    Social - Ecological - Zero Packaging
+                    <?= $subline; ?>
                 </div>
 
                 <div class="p mb-3">
-                    Kaffee ist unsere Leidenschaft – in all seinen Facetten. Für uns gehört zu einem vollkommenen Genuss, zu einem perfekten Produkt, nicht nur ein unverwechselbares Geschmackserlebnis. Auch der verantwortungsbewusste Umgang mit allen an der Wertschöpfungskette beteiligten Menschen und Ressourcen ist uns wichtig. 
-                    <br><br>Aus diesem Grund liegt uns eine Sache ganz besonders am Herzen: <br><br>
-                    Unser Kaffee ist fair produziert und biologisch in Anbau und Ernte. Das ist keine Selbstverständlichkeit, denn der Kaffeeanbau ist ein hartes Geschäft.
+                    <?= $headline_text; ?>
                 </div>
 
-                <a href="/verantwortung/"><div class="btn btn-primary mt-4">
-                    Weiterlesen
+                <a href="<?= $headline_button_url; ?>"><div class="btn btn-primary mt-4">
+                    <?= $headline_button_text; ?>
                 </div></a>
 
             </div>
@@ -55,11 +82,11 @@
         <div class="row">
 
             <div class="col-4 coffee-balance-bild">
-                <img src="/wp-content/uploads/2022/12/Coffee-balance-Bild-1.png" style="width: 500px;">
+                <img src="<?= wp_get_attachment_image_url($box_eins_image, 'large');?>" style="width: 500px;">
             </div>
 
             <div class="col-2 true-coffee-siegel d-flex align-items-end">
-                <img src="/wp-content/uploads/2022/11/true-coffee-siegel.png" style="width: 450px;">
+                <img src="<?= wp_get_attachment_image_url($box_eins_siegel, 'large');?>" style="width: 450px;">
             </div>
 
         </div>
@@ -72,7 +99,7 @@
                 
                     <div class="col-6 bg-white pb-3 pt-4">
                         <div class="h3 text-uppercase">
-                            Coffee Balance <br> Bio Fairtrade
+                            <?= $box_eins_headline; ?>
                         </div>
 
                     </div>
@@ -84,7 +111,7 @@
                     <div class="col-6 bg-white pb-3">
                     
                         <div class="h4 text-uppercase">
-                            Kategorie: Kaffee
+                            <?= $box_eins_subline; ?>
                         </div>
                     
                     </div>
@@ -95,8 +122,8 @@
                 
                     <div class="col-6 bg-white pb-3 mb-4">
                     
-                        <a href="/shop/"><div class="btn btn-primary">
-                            Jetzt entdecken
+                        <a href="<?= $box_eins_button_url;?>"><div class="btn btn-primary">
+                            <?= $box_eins_button_text; ?>
                         </div></a>
                 
                     </div>
@@ -113,12 +140,12 @@
 
 <div class="row row-verantwortung-kategorie-text-right">
     
-    <div class="col-8 offset-2 col-verantwortung-kategorie-text-right-first">
+    <div class="col-8 offset-1 col-verantwortung-kategorie-text-right-first">
         
         <div class="row">
             
             <div class="col">
-                <img src="/wp-content/uploads/2022/11/true-coffee-siegel.png" style="width: 450px;">
+                <img src="<?= wp_get_attachment_image_url($box_zwei_siegel, 'large');?>" style="width: 450px; position:relative; z-index:4">
             </div>
         
         </div>
@@ -126,17 +153,17 @@
         <div class="row row-verantwortung-kategorie-text-right-zwei">
             
             <div class="col-2 col-verantwortung-kategorie-text-right-img">
-                <img src="/wp-content/uploads/2022/12/Filter-roast-Bilder.jpg" style="width: 500px;">
+                <img src="<?= wp_get_attachment_image_url($box_zwei_image, 'large');?>" style="width: 500px;">
             </div>
             
-            <div class="col-7 col-verantwortung-kategorie-text-right d-flex flex justify-content-center flex-column">
+            <div class="col-8 col-verantwortung-kategorie-text-right d-flex flex justify-content-center flex-column">
                 
                 <div class="row row-verantwortung-kategorie-text-right-drei justify-content-start">
                     
                     <div class="col-12 col-verantwortung-kategorie-text-right-zwei bg-white pt-4 pb-3">
-                        
+
                         <div class="h3 text-uppercase">
-                            Filter Roast <br> Bio Fairtrade
+                            <?= $box_zwei_headline; ?>
                         </div>
                     
                     </div>
@@ -148,7 +175,7 @@
                     <div class="col-9 bg-white pb-3">
                     
                         <div class="h4 text-uppercase">
-                            Kategorie: Filterkaffee
+                            <?= $box_zwei_subline; ?>
                         </div>
                     
                     </div>
@@ -159,8 +186,8 @@
             
                     <div class="col-9 bg-white pb-3 mb-4">
             
-                        <a href="/shop/"><div class="btn btn-primary">
-                            Jetzt entdecken
+                        <a href="<?= $box_zwei_button_url; ?>"><div class="btn btn-primary">
+                            <?= $box_zwei_button_text; ?>
                         </div></a>
             
                     </div>
@@ -196,7 +223,7 @@
                     <div class="col-8 bg-white pt-4 pb-3 mt-5">
 
                         <div class="h3 text-uppercase">
-                            Espresso Intense <br> Bio Fairtrade
+                            <?= $box_drei_headline; ?>
                         </div>
 
                     </div>
@@ -208,8 +235,7 @@
                     <div class="col-8 bg-white pb-3">
 
                         <div class="h4 text-uppercase">
-                            Kategorie: Espresso
-
+                            <?= $box_drei_subline; ?>
                         </div>
 
                     </div>
@@ -220,8 +246,8 @@
 
                     <div class="col-8 bg-white pb-3">
 
-                        <a href="/shop"><div class="btn btn-primary">
-                            Jetzt entdecken
+                        <a href="<?= $box_drei_button_url; ?>"><div class="btn btn-primary">
+                            <?= $box_drei_button_text; ?>
                         </div></a>
 
                     </div>
@@ -235,11 +261,11 @@
         <div class="row">
 
             <div class="col-3">
-                <img src="/wp-content/uploads/2022/12/expresoo-intens-bild-1.png" style="width: 500px;">
+                <img src="<?= wp_get_attachment_image_url($box_drei_image, 'large');?>" style="width: 500px;">
             </div>
 
             <div class="col-2 d-flex align-items-end ms-5">
-                <img src="/wp-content/uploads/2022/11/true-coffee-siegel.png" style="width: 450px;">
+                <img src="<?= wp_get_attachment_image_url($box_drei_siegel, 'large');?>" style="width: 450px;">
             </div>
 
         </div>

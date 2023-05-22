@@ -5,9 +5,9 @@
 
 <div class="row ms-5 me-5 pt-5 pb-5 d-flex justify-content-center">
 
-    <div class="col-10 col-produkte-3-karten pb-5">
+    <div class="col-12 col-produkte-3-karten pb-5 ">
 
-        <div class="row">
+        <div class="row d-flex justify-content-between">
 
         <?php if( have_rows('angebote')):
                 while( have_rows('angebote')): the_row();
@@ -15,9 +15,9 @@
                 $titel = get_sub_field('titel');
                 $beschreibung = get_sub_field('beschreibung');
         ?>
-            <div class="col-4">
+            <div class="col-4 d-flex justify-content-center">
 
-                <div class="card p-4 m-5 border-0 bg-transparent" style="width: 25rem;">
+                <div class="card p-4 border-0 bg-transparent " style="width: 25rem;">
 
                     <img src="<?= wp_get_attachment_image_url($bild, 'large');?>" class="card-img-top" alt="...">
 

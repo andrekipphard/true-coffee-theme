@@ -1,3 +1,11 @@
+<?php
+    $video_url = get_sub_field('video_url');
+    $headline = get_sub_field('headline');
+    $subline = get_sub_field('subline');
+    $headline_text = get_sub_field('headline_text');
+    $headline_button_text = get_sub_field('headline_button_text');
+    $headline_button_url = get_sub_field('headline_button_url');
+?>
 <div class="row row-verantwortung">
 
     <div class="col offset-2">
@@ -5,7 +13,10 @@
         <div class="row">
 
             <div class="col">
-                <img src="/wp-content/uploads/2022/12/bild-unsere-verantwortung.jpg" style="width: 1200px;">
+            <video width="1200px" height="auto" autoplay="" preload="" muted="" loop="" playsinline="">
+                <source src="<?= $video_url; ?>" type="video/mp4">
+                Ihr Browser unterstützt das Video-Tag nicht.
+                </video>
             </div>
 
         </div>
@@ -15,21 +26,20 @@
             <div class="col-7 col-verantwortung-einzeln bg-white">
 
                 <div class="h2 text-uppercase mb-3">
-                    Unsere Verantwortung
+                    <?= $headline; ?>
                 </div>
 
                 <div class="h4 text-uppercase mb-5">
-                    Social - Ecological - Zero Packaging
+                    <?= $subline; ?>
                 </div>
 
                 <div class="p mb-3">
-                    Kaffee ist unsere Leidenschaft – in all seinen Facetten. Für uns gehört zu einem vollkommenen Genuss, zu einem perfekten Produkt, nicht nur ein unverwechselbares Geschmackserlebnis. Auch der verantwortungsbewusste Umgang mit allen an der Wertschöpfungskette beteiligten Menschen und Ressourcen ist uns wichtig. 
-                    <br><br>Aus diesem Grund liegt uns eine Sache ganz besonders am Herzen: <br><br>
-                    Unser Kaffee ist fair produziert und biologisch in Anbau und Ernte. Das ist keine Selbstverständlichkeit, denn der Kaffeeanbau ist ein hartes Geschäft.
+                    <?= $headline_text; ?>
+                    
                 </div>
 
-                <a href="/verantwortung"><div class="btn btn-primary mt-4">
-                    Weiterlesen
+                <a href="<?= $headline_button_url; ?>"><div class="btn btn-primary mt-4">
+                    <?= $headline_button_text; ?>
                 </div></a>
 
             </div>
