@@ -76,3 +76,9 @@ body > div > main > div:nth-child(3) > div.col-6 > div.row.illu-2 > div > div{
     z-index: 2;
     background: linear-gradient( 90deg, #fff 80%, transparent 50%) no-repeat;
 }
+@include media-breakpoint-down(lg){
+    .row-zum-shop{
+        margin-top:0;
+        margin-bottom:0;
+    }
+}

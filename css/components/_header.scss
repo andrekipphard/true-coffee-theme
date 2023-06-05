@@ -30,3 +30,23 @@
 body.scrolled .logo {
     opacity: 0;
   }
+.logo img{
+    width: 5rem;
+}
+.hamburger-btn img{
+    width: 4rem;
+}
+@include media-breakpoint-down(lg){
+    .socials-sticky{
+        top:50vh;
+    }
+    .logo img{
+        width: 3rem;
+    }
+    .hamburger-btn img{
+        width: 2rem;
+    }
+    .hamburger-btn{
+        margin-top:15%;
+    }
+}

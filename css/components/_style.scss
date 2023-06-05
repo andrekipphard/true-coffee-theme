@@ -835,3 +835,10 @@ li.woocommerce-MyAccount-navigation-link.woocommerce-MyAccount-navigation-link.i
     background-color:#000;
     color:#fff;
 }
+
+@include media-breakpoint-down(lg){
+    h1{
+        font-size: 3rem;
+        line-height: 3rem;
+    }
+}

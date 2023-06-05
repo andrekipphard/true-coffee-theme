@@ -37,13 +37,13 @@
 
 	<header class="d-flex align-items-center header pt-3 ps-5 pe-5">
 
-				<div class="d-flex flex-row w-100 pt-5">
+				<div class="d-flex flex-row w-100 pt-lg-5 pt-0">
 
 					<div class="col d-flex justify-content-start">
 						
 						<a href="/" class="d-flex align-items-center text-dark text-decoration-none logo">
 
-							<img src="/wp-content/uploads/2022/11/True-Coffee-Logo.png" style="width: 5rem;">
+							<img src="/wp-content/uploads/2022/11/True-Coffee-Logo.png">
 		
 						</a>
 
@@ -53,7 +53,7 @@
 
 						<button type="button" class="hamburger-btn btn btn-primary bg-transparent border-0 align-self-start offcanvas-toggle" data-bs-toggle="offcanvas" data-bs-target="#offcanvasExample" aria-controls="offcanvasExample">
 							
-							<img src="/wp-content/uploads/2022/11/Menu.png" style="width: 4rem;">
+							<img src="/wp-content/uploads/2022/11/Menu.png">
 							<!-- <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" fill="#000" class="bi bi-justify" viewBox="0 0 16 16">
 			  					
 								<path fill-rule="evenodd" d="M2 12.5a.5.5 0 0 1 .5-.5h11a.5.5 0 0 1 0 1h-11a.5.5 0 0 1-.5-.5zm0-3a.5.5 0 0 1 .5-.5h11a.5.5 0 0 1 0 1h-11a.5.5 0 0 1-.5-.5zm0-3a.5.5 0 0 1 .5-.5h11a.5.5 0 0 1 0 1h-11a.5.5 0 0 1-.5-.5zm0-3a.5.5 0 0 1 .5-.5h11a.5.5 0 0 1 0 1h-11a.5.5 0 0 1-.5-.5z"></path>
