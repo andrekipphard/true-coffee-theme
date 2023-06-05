@@ -38,6 +38,14 @@ body.scrolled .logo {
 }
 @include media-breakpoint-down(lg){
     .socials-sticky{
+        top:30vh;
+    }
+    .hamburger-btn{
+        margin-top:7%;
+    }
+}
+@include media-breakpoint-down(md){
+    .socials-sticky{
         top:50vh;
     }
     .logo img{
@@ -47,6 +55,6 @@ body.scrolled .logo {
         width: 2rem;
     }
     .hamburger-btn{
-        margin-top:15%;
+        margin-top:14%;
     }
 }

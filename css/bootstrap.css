@@ -11013,6 +11013,14 @@ body.scrolled .logo {
 
 @media (max-width: 991.98px) {
   .socials-sticky {
+    top: 30vh;
+  }
+  .hamburger-btn {
+    margin-top: 7%;
+  }
+}
+@media (max-width: 767.98px) {
+  .socials-sticky {
     top: 50vh;
   }
   .logo img {
@@ -11022,7 +11030,7 @@ body.scrolled .logo {
     width: 2rem;
   }
   .hamburger-btn {
-    margin-top: 15%;
+    margin-top: 14%;
   }
 }
 /* *** Hero *** */
@@ -11072,6 +11080,11 @@ body.scrolled .logo {
     order: 2;
   }
   .btn-hero {
+    margin-top: 10%;
+  }
+}
+@media (min-width: 768px) {
+  .hero-col-3 {
     margin-top: 10%;
   }
 }
@@ -11184,10 +11197,29 @@ body > div > main > div:nth-child(3) > div.col-6 > div.row.illu-2 > div > div {
   background: linear-gradient(90deg, #fff 80%, transparent 50%) no-repeat;
 }
 
+.row-zum-shop-btn .btn {
+  border-width: 2px;
+}
+
 @media (max-width: 991.98px) {
   .row-zum-shop {
-    margin-top: 0;
+    margin-top: -20%;
     margin-bottom: 0;
+  }
+  .row-zum-shop img {
+    margin-top: 0;
+  }
+  .row-zum-shop .btn {
+    padding-right: 1.5rem;
+    margin-top: 0;
+  }
+  .row-zum-shop-btn .btn {
+    border: 1px solid black !important;
+  }
+}
+@media (max-width: 767.98px) {
+  .row-zum-shop {
+    margin-top: 0;
   }
 }
 /* *** Schmuck Text *** */

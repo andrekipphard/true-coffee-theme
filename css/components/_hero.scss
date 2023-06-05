@@ -52,6 +52,11 @@ margin-left: 60%;
         margin-top:10%;
     }
 }
+@include media-breakpoint-up(md){
+    .hero-col-3{
+        margin-top: 10%;
+    }
+}
 @include media-breakpoint-up(lg){
     .hero{
         transform:translateY(-10rem);

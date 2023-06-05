@@ -16,15 +16,15 @@
 ?>
 <div class="row row-zum-shop pt-5 pb-5">
 
-    <div class="col-6 ps-0">
-        <img src="<?= wp_get_attachment_image_url($background_image, 'large');?>">
+    <div class="col-7 col-lg-6 ps-0">
+        <img src="<?= wp_get_attachment_image_url($background_image, 'large');?>" class="img-fluid">
     </div>
 
-    <div class="col d-flex justify-content-end">
+    <div class="col-5 col-lg-6 d-flex justify-content-end align-items-start align-items-md-center align-items-lg-start">
 
         <div class="row-zum-shop-btn justify-content-end">
             
-            <a href="/shop/"><button class="btn border-top border-start border-bottom  bg-transparent border-dark border-2 border-end-0 pt-5 pb-5 ps-5 rounded-0 text-black">
+            <a href="/shop/"><button class="btn bg-transparent border-dark border-end-0 pt-lg-5 pb-lg-5 ps-lg-5 rounded-0 text-black">
                 Zum Shop
             </button></a>
 
