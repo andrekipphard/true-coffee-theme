@@ -154,41 +154,5 @@
         </div>
     </div>
 
-    <div class="col col-so-einfach bg-black">
-
-        <div class="row mt-5 mb-5 pb-5 pt-5">
-
-            <div class="col-2">
-                <img src="<?= wp_get_attachment_image_url($illu_eins, 'large');?>">
-            </div>
-
-            <div class="col-8 text-center ps-5 pe-5">
-
-                <div class="h2 text-uppercase text-white">
-                    <?= $headline; ?>
-                </div>
-
-                <div class="h4 text-uppercase text-white mb-5">
-                    <?= $subline; ?>
-                </div>
-
-                <div class="p text-white ps-3 text-start mb-5 ps-5 pe-5 me-3 ms-3">
-                    <?= $headline_text; ?>
-                </div>
-
-                <a href="<?= $headline_button_url; ?>"><div class="btn btn-white mt-3">
-                    <?= $headline_button_text; ?>
-                </div></a>
-
-            </div>
-
-            <div class="col-2 text-end">
-                <img src="<?= wp_get_attachment_image_url($illu_zwei, 'large');?>">
-            </div>
-        
-        </div>
-        
-
-    </div>
 
 </div>
