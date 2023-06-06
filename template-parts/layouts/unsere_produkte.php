@@ -22,15 +22,15 @@
     $headline_white_image = get_sub_field('headline_white_image');
     $headline_black_image = get_sub_field('headline_black_image');
 ?>
-<div class="row row-produkte">
+<div class="row row-produkte mt-5 mt-lg-0">
 
-    <div class="col-4 offset-2 pt-5 pb-5">
+    <div class="col-12 col-lg-4 offset-lg-2 pt-5 pb-5">
 
         <div class="h2 text-uppercase">
             <?= $headline; ?>
         </div>
 
-        <div class="h4 text-uppercase mb-5">
+        <div class="h4 text-uppercase mb-3 mb-lg-5">
             <?= $subline; ?>
         </div>
 
@@ -44,7 +44,7 @@
 
     </div>
 
-    <div class="col-5">
+    <div class="col-12 col-lg-5">
         
     </div>
 
@@ -57,24 +57,25 @@
     </div>
 
     <div class="col-5 produkte-img">
-        <img src="<?= wp_get_attachment_image_url($deco_image, 'large');?>">
+        <img src="<?= wp_get_attachment_image_url($deco_image, 'large');?>" class="desktop-hide img-fluid">
+        <img src="<?= wp_get_attachment_image_url($deco_image, 'large');?>" class="mobile-hide">
     </div>
 
 </div>
 
 <div class="row pt-5">
 
-    <div class="col-7 produkte-bild-bg" style="background-image:url('<?= wp_get_attachment_image_url($headline_black_image, 'large');?>');">
+    <div class="col-12 col-lg-7 produkte-bild-bg" style="background-image:url('<?= wp_get_attachment_image_url($headline_black_image, 'large');?>');">
 
     </div>
 
-    <div class="col-6 produkte-black-bg bg-black">
+    <div class="col-11 col-lg-6 produkte-black-bg bg-black">
 
         <div class="h3 text-uppercase text-white">
             <?= $headline_white; ?>
         </div>
 
-        <div class="h4 text-uppercase text-white mb-5">
+        <div class="h4 text-uppercase text-white mb-3 mb-lg-5">
             <?= $subline_white; ?>
         </div>
 
@@ -90,15 +91,15 @@
 
 </div>
 
-<div class="row">
+<div class="row mt-5 mt-lg-0">
 
-    <div class="col-7 produkte-white-bg bg-white text-end">
+    <div class="col-11 col-lg-7 produkte-white-bg bg-white text-lg-end">
 
         <div class="h3 text-uppercase">
             <?= $headline_black; ?>
         </div>
 
-        <div class="h4 text-uppercase mb-5">
+        <div class="h4 text-uppercase mb-3 mb-lg-5">
             <?= $subline_black; ?>
         </div>
 
@@ -112,13 +113,13 @@
 
     </div>
 
-    <div class="col-6 produkte-bild-bg-2" style="background-image:url('<?= wp_get_attachment_image_url($headline_black_image, 'large');?>');">
+    <div class="col-12 col-lg-6 produkte-bild-bg-2" style="background-image:url('<?= wp_get_attachment_image_url($headline_black_image, 'large');?>');">
 
     </div>
 
 </div>
 
-<div class="row row-punkte-linie">
+<div class="row row-punkte-linie mobile-hide">
     
     <div class="col-5 text-center">
         <img src="<?= wp_get_attachment_image_url($deco_image_zwei, 'large');?>">
@@ -169,6 +170,39 @@
             </div>
 
          </div>
+
+    </div>
+
+</div>
+<div class="row desktop-hide mt-3">
+    <div class="accordion accordion-flush" id="accordionFlushExample">
+        <?php $index=1;?>
+        <?php while(have_rows('produkte')): the_row();
+                $card_image = get_sub_field('card_image');
+                $card_headline = get_sub_field('card_headline');
+                $card_text = get_sub_field('card_text');
+            ?>
+            <div class="accordion-item">
+                <h2 class="accordion-header">
+                <button class="accordion-button collapsed subline border-bottom border-dark" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapse<?=$index;?>" aria-expanded="false" aria-controls="flush-collapse<?=$index;?>">
+                    <span class="h4 mt-3 text-uppercase">- <?= $card_headline; ?> -</span>
+                </button>
+                </h2>
+                <div id="flush-collapse<?=$index;?>" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
+                    <div class="accordion-body"><?= $card_text; ?></div>
+                </div>
+            </div>
+            <?php $index++;?>
+        <?php endwhile;?>
+    </div>
+</div>
+<div class="row desktop-hide mt-4">
+
+    <div class="col-12 text-center">
+
+        <a href="<?= $produkte_button_url; ?>"><div class="btn btn-primary">
+            <?= $produkte_button_text; ?>
+            </div></a>
 
     </div>
 

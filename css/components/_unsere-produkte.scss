@@ -79,3 +79,61 @@
 .card-title{
     font-family: "Bebas Neue";
 }
+.accordion-button:not(.collapsed){
+    color:black;
+    background-color: #EDEDED;
+    box-shadow: 0;
+}
+.accordion-button:focus{
+    border-color:transparent;
+    box-shadow: none;
+}
+.accordion-item{
+    border:0;
+}
+.accordion-body{
+    background-color:#EDEDED;
+}
+.accordion-button:not(.collapsed)::after{
+    background-image:var(--bs-accordion-btn-icon);
+}
+@include media-breakpoint-down(lg){
+    .row-produkte{
+        background-color:#EDEDED;
+        margin-top:0;
+        padding-top:0;
+        margin-right:10px;
+        margin-left:10px;
+        .col-12{
+            padding-right:40px;
+            padding-left:40px;
+        }
+    }
+    .produkte-img{
+        margin-top:-8rem
+    }
+    .produkte-black-bg{
+        margin-left:1rem;
+        margin-top:-10rem;
+        padding:3rem;
+    }
+    .produkte-bild-bg{
+        height: 400px;
+    }
+    .produkte-white-bg{
+        order:2;
+        margin-left:0;
+        margin-top:-10rem;
+        margin-left:1rem;
+        padding:3rem;
+        margin-bottom:1rem;
+    }
+    .produkte-bild-bg-2{
+        order:1;
+        height: 400px;
+        margin-left:0;
+    }
+    .row-produkte-3-karten{
+        display:none!important;
+    }
+}
