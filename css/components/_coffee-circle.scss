@@ -82,7 +82,7 @@ body > div > main > div:nth-child(3) > div.col-6 > div.row.illu-2 > div > div{
 @include media-breakpoint-down(lg){
     .row-zum-shop{
         margin-top:-20%;
-        margin-bottom:0;
+        margin-bottom:-30%;
         img{
             margin-top:0;
         }
@@ -93,6 +93,25 @@ body > div > main > div:nth-child(3) > div.col-6 > div.row.illu-2 > div > div{
     }
     .row-zum-shop-btn .btn{
         border:1px solid black!important
+    }
+    .coffe-circle-headline{
+        margin-left:0;
+        margin-right:0;
+    }
+    .coffe-circle-headline-col{
+        margin-top:0;
+    }
+    .text-in-square.p{
+        font-size: 1rem;
+    }
+    .text-in-square{
+        width: auto;
+    }
+    .privat-buero-row{
+        margin-top:0;
+    }
+    .privat-buero-row.desktop-hide{
+        display:flex;
     }
 }
 @include media-breakpoint-down(md){

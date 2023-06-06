@@ -835,10 +835,26 @@ li.woocommerce-MyAccount-navigation-link.woocommerce-MyAccount-navigation-link.i
     background-color:#000;
     color:#fff;
 }
-
+.desktop-hide{
+    display:none;
+}
 @include media-breakpoint-down(lg){
+    .mobile-hide{
+        display:none;
+    }
+    .desktop-hide{
+        display:block;
+    }
     h1{
         font-size: 3rem;
         line-height: 3rem;
+    }
+    h2{
+        font-size:2.75rem;
+        line-height: 2.75rem;
+    }
+    h3{
+        font-size:2.5rem;
+        line-height: 2.75rem;
     }
 }
