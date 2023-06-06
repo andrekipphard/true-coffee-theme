@@ -26,12 +26,16 @@
 ?>
 <div class="row row-verantwortung">
 
-    <div class="col offset-2">
+    <div class="col offset-lg-2">
 
         <div class="row">
 
             <div class="col">
-                <video width="1200px" height="auto" autoplay="" preload="" muted="" loop="" playsinline="">
+                <video class="mobile-hide" width="1200px" height="auto" autoplay="" preload="" muted="" loop="" playsinline="">
+                <source src="<?= $video_url; ?>" type="video/mp4">
+                Ihr Browser unterstützt das Video-Tag nicht.
+                </video>
+                <video class="desktop-hide" width="100%" height="auto" autoplay="" preload="" muted="" loop="" playsinline="">
                 <source src="<?= $video_url; ?>" type="video/mp4">
                 Ihr Browser unterstützt das Video-Tag nicht.
                 </video>
@@ -41,7 +45,7 @@
 
         <div class="row">
 
-            <div class="col-7 col-verantwortung bg-white">
+            <div class="col-11 col-lg-7 col-verantwortung bg-white">
 
                 <div class="h2 text-uppercase mb-3">
                     <?= $headline; ?>
@@ -73,31 +77,33 @@
 
 <div class="row row-verantwortung-eins">
 
-    <div class="col-6">
+    <div class="col-2 col-lg-6">
 
     </div>
 
-    <div class="col-6 col-verantwortung-eins">
+    <div class="col-10 col-lg-6 col-verantwortung-eins">
 
-        <div class="row">
+        <div class="row mb-5 mb-lg-0">
 
-            <div class="col-4 coffee-balance-bild">
-                <img src="<?= wp_get_attachment_image_url($box_eins_image, 'large');?>" style="width: 500px;">
+            <div class="col-8 coffee-balance-bild">
+                <img src="<?= wp_get_attachment_image_url($box_eins_image, 'large');?>" class="img-fluid desktop-hide">
+                <img src="<?= wp_get_attachment_image_url($box_eins_image, 'large');?>" style="width: 500px;" class="mobile-hide">
             </div>
 
-            <div class="col-2 true-coffee-siegel d-flex align-items-end">
-                <img src="<?= wp_get_attachment_image_url($box_eins_siegel, 'large');?>" style="width: 450px;">
+            <div class="col-4 true-coffee-siegel d-flex align-items-end">
+                <img src="<?= wp_get_attachment_image_url($box_eins_siegel, 'large');?>" style="margin-left:-90px; width: 200px; height: auto;" class="desktop-hide">
+                <img src="<?= wp_get_attachment_image_url($box_eins_siegel, 'large');?>" class="mobile-hide" style="width: 450px; margin-left:-19rem;">
             </div>
 
         </div>
 
         <div class="row row-verantwortung-eins-eins">
             
-            <div class="col col-verantwortung-kategorie d-flex flex justify-content-end flex-column">
+            <div class="col-10 col-lg-12 col-verantwortung-kategorie d-flex flex justify-content-end flex-column">
             
                 <div class="row">
                 
-                    <div class="col-6 bg-white pb-3 pt-4">
+                    <div class="col-10 col-lg-6 bg-white pb-3 pt-4">
                         <div class="h3 text-uppercase">
                             <?= $box_eins_headline; ?>
                         </div>
@@ -108,7 +114,7 @@
 
                 <div class="row">
                     
-                    <div class="col-6 bg-white pb-3">
+                    <div class="col-10 col-lg-6 bg-white pb-3">
                     
                         <div class="h4 text-uppercase">
                             <?= $box_eins_subline; ?>
@@ -120,7 +126,7 @@
                 
                 <div class="row row-verantwortung-eins-btn">
                 
-                    <div class="col-6 bg-white pb-3 mb-4">
+                    <div class="col-10 col-lg-6 bg-white pb-3 mb-4">
                     
                         <a href="<?= $box_eins_button_url;?>"><div class="btn btn-primary">
                             <?= $box_eins_button_text; ?>
@@ -138,7 +144,7 @@
 
 </div>
 
-<div class="row row-verantwortung-kategorie-text-right">
+<div class="row row-verantwortung-kategorie-text-right mobile-hide">
     
     <div class="col-8 offset-1 col-verantwortung-kategorie-text-right-first">
         
@@ -206,7 +212,7 @@
 
 </div>
 
-<div class="row row-verantwortung-text-top mt-5 pt-5">
+<div class="row row-verantwortung-text-top mt-5 pt-5 mobile-hide">
 
     <div class="col-7">
 

@@ -74,3 +74,19 @@
 .row-verantwortung-eins, .col-verantwortung-eins, .row-verantwortung-eins-eins, .col-verantwortung-kategorie, .row-verantwortung-eins-btn{
     z-index:3;
 }
+@include media-breakpoint-down(lg){
+    .row-verantwortung{
+        margin-top:-10rem;
+    }
+    .col-verantwortung{
+        margin-top:-3rem;
+        padding:3rem;
+    }
+    .col-verantwortung-kategorie{
+        height: 265px;
+        margin-left:2rem;
+    }
+    .row-verantwortung-kategorie-text-right{
+        margin-top:0;
+    }
+}

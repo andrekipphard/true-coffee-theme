@@ -10,3 +10,9 @@
     background-repeat:no-repeat;
     z-index:-2;
 }
+@include media-breakpoint-down(lg){
+    .row-schmuck-text{
+        margin-top: -10rem;
+        height: 400px;
+    }
+}

@@ -11255,6 +11255,12 @@ body > div > main > div:nth-child(3) > div.col-6 > div.row.illu-2 > div > div {
   z-index: -2;
 }
 
+@media (max-width: 991.98px) {
+  .row-schmuck-text {
+    margin-top: -10rem;
+    height: 400px;
+  }
+}
 /* *** Verantwortung einzeln *** */
 .col-verantwortung-einzeln {
   margin-top: -10rem;
@@ -11337,6 +11343,22 @@ body > div > main > div:nth-child(3) > div.col-6 > div.row.illu-2 > div > div {
   z-index: 3;
 }
 
+@media (max-width: 991.98px) {
+  .row-verantwortung {
+    margin-top: -10rem;
+  }
+  .col-verantwortung {
+    margin-top: -3rem;
+    padding: 3rem;
+  }
+  .col-verantwortung-kategorie {
+    height: 265px;
+    margin-left: 2rem;
+  }
+  .row-verantwortung-kategorie-text-right {
+    margin-top: 0;
+  }
+}
 /* *** Unsere Produkte einzeln *** */
 .row-produkte-einzeln {
   background-image: url("/wp-content/uploads/2022/11/hintergrundfarbflache-grau-unsere-produkte-3-e1668420059260.png");
@@ -12451,6 +12473,13 @@ li.woocommerce-MyAccount-navigation-link.woocommerce-MyAccount-navigation-link.i
   h3, .h3 {
     font-size: 2.5rem;
     line-height: 2.75rem;
+  }
+  .col-verantwortung-kategorie h3, .col-verantwortung-kategorie .h3 {
+    font-size: 1.5rem;
+    line-height: 1.5rem;
+  }
+  .col-verantwortung-kategorie h4, .col-verantwortung-kategorie .h4 {
+    letter-spacing: 0.1rem;
   }
 }
 /* *** Hero *** */

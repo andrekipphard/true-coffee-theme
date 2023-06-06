@@ -139,7 +139,7 @@
     </div>
 
 </div>
-<div class="row pb-5 privat-buero-row desktop-hide">
+<div class="row pb-5 mt-5 privat-buero-row desktop-hide">
     
     <div class="col-2 text-end">
         <img src="/wp-content/uploads/2022/11/Pfeil-2-e1668095203826.png" style="width:100px; height: auto; margin-left: -35px; margin-bottom: -40px;">
