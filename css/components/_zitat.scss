@@ -3,3 +3,12 @@
     padding-top:10rem;
     padding-bottom: 10rem;
 }
+@include media-breakpoint-down(lg){
+    .row-zitat img{
+        width: 50px;
+    }
+    h2{
+        font-size: 2rem!important;
+        line-height: 2rem!important;
+    }
+}

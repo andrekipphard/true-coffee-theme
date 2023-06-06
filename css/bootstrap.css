@@ -11512,6 +11512,15 @@ body > div > main > div:nth-child(3) > div.col-6 > div.row.illu-2 > div > div {
   padding-bottom: 10rem;
 }
 
+@media (max-width: 991.98px) {
+  .row-zitat img {
+    width: 50px;
+  }
+  h2, .h2 {
+    font-size: 2rem !important;
+    line-height: 2rem !important;
+  }
+}
 /* *** So einfach ** */
 .row-so-einfach {
   background-image: url("/wp-content/uploads/2022/11/Hintergrund-Dekotext-1.png");
@@ -11536,6 +11545,16 @@ body > div > main > div:nth-child(3) > div.col-6 > div.row.illu-2 > div > div {
   background-position: center center;
 }
 
+@media (max-width: 991.98px) {
+  .row-so-einfach {
+    background-size: 20rem;
+  }
+  .col-so-einfach {
+    margin-top: 7rem;
+    margin-left: 0;
+    margin-right: 0;
+  }
+}
 /* *** Testimonials ** */
 .row-testimonials {
   /*background-image: url('/wp-content/uploads/2022/11/Hintergrundtext-1.png');

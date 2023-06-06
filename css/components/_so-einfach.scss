@@ -19,3 +19,13 @@
     background-repeat: no-repeat;
     background-position: center center;
 }
+@include media-breakpoint-down(lg){
+    .row-so-einfach{
+        background-size:20rem;
+    }
+    .col-so-einfach{
+        margin-top:7rem;
+        margin-left:0;
+        margin-right:0;
+    }
+}

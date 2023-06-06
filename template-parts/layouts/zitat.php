@@ -7,7 +7,7 @@
     </div>
 
     <div class="col-8">
-        <div class="h2 text-uppercase mt-5 mb-5 pb-5 pt-5">
+        <div class="h2 text-uppercase mt-0 mb-0 my-lg-5 pb-5 pt-5">
             <?= $zitat; ?>
         </div>
     </div>
