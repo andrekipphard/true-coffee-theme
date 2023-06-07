@@ -1,5 +1,33 @@
 @import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css");
-
+@each $breakpoint in map-keys($grid-breakpoints) {
+    @include media-breakpoint-up($breakpoint) {
+      $infix: breakpoint-infix($breakpoint, $grid-breakpoints);
+  
+      .border#{$infix}-top {      border-top: $border-width solid $border-color !important; }
+      .border#{$infix}-right {    border-right: $border-width solid $border-color !important; }
+      .border#{$infix}-end {    border-right: $border-width solid $border-color !important; }
+      .border#{$infix}-bottom {   border-bottom: $border-width solid $border-color !important; }
+      .border#{$infix}-left {     border-left: $border-width solid $border-color !important; }
+      .border#{$infix}-start {     border-left: $border-width solid $border-color !important; }
+  
+      .border#{$infix}-top-0 {    border-top: 0 !important; }
+      .border#{$infix}-right-0 {  border-right: 0 !important; }
+      .border#{$infix}-end-0 {  border-right: 0 !important; }
+      .border#{$infix}-bottom-0 { border-bottom: 0 !important; }
+      .border#{$infix}-left-0 {   border-left: 0 !important; }
+      .border#{$infix}-start-0 {   border-left: 0 !important; }
+  
+      .border#{$infix}-x {
+        border-left: $border-width solid $border-color !important;
+        border-right: $border-width solid $border-color !important;
+      }
+  
+      .border#{$infix}-y {
+        border-top: $border-width solid $border-color !important;
+        border-bottom: $border-width solid $border-color !important;
+      }
+    }
+}
 :root{
     --bs-link-color:#000;
     --bs-body-font-family: 'roboto condensed';
@@ -8,6 +36,9 @@
     --bs-btn-disabled-bg:rgb(187, 187, 187);
     --bs-btn-disabled-border-color: rgb(187, 187, 187);
     --bs-accordion-active-color: black!important;
+}
+.border-dark{
+    border-color:black!important;
 }
 .accordion{
     --bs-accordion-active-color: black!important;
@@ -425,7 +456,9 @@ a.added_to_cart.wc-forward {
 
 .single-product .single-hero{
     height: auto;
+    margin-top:0rem;
 }
+
 .woocommerce div.product p.price, .woocommerce div.product span.price{
     font-size: 16px;
     color:#000;
@@ -842,6 +875,9 @@ li.woocommerce-MyAccount-navigation-link.woocommerce-MyAccount-navigation-link.i
 .desktop-hide{
     display:none;
 }
+.single-product .single-hero{
+    margin-top:-10rem;
+}
 @include media-breakpoint-down(lg){
     .mobile-hide{
         display:none;
@@ -878,5 +914,60 @@ li.woocommerce-MyAccount-navigation-link.woocommerce-MyAccount-navigation-link.i
     } 
     html{
         overflow-x: hidden;
+    }
+    .woocommerce div.product form.cart .variations select{
+        min-width: 100%;
+        max-width: 100%;
+    }
+    .woocommerce .quantity .qty{
+        width:3rem;
+    }
+    .woocommerce div.product form.cart .button{
+        padding-left:10px;
+        padding-right:10px;
+        margin-left:10px;
+    }
+    .nav-tabs .nav-item .nav-link{
+        font-size:30px;
+    }
+    .nav-tabs{
+        display:flex;
+        justify-content:center;
+    }
+    .versprechen{
+        font-size: 30px;
+        line-height: 40px;
+    }
+    .product-illustration{
+        width:250px;
+    }
+    .hilf-mit{
+        font-size:30px;
+        line-height: 40px;
+    }
+    .product .single-hero-col{
+        margin-top:-10rem;
+    }
+    .single-product .single-hero{
+        margin-top:10rem;
+    }
+    .related-products{
+        margin-bottom:0;
+    }
+    .product-background-image{
+        background-size:contain!important;
+        background-position: bottom!important;
+        margin-bottom:7rem;
+    }
+    .abschnitt-hilf-mit{
+        margin-bottom:0;
+        margin-left:2rem;
+    }
+    .woocommerce ul.products[class*=columns-] li.product:nth-child(2n), .woocommerce-page ul.products[class*=columns-] li.product:nth-child(2n){
+        margin:0 auto!important;
+        float:none!important;
+    }
+    .single-product .single-hero-text{
+        margin-left:1rem;
     }
 }

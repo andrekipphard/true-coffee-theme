@@ -23,8 +23,9 @@
 
 @include media-breakpoint-down(lg){
     .single-hero{
-        margin-top:3rem;
+        margin-top:-7rem;
         margin-bottom:0;
+        transform:none;
     }
     .single-hero-col{
         margin-top:-30rem;

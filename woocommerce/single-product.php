@@ -45,13 +45,13 @@ get_template_part('template-parts/layouts/sticky-socials');
 <div id="product-<?php the_ID(); ?>" <?php wc_product_class( '', $product ); ?>>
 	<div class="row single-hero">
 			
-		<div class="col-1">
+		<div class="col-1 col-lg-1">
 
 		</div>
 
-		<div class="col-5 single-hero-text">
+		<div class="col-10 col-lg-5 single-hero-text">
 			
-			<div class="text-end pt-5 mt-5">
+			<div class="text-end pt-5 mt-5 mobile-hide">
 				<img src="/wp-content/uploads/2022/11/Herobild-produkt.png">
 			</div>
 			
@@ -59,7 +59,7 @@ get_template_part('template-parts/layouts/sticky-socials');
 				<div class="col single-hero-col bg-white p-5" style="--bs-bg-opacity:1;">
 				<?php
 
-woocommerce_output_all_notices();	?>
+				woocommerce_output_all_notices();	?>
 					<div class="h1 text-uppercase mb-3">
 					<?php the_title( '<h1 class="product_title entry-title">', '</h1>' );?>
 					</div>
@@ -110,12 +110,12 @@ woocommerce_output_all_notices();	?>
 		
 		</div>
 
-		<div class="col-6 d-flex align-items-end justify-content-end single-hero-col-3" style="background-image:url('<?php
-$product = wc_get_product();
-$image_html = $product->get_image();
-preg_match('/<img.+src=[\'"](?P<src>.+?)[\'"].*>/i', $image_html, $matches);
-echo isset($matches['src']) ? $matches['src'] : '';
-?>');">
+		<div class="col-12 col-lg-6 d-flex align-items-end justify-content-end single-hero-col-3" style="background-image:url('<?php
+			$product = wc_get_product();
+			$image_html = $product->get_image();
+			preg_match('/<img.+src=[\'"](?P<src>.+?)[\'"].*>/i', $image_html, $matches);
+			echo isset($matches['src']) ? $matches['src'] : '';
+			?>');">
 
 
 			<div class="row me-5 mb-5">
@@ -140,22 +140,22 @@ echo isset($matches['src']) ? $matches['src'] : '';
 		</div>
 
 	</div>
-	<div class="row ms-5 me-5">
+	<div class="row ms-lg-5 me-lg-5">
 		<div class="col ps-0 pe-0">
-			<ul class="nav nav-tabs ms-5" id="myTab" role="tablist">
-				<li class="nav-item ms-5 rounded-0" role="presentation">
+			<ul class="nav nav-tabs ms-lg-5" id="myTab" role="tablist">
+				<li class="nav-item ms-lg-5 rounded-0" role="presentation">
 					<button class="nav-link active bg-black text-white ps-5 pe-5 rounded-0 border-0" id="produkt-details" data-bs-toggle="tab" data-bs-target="#produkt-details-pane" type="button" role="tab" aria-controls="produkt-details-tab-pane" aria-selected="true">Produkt-Details</button>
 				</li>
 			</ul>
 			<div class="tab-content pt-5 pb-5 bg-black text-white" id="myTabContent">
-				<div class="tab-pane ms-5 mt-5 ps-4 fade show active" id="produkt-details-tab-pane" role="tabpanel" aria-labelledby="produkt-details" tabindex="0">
-					<div class="row mb-5 pe-5">
+				<div class="tab-pane ms-lg-5 mt-lg-5 ps-4 fade show active" id="produkt-details-tab-pane" role="tabpanel" aria-labelledby="produkt-details" tabindex="0">
+					<div class="row mb-5 pe-lg-5">
 						<div class="col ps-5 pe-5">
 						<?php echo $excerpt;?>
 						</div>
 					</div>
-					<div class="row pt-5">
-						<div class="col-4 ps-5 pe-5 border-end border-light">
+					<div class="row pt-lg-5">
+						<div class="col-12 col-lg-4 ps-5 pe-5 pb-5 pb-lg-0 border-end border-bottom border-lg-bottom-0 border-light">
 							<div class="p h4 text-white mb-4">
 								Geschmackprofil
 							</div>
@@ -163,7 +163,7 @@ echo isset($matches['src']) ? $matches['src'] : '';
 								<?= $geschmackprofil; ?>
 							</div>
 						</div>
-						<div class="col-4 ps-5 pe-5 border-end border-light">
+						<div class="col-12 col-lg-4 ps-5 pe-5 border-end border-bottom border-lg-bottom-0 pt-5 pt-lg-0 pb-5 pb-lg-0 border-light">
 							<div class="p h4 text-white mb-4">
 								Ursprung
 							</div>
@@ -171,7 +171,7 @@ echo isset($matches['src']) ? $matches['src'] : '';
 								<?= $ursprung; ?>
 							</div>
 						</div>
-						<div class="col-4 ps-5 pe-5">
+						<div class="col-12 col-lg-4 ps-5 pe-5 pt-5 pt-lg-0">
 							<div class="p h4 text-white mb-4">
 								Geeignet für
 							</div>
@@ -184,10 +184,10 @@ echo isset($matches['src']) ? $matches['src'] : '';
 			</div>
 		</div>
 	</div>
-	<div class="row ms-5 me-5 p-5 bg-black">
-		<div class="col-8 p-5 mb-5">
+	<div class="row ms-lg-5 me-lg-5 p-lg-5 p-2 bg-black">
+		<div class="col-12 col-lg-8 p-5 mb-5">
 			<div class="versprechen text-white mb-3">
-				Unser Qualitäts- und Nachhaltigkeitsversprechen
+				Unser Qualitäts- und Nachhaltigkeits&shy;versprechen
 			</div>
 			<div class="p text-white">
 				Angebaut in Mischkulturen inmitten des Regenwaldes, werden unsere Kaffees mit der Hand gepflückt. So garantieren wir die perfekte Bohnenauslese und vermeiden den sonst üblichen Einsatz von schweren Erntemaschinen, für die Jahr für Jahr gewaltige Flächen Regenwald gerodet werden. 
@@ -201,11 +201,11 @@ echo isset($matches['src']) ? $matches['src'] : '';
 				Unsere Produkte sind der Umwelt und Gesundheit zuliebe aluminiumfrei verpackt.
 			</div>
 		</div>
-		<div class="col-4 d-flex align-items-center justify-content-center">
-			<img src="/wp-content/uploads/2022/11/Produktdetails-Illustration.png">
+		<div class="col-12 col-lg-4 d-flex align-items-center justify-content-end justify-content-lg-center">
+			<img src="/wp-content/uploads/2022/11/Produktdetails-Illustration.png" class="product-illustration">
 		</div>
 	</div>
-	<div class="row related-products text-center mt-5 ms-5 me-5 pt-5 pb-5">
+	<div class="row related-products text-center mt-lg-5 ms-lg-5 me-lg-5 pt-lg-5 pb-5">
 		<div class="h3 mt-5 pt-5 mb-5">
 			Das könnte dir auch schmecken
 		</div>
@@ -222,11 +222,11 @@ echo isset($matches['src']) ? $matches['src'] : '';
 
 	</div>
 
-	<div class="row ms-5 me-5 mt-5" style="background-image:url('/wp-content/uploads/2022/12/Hintergrundbild-für-Titel.jpg'); background-size:70rem; background-position:top right; background-repeat:no-repeat;">
+	<div class="row ms-lg-5 me-lg-5 mt-lg-5 product-background-image" style="background-image:url('/wp-content/uploads/2022/12/Hintergrundbild-für-Titel.jpg'); background-size:70rem; background-position:top right; background-repeat:no-repeat;">
 
-		<div class="col-7 abschnitt-hilf-mit">
+		<div class="col-10 col-lg-7 abschnitt-hilf-mit">
 			
-			<div class="row ms-5">
+			<div class="row ms-lg-5">
 				<div class="col single-hero-col bg-white p-5" style="--bs-bg-opacity:1;">
 					<div class="hilf-mit text-uppercase mb-3">
 						Du hilfst dabei, die Welt zu einem besseren ort zu machen!
@@ -235,7 +235,7 @@ echo isset($matches['src']) ? $matches['src'] : '';
 					<div class="h4">
 						Social - Ecological - Zero Packaging
 					</div>
-					<a href="/verantwortung/"><div class="btn btn-primary mt-5">
+					<a href="/verantwortung/"><div class="btn btn-primary mt-3 mt-lg-5">
                         Mehr erfahren
                     </div></a>
 				</div>
