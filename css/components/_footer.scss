@@ -34,4 +34,36 @@
 .footer-col-arrow-to-top{
     margin-bottom: -5rem;
 }
-
+@include media-breakpoint-down(lg){
+    .btn-no-border{
+        padding-left:0!important;
+        padding-right:0!important;
+        letter-spacing:.1rem!important;
+        font-size: 1rem!important;
+    }
+    .contact-arrow{
+        margin-left:-77rem;
+    }
+    .footer-siegel{
+        width:100%!important;
+    }
+    .row-footer-siegel{
+        margin-top:-6rem;
+        margin-bottom:-1rem!important;
+    }
+    .footer-socials{
+        order:5;
+        ul{
+            display:block;
+            .list-group-item{
+                display:inline;
+            }
+        }
+    }
+    .footer-logo{
+        width:50px!important;
+    }
+    .btn-to-top{
+        margin-right:-25px;
+    }
+}

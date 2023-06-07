@@ -11,12 +11,12 @@
 
 ?>
 
-	<footer id="colophon" class="site-footer pt-5 my-5 text-muted">
+	<footer id="colophon" class="site-footer pt-lg-5 my-lg-5 text-muted">
 		<div class="site-info">
 			<!-- *** Connect *** -->
-			<div class="row connect mt-5 pt-5">
+			<div class="row connect mt-lg-5 pt-lg-5">
 
-				<div class="col">
+				<div class="col-12">
 
 					<div class="h2 text-uppercase text-center">
 						We'd love to connect
@@ -26,13 +26,14 @@
 
 			</div>
 
-			<div class="row pb-5 mb-5">
+			<div class="row pb-lg-5 mb-lg-5">
 
-				<div class="col-9 d-flex">
-					<img src="/wp-content/uploads/2022/11/Kontaktanfrage-1.png" class="img-fluid">
+				<div class="col-6 col-lg-9 d-flex">
+					<img src="/wp-content/uploads/2022/11/Kontaktanfrage-1.png" class="img-fluid mobile-hide">
+					<img src="/wp-content/uploads/2022/11/Kontaktanfrage-1.png" class="desktop-hide contact-arrow">
 				</div>
 
-				<div class="col-3">
+				<div class="col-6 col-lg-3">
 
 					<a href="/kontakt/"><div class="btn btn-no-border">
 						Kontaktanfrage schicken
@@ -42,7 +43,7 @@
 
 			</div>
 			<!-- *** Partner *** -->
-			<div class="row mt-5 pt-5 pb-5 mb-5">
+			<div class="row mt-lg-5 pt-5 pb-5 mb-lg-5">
 
 				<div class="col border-end border-dark text-center">
 					<img src="/wp-content/uploads/2022/11/Partner-logos.png" class="img-fluid">
@@ -81,7 +82,7 @@
 				</div>
 
 				<div class="col-7">
-					<img src="/wp-content/uploads/2023/03/siegel-true-coffee-kon-04.png" style="width:50rem;" class="image-fluid">
+					<img src="/wp-content/uploads/2023/03/siegel-true-coffee-kon-04.png" style="width:50rem;" class="image-fluid footer-siegel">
 				</div>
 
 			</div>
@@ -89,17 +90,17 @@
 			<!-- *** Footer *** -->
 			<div class="row">
 
-				<div class="col-2 d-flex justify-content-end align-self-center">
+				<div class="col-3 col-lg-2 d-flex justify-content-center justify-content-lg-end align-self-center">
 				
 					<a href="/" class="d-flex align-items-center text-dark text-decoration-none">
 
-						<img src="/wp-content/uploads/2022/11/True-Coffee-Logo.png" style="width: 5rem;">
+						<img src="/wp-content/uploads/2022/11/True-Coffee-Logo.png" style="width: 5rem;" class="footer-logo">
 
 					
 					</a>
 				</div>
 
-				<div class="col-4 d-flex justify-content-center align-self-center">
+				<div class="col-5 col-lg-4 d-flex justify-content-center align-self-center">
 					<nav class="navbar-footer">
 							<div class="navbar-nav">
 								<?php
@@ -115,7 +116,7 @@
 
 				</div>
 
-				<div class="col-2 d-flex justify-content-start align-self-center">
+				<div class="col-12 col-lg-2 footer-socials d-flex justify-content-start align-self-center">
 
 					<ul class="list-group pt-5 pb-5 pe-2">
 						<li class="list-group-item bg-transparent border-0 text-dark mb-3"><a href="#"><i class="bi bi-facebook"></i></a></li>
@@ -125,18 +126,24 @@
 
 				</div>
 
-				<div class="col-2 d-flex align-self-center justify-content-end">
+				<div class="col-2 col-lg-2 d-flex align-self-start align-self-lg-center justify-content-end">
 
-					<a href="#top"><div class="btn btn-no-border">
+					<a href="#top"><div class="btn btn-no-border btn-to-top">
 						Nach oben
 					</div></a>
 
 				</div>
 
-				<div class="col-2 footer-col-arrow-to-top d-flex justify-content-start align-self-end">
+				<div class="col-2 col-lg-2 footer-col-arrow-to-top d-flex justify-content-start align-self-end">
 					<a href="#top"><img src="/wp-content/uploads/2022/11/Pfeil-nach-oben-e1668433287503.png">
 				</div></a>
 
+			</div>
+			<div class="row text-center pb-5 pt-lg-5">
+				<div class="col-12">
+					<div class="h4 text-uppercase">Copyright 2023 by True Coffee</div>
+				</div>
+				
 			</div>
 		</div><!-- .site-info -->
 	</footer><!-- #colophon -->

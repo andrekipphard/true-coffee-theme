@@ -11032,6 +11032,23 @@ body.scrolled .logo {
   .hamburger-btn {
     margin-top: 14%;
   }
+  .offcanvas .menu-item > a {
+    padding: 0;
+    font-size: 1.5rem;
+    line-height: 2rem;
+    letter-spacing: 0.1rem;
+  }
+  .offcanvas .menu-item {
+    margin-bottom: 20px;
+  }
+  .offcanvas-logo {
+    width: 3rem !important;
+    margin-top: -40px;
+  }
+  .offcanvas .btn-close {
+    width: 10px;
+    height: 10px;
+  }
 }
 /* *** Hero *** */
 .hero-text {
@@ -11662,6 +11679,39 @@ body > div > main > div:nth-child(3) > div.col-6 > div.row.illu-2 > div > div {
   margin-bottom: -5rem;
 }
 
+@media (max-width: 991.98px) {
+  .btn-no-border {
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+    letter-spacing: 0.1rem !important;
+    font-size: 1rem !important;
+  }
+  .contact-arrow {
+    margin-left: -77rem;
+  }
+  .footer-siegel {
+    width: 100% !important;
+  }
+  .row-footer-siegel {
+    margin-top: -6rem;
+    margin-bottom: -1rem !important;
+  }
+  .footer-socials {
+    order: 5;
+  }
+  .footer-socials ul {
+    display: block;
+  }
+  .footer-socials ul .list-group-item {
+    display: inline;
+  }
+  .footer-logo {
+    width: 50px !important;
+  }
+  .btn-to-top {
+    margin-right: -25px;
+  }
+}
 :root {
   --bs-link-color:#000;
   --bs-body-font-family: "roboto condensed";
@@ -12598,6 +12648,9 @@ li.woocommerce-MyAccount-navigation-link.woocommerce-MyAccount-navigation-link.i
   }
   .col-verantwortung-kategorie h4, .col-verantwortung-kategorie .h4 {
     letter-spacing: 0.1rem;
+  }
+  html {
+    overflow-x: hidden;
   }
 }
 /* *** Hero *** */

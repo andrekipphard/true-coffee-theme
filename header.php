@@ -70,7 +70,7 @@
 
 								<div class="col">
 
-									<img src="/wp-content/uploads/2022/11/True-Coffee-Logo-weis.png" style="width: 5rem;">
+									<img src="/wp-content/uploads/2022/11/True-Coffee-Logo-weis.png" style="width: 5rem;" class="offcanvas-logo">
 
 								</div>
 
@@ -86,10 +86,10 @@
 								
 								<div class="col-1 d-flex flex-row-reverse justify-content-end align-self-center ps-0">
 									
-									<ul class="list-group border-top border-end border-bottom rounded-0 pt-5 pb-5 pe-2 ps-5">
-										<li class="list-group-item bg-transparent border-0 text-white mb-3 ps-5"><a href="#!"><i class="bi bi-facebook"></i></a></li>
-										<li class="list-group-item bg-transparent border-0 text-white mb-3 ps-5"><a href="#!"><i class="bi bi-instagram"></i></a></li>
-										<li class="list-group-item bg-transparent border-0 text-white ps-5"><a href="#!"><i class="bi bi-twitter"></i></a></li>
+									<ul class="list-group border-top border-end border-bottom rounded-0 pt-5 pb-5 pe-2 ps-lg-5">
+										<li class="list-group-item bg-transparent border-0 text-white mb-3 ps-lg-5"><a href="#!"><i class="bi bi-facebook"></i></a></li>
+										<li class="list-group-item bg-transparent border-0 text-white mb-3 ps-lg-5"><a href="#!"><i class="bi bi-instagram"></i></a></li>
+										<li class="list-group-item bg-transparent border-0 text-white ps-lg-5"><a href="#!"><i class="bi bi-twitter"></i></a></li>
 									</ul>
 
 								</div>
@@ -120,11 +120,11 @@
 
 								<div class="col-1 d-flex flex-row-reverse justify-content-start align-self-center pe-0">
 									
-									<ul class="list-group border-top border-start border-bottom rounded-0 pt-5 pb-5 pe-5 ps-2">
+									<ul class="list-group border-top border-start border-bottom rounded-0 pt-5 pb-5 pe-lg-5 ps-2">
 										
-										<li class="list-group-item bg-transparent border-0 text-white mb-3  pe-5"><a href="/warenkorb/"><i class="bi bi-cart"></i></a></li>
-										<li class="list-group-item bg-transparent border-0 text-white mb-3  pe-5"><a href="/wunschliste/"><i class="bi bi-cup"></i></a></li>
-										<li class="list-group-item bg-transparent border-0 text-white  pe-5"><a href="/mein-konto/"><i class="bi bi-person"></i></a></li>
+										<li class="list-group-item bg-transparent border-0 text-white mb-3  pe-lg-5"><a href="/warenkorb/"><i class="bi bi-cart"></i></a></li>
+										<li class="list-group-item bg-transparent border-0 text-white mb-3  pe-lg-5"><a href="/wunschliste/"><i class="bi bi-cup"></i></a></li>
+										<li class="list-group-item bg-transparent border-0 text-white  pe-lg-5"><a href="/mein-konto/"><i class="bi bi-person"></i></a></li>
 									
 									</ul>
 								</div>
