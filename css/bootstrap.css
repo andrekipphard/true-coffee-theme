@@ -11688,6 +11688,7 @@ body > div > main > div:nth-child(3) > div.col-6 > div.row.illu-2 > div > div {
   }
   .contact-arrow {
     margin-left: -77rem;
+    max-width: none !important;
   }
   .footer-siegel {
     width: 100% !important;
@@ -12675,6 +12676,25 @@ li.woocommerce-MyAccount-navigation-link.woocommerce-MyAccount-navigation-link.i
   z-index: -1;
 }
 
+@media (max-width: 991.98px) {
+  .single-hero {
+    margin-top: 3rem;
+    margin-bottom: 0;
+  }
+  .single-hero-col {
+    margin-top: -30rem;
+  }
+  .single-hero-col-3 {
+    transform: none;
+    height: 300px;
+    background-position: right;
+    margin-top: -10rem;
+  }
+  .single-hero-text {
+    order: 2;
+    margin-top: 0;
+  }
+}
 .text-in-bild-titel-rechts-bg-image {
   background-image: url("/wp-content/uploads/2022/12/Hintergrundbild-für-Titel.jpg");
   background-size: cover;
@@ -12758,4 +12778,23 @@ input.invalid {
 
 .tab h4, .tab .h4 {
   letter-spacing: 1px !important;
+}
+
+@media (max-width: 991.98px) {
+  .category-tabs-mobile {
+    margin-top: -30rem !important;
+    z-index: 2;
+    position: relative;
+  }
+  .nav-pill-main-category {
+    font-size: 40px;
+  }
+  .nav-pill-sub-category {
+    font-size: 14px;
+    letter-spacing: 0.1rem;
+  }
+  .nav-link.active.nav-pill-main-category::after {
+    width: 2rem;
+    height: 2rem;
+  }
 }/*# sourceMappingURL=bootstrap.css.map */

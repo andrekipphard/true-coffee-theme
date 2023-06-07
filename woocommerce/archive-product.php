@@ -38,14 +38,14 @@ get_template_part('template-parts/layouts/sticky-socials');
         
     </div>
 
-    <div class="col-5 single-hero-text">
+    <div class="col-11 col-lg-5 single-hero-text">
         
-        <div class="text-end pt-5 mt-5">
+        <div class="text-end pt-5 mt-5 mobile-hide">
             <img src="/wp-content/uploads/2022/11/Herobild-Kommentar-Büro.png">
         </div>
         
         <div class="row">
-            <div class="col single-hero-col bg-white p-5" style="--bs-bg-opacity:1;">
+            <div class="col-12 single-hero-col bg-white p-5" style="--bs-bg-opacity:1;">
                 <div class="h1 text-center text-uppercase mb-3">
 					<?php woocommerce_page_title(); ?>
                 </div>
@@ -62,7 +62,7 @@ get_template_part('template-parts/layouts/sticky-socials');
     
     </div>
 
-    <div class="col-6 single-hero-col-3" style="background-image:url('/wp-content/uploads/2022/12/Herobild-shop.jpg');">
+    <div class="col-12 col-lg-6 single-hero-col-3" style="background-image:url('/wp-content/uploads/2022/12/Herobild-shop.jpg');">
             
     </div>
 
@@ -78,10 +78,10 @@ get_template_part('template-parts/layouts/sticky-socials');
 	if ( ! empty( $product_categories ) && ! is_wp_error( $product_categories ) ) {
 
 	// Output the category tabs
-	echo '<div class="row mt-5 mx-5">';
+	echo '<div class="row mt-lg-5 mx-lg-5 mx-3 category-tabs-mobile">';
 	echo '<div class="col-12">';
-	echo '<div class="d-flex align-items-start">';
-	echo '<div class="col-4">';
+	echo '<div class="row d-flex align-items-start">';
+	echo '<div class="col-12 col-lg-4">';
 	echo '<div class="nav flex-column nav-pills me-3" id="v-pills-tab" role="tablist" aria-orientation="vertical">';
 
 	foreach ( $product_categories as $category ) {
@@ -94,7 +94,7 @@ get_template_part('template-parts/layouts/sticky-socials');
 	echo '</div>';
 	
 	echo '</div>';
-	echo '<div class="col-7 offset-1">';
+	echo '<div class="col-12 col-lg-7 offset-lg-1">';
 
 	// Output the category content
 	echo '<div class="tab-content" id="v-pills-tabContent">';
@@ -147,7 +147,7 @@ get_template_part('template-parts/layouts/sticky-socials');
 	}
 ?>
 
-´
+
 <?php
 
 

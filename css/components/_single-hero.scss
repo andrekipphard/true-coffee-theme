@@ -20,3 +20,23 @@
     margin-top:10rem;
     z-index:-1;
 }
+
+@include media-breakpoint-down(lg){
+    .single-hero{
+        margin-top:3rem;
+        margin-bottom:0;
+    }
+    .single-hero-col{
+        margin-top:-30rem;
+    }
+    .single-hero-col-3{
+        transform:none;
+        height: 300px;
+        background-position: right;
+        margin-top:-10rem;
+    }
+    .single-hero-text{
+        order:2;
+        margin-top:0;
+    }
+}
