@@ -88,7 +88,7 @@
         </div>
         <div class="row">
             <div class="col-6 d-flex justify-content-end align-items-start">
-                <img src="/wp-content/uploads/2023/06/Gruppe-449.png" class="img-fluid" style="margin-top: -10%; margin-right: -20%;">
+                <img src="/wp-content/uploads/2023/06/Gruppe-449.png" class="img-fluid" style="margin-top: -45%; margin-right: -20%;">
             </div>
             <div class="col-6 align-self-end coffe-circle-headline-col">
         
