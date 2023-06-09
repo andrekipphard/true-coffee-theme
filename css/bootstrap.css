@@ -13019,6 +13019,9 @@ li.woocommerce-MyAccount-navigation-link.woocommerce-MyAccount-navigation-link.i
   .projektgebiete {
     margin-bottom: -10rem;
   }
+  input[type=text i], input[type=email i] {
+    width: 100% !important;
+  }
 }
 /* *** Hero *** */
 .single-hero-text {
@@ -13082,7 +13085,7 @@ li.woocommerce-MyAccount-navigation-link.woocommerce-MyAccount-navigation-link.i
     margin-top: -10rem;
   }
   .page-id-219 .single-hero {
-    margin-bottom: -10rem !important;
+    margin-bottom: -5rem !important;
   }
 }
 .text-in-bild-titel-rechts-bg-image {
