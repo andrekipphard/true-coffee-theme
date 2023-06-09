@@ -880,7 +880,7 @@ li.woocommerce-MyAccount-navigation-link.woocommerce-MyAccount-navigation-link.i
 }
 @include media-breakpoint-down(lg){
     .mobile-hide{
-        display:none;
+        display:none!important;
     }
     .desktop-hide{
         display:block;
@@ -962,5 +962,10 @@ li.woocommerce-MyAccount-navigation-link.woocommerce-MyAccount-navigation-link.i
         margin:0 auto!important;
         float:none!important;
     }
-
+    .col-produkte-3-karten{
+        background:none;
+    }
+    .woocommerce_kategorie_titel_links h2{
+        font-size:2.5rem!important;
+    }
 }

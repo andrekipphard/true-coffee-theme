@@ -8,3 +8,8 @@
 .alleinstellungsmerkmal{
     font-size: 1.1rem;
 }
+@include media-breakpoint-down(lg){
+    .alleinstellungsmerkmale{
+        margin-bottom:-10rem;
+    }
+}

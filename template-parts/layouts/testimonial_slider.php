@@ -2,13 +2,13 @@
 <?php
   $titel = get_sub_field('titel');
 ?>
-<div class="row mt-5 pt-5">
+<div class="row mt-lg-5 pt-lg-5 mb-5 mb-lg-0">
   <div class="col mt-5">
-    <div class="h2 text-center mb-5">
+    <div class="h2 text-center mb-lg-5">
       <?= $titel; ?>
     </div>
 
-    <div id="carouselExampleIndicators" class="carousel carousel-dark slide text-center mt-5 pt-5" data-bs-ride="true">
+    <div id="carouselExampleIndicators" class="carousel carousel-dark slide text-center mt-3 mt-lg-5 pt-lg-5" data-bs-ride="true">
       
       <div class="carousel-inner">
         <?php if( have_rows('testimonial')):

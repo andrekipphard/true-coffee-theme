@@ -7,12 +7,12 @@
 ?>
 
 
-<div class="row mt-5 pt-5 d-flex justify-content-center">
-    <div class="col-10 mt-5 pt-5">
-        <div class="h3 text-center text-uppercase">
+<div class="row mt-5 pt-5 d-flex justify-content-lg-center">
+    <div class="col-10 mt-5 pt-lg-5 px-5 pg-lg-0 ms-3 ms-lg-0">
+        <div class="h3 text-lg-center text-uppercase">
             <?=$titel; ?>
         </div>
-        <div class="h4 mb-5 text-center text-uppercase">
+        <div class="h4 mb-5 text-lg-center text-uppercase">
             <?=$subtitel; ?>
         </div>
         <div class="p">
