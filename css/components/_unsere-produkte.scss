@@ -98,7 +98,7 @@
     background-image:var(--bs-accordion-btn-icon);
 }
 @include media-breakpoint-down(lg){
-    .row-produkte{
+    .row-produkte, .row-produkte-einzeln{
         background-color:#EDEDED;
         margin-top:0;
         padding-top:0;
@@ -108,6 +108,9 @@
             padding-right:40px;
             padding-left:40px;
         }
+    }
+    .row-produkte-einzeln{
+        padding-bottom:3rem;
     }
     .produkte-img{
         margin-top:-8rem

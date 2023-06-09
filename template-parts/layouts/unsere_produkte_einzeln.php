@@ -5,9 +5,9 @@
     $button_text = get_sub_field('button_text');
     $button_url = get_sub_field('button_url');
 ?>
-<div class="row row-produkte-einzeln">
+<div class="row row-produkte-einzeln mb-5 mb-lg-0">
 
-    <div class="col-5 offset-2 pt-5 pb-5">
+    <div class="col-12 col-lg-5 offset-lg-2 pt-5 pb-lg-5">
 
         <div class="h2 text-uppercase">
             <?= $headline; ?>

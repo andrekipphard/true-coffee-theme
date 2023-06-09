@@ -11,9 +11,9 @@
     
     </div>
 
-    <div class="col-5 single-hero-text">
+    <div class="col-10 col-lg-5 single-hero-text">
         
-        <div class="text-end pt-5 mt-5">
+        <div class="text-end pt-5 mt-5 mobile-hide">
             <img src="<?= wp_get_attachment_image_url($bildkommentar, 'large');?>">
         </div>
         
@@ -35,7 +35,7 @@
     
     </div>
 
-    <div class="col-6 single-hero-col-3" style="background-image:url('<?= wp_get_attachment_image_url($background_bild, 'large');?>');">
+    <div class="col-12 col-lg-6 single-hero-col-3" style="background-image:url('<?= wp_get_attachment_image_url($background_bild, 'large');?>');">
             
     </div>
 

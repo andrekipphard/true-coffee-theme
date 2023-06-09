@@ -11364,7 +11364,7 @@ body > div > main > div:nth-child(3) > div.col-6 > div.row.illu-2 > div > div {
   .row-verantwortung {
     margin-top: -10rem;
   }
-  .col-verantwortung {
+  .col-verantwortung, .col-verantwortung-einzeln {
     margin-top: -3rem;
     padding: 3rem;
   }
@@ -11484,16 +11484,19 @@ body > div > main > div:nth-child(3) > div.col-6 > div.row.illu-2 > div > div {
 }
 
 @media (max-width: 991.98px) {
-  .row-produkte {
+  .row-produkte, .row-produkte-einzeln {
     background-color: #EDEDED;
     margin-top: 0;
     padding-top: 0;
     margin-right: 10px;
     margin-left: 10px;
   }
-  .row-produkte .col-12 {
+  .row-produkte .col-12, .row-produkte-einzeln .col-12 {
     padding-right: 40px;
     padding-left: 40px;
+  }
+  .row-produkte-einzeln {
+    padding-bottom: 3rem;
   }
   .produkte-img {
     margin-top: -8rem;
@@ -12980,12 +12983,6 @@ li.woocommerce-MyAccount-navigation-link.woocommerce-MyAccount-navigation-link.i
     font-size: 30px;
     line-height: 40px;
   }
-  .product .single-hero-col {
-    margin-top: -10rem;
-  }
-  .single-product .single-hero {
-    margin-top: 10rem;
-  }
   .related-products {
     margin-bottom: 0;
   }
@@ -13001,9 +12998,6 @@ li.woocommerce-MyAccount-navigation-link.woocommerce-MyAccount-navigation-link.i
   .woocommerce ul.products[class*=columns-] li.product:nth-child(2n), .woocommerce-page ul.products[class*=columns-] li.product:nth-child(2n) {
     margin: 0 auto !important;
     float: none !important;
-  }
-  .single-product .single-hero-text {
-    margin-left: 1rem;
   }
 }
 /* *** Hero *** */
@@ -13029,23 +13023,43 @@ li.woocommerce-MyAccount-navigation-link.woocommerce-MyAccount-navigation-link.i
 }
 
 @media (max-width: 991.98px) {
+  .single-hero-text {
+    order: 2;
+    margin-top: 0;
+  }
   .single-hero {
-    margin-top: -7rem;
-    margin-bottom: 0;
-    transform: none;
+    margin-top: 10rem;
+    margin-bottom: -20rem;
   }
   .single-hero-col {
-    margin-top: -30rem;
+    margin-top: -10rem;
+  }
+  .single-hero-text {
+    margin-left: 1rem;
   }
   .single-hero-col-3 {
     transform: none;
     height: 300px;
     background-position: right;
-    margin-top: -10rem;
-  }
-  .single-hero-text {
-    order: 2;
     margin-top: 0;
+  }
+  .single-product .single-hero {
+    margin-bottom: -10rem !important;
+    margin-top: 10rem !important;
+  }
+  .archive .single-hero {
+    margin-top: -7rem;
+    margin-bottom: 5rem !important;
+    transform: none;
+  }
+  .archive .single-hero-col {
+    margin-top: -30rem;
+  }
+  .archive .single-hero-col-3 {
+    transform: none;
+    height: 300px;
+    background-position: right;
+    margin-top: -10rem;
   }
 }
 .text-in-bild-titel-rechts-bg-image {
