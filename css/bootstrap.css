@@ -13005,6 +13005,20 @@ li.woocommerce-MyAccount-navigation-link.woocommerce-MyAccount-navigation-link.i
   .woocommerce_kategorie_titel_links h2, .woocommerce_kategorie_titel_links .h2 {
     font-size: 2.5rem !important;
   }
+  .page-id-87 #primary > div > div:nth-child(4) {
+    margin-top: 10rem !important;
+  }
+  .page-id-87 #primary > div > div:nth-child(8) {
+    margin-top: 30rem !important;
+    margin-bottom: -7rem !important;
+  }
+  .projektgebiete .card-title {
+    font-size: 2rem;
+    line-height: 2.25rem;
+  }
+  .projektgebiete {
+    margin-bottom: -10rem;
+  }
 }
 /* *** Hero *** */
 .single-hero-text {
@@ -13067,6 +13081,9 @@ li.woocommerce-MyAccount-navigation-link.woocommerce-MyAccount-navigation-link.i
     background-position: right;
     margin-top: -10rem;
   }
+  .page-id-219 .single-hero {
+    margin-bottom: -10rem !important;
+  }
 }
 .text-in-bild-titel-rechts-bg-image {
   background-image: url("/wp-content/uploads/2022/12/Hintergrundbild-für-Titel.jpg");
@@ -13078,6 +13095,22 @@ li.woocommerce-MyAccount-navigation-link.woocommerce-MyAccount-navigation-link.i
   box-shadow: inset 0 0 0 2000px rgba(0, 0, 0, 0.2);
 }
 
+@media (max-width: 991.98px) {
+  .text-in-bild-titel-rechts-bg-image {
+    margin-top: 0;
+    background-size: contain;
+    background-position: top center;
+    box-shadow: none;
+  }
+  .text-in-bild-titel-rechts-bg-image .col-10 {
+    margin-top: 7rem;
+  }
+  .verantwortung-h2 {
+    font-size: 3rem !important;
+    line-height: 3.25rem !important;
+    margin-bottom: -1.5rem;
+  }
+}
 .text-in-bild-titel-links-bg-image {
   background-image: url("/wp-content/uploads/2022/12/Hintergrundbild-für-Titel.jpg");
   background-size: cover;
@@ -13088,6 +13121,22 @@ li.woocommerce-MyAccount-navigation-link.woocommerce-MyAccount-navigation-link.i
   box-shadow: inset 0 0 0 2000px rgba(0, 0, 0, 0.2);
 }
 
+@media (max-width: 991.98px) {
+  .text-in-bild-titel-links-bg-image {
+    margin-top: 0;
+    background-size: contain;
+    background-position: top center;
+    box-shadow: none;
+  }
+  .text-in-bild-titel-links-bg-image .col-10 {
+    margin-top: 7rem;
+  }
+  .verantwortung-h2 {
+    font-size: 3rem !important;
+    line-height: 3.25rem !important;
+    margin-bottom: -1.5rem;
+  }
+}
 .alleinstellungsmerkmale .col-3 {
   background-image: url("/wp-content/uploads/2022/11/Hintergrundfarbfläche-grau-für-textboxen.png");
   background-position: right;

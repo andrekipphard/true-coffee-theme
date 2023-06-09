@@ -7,7 +7,7 @@
     $button_url = get_sub_field('button_url');
 ?>
 <div class="row m-5 pt-5">
-    <div class="col-10 offset-1">
+    <div class="col-12 col-lg-10 offset-lg-1 px-0">
 
         <div class="h3 text-uppercase">
             <?= $titel; ?>

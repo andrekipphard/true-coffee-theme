@@ -7,3 +7,19 @@
     margin-top: -5rem;
     box-shadow: inset 0 0 0 2000px rgba(0, 0, 0, 0.2);
 }
+@include media-breakpoint-down(lg){
+    .text-in-bild-titel-rechts-bg-image{
+        margin-top:0;
+        background-size: contain;
+        background-position: top center;
+        box-shadow: none;
+        .col-10{
+            margin-top:7rem;
+        }
+    }
+    .verantwortung-h2{
+        font-size:3rem!important;
+        line-height: 3.25rem!important;
+        margin-bottom:-1.5rem;
+    }
+}

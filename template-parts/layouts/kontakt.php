@@ -3,15 +3,15 @@
     $titel = get_sub_field('titel');
     $background_bild = get_sub_field('background_bild');
 ?>
-<div class="row single-hero">
+<div class="row contact single-hero">
 
     <div class="col-1 sticky-top socials-sticky d-flex flex-row-reverse justify-content-end align-self-center ps-0">
 
     </div>
 
-    <div class="col-5 single-hero-text">
+    <div class="col-10 col-lg-5 single-hero-text">
         
-        <div class="text-end pt-5 mt-5">
+        <div class="text-end pt-5 mt-5 mobile-hide">
             <img src="<?= wp_get_attachment_image_url($bildkommentar, 'large');?>">
         </div>
         
@@ -59,14 +59,14 @@
                         <button type="submit" class="submit-form btn btn-primary">Senden</button>
                     </form>
                 </div>
-                <div class="row mt-5">
+                <div class="row mt-lg-5">
                     <?php if( have_rows('kontaktinformationen')):
                         while( have_rows('kontaktinformationen')): the_row();
                         $icon = get_sub_field('icon');
                         $text = get_sub_field('text');
                     ?>
                     <?php if(get_row_index()==1):?>
-                    <div class="col-4 mt-5 text-center">
+                    <div class="col-12 col-lg-4 mt-5 text-center">
 
                         <i class="bi bi-<?= $icon; ?> text-center" style="font-size:2rem;"></i>
                         <div class="h4 mt-2"><?= $text; ?></div>
@@ -75,7 +75,7 @@
 
                     <?php else:?>
 
-                    <div class="col-4 mt-5 text-center border-start border-dark">
+                    <div class="col-12 col-lg-4 mt-5 text-center border-lg-start border-dark border-top border-lg-top-0 pt-5 pt-lg-0">
 
                         <i class="bi bi-<?= $icon; ?>" style="font-size:2rem;"></i>
                         <div class="h4 mt-2"><?= $text; ?></div>
@@ -93,7 +93,7 @@
     
     </div>
 
-    <div class="col-6 single-hero-col-3" style="background-image:url('<?= wp_get_attachment_image_url($background_bild, 'large');?>');">
+    <div class="col-12 col-lg-6 single-hero-col-3" style="background-image:url('<?= wp_get_attachment_image_url($background_bild, 'large');?>');">
             
     </div>
 
