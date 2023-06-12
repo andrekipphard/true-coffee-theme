@@ -71,12 +71,14 @@ get_template_part('template-parts/layouts/sticky-socials');
 
 
 <?php
-	// Get all product categories
-	$product_categories = get_terms( 'product_cat' );
+	// Get all top-level product categories
+$product_categories = get_terms( array(
+	'taxonomy' => 'product_cat',
+	'parent'   => 0,
+) );
 
-	// Check if any categories were found
-	if ( ! empty( $product_categories ) && ! is_wp_error( $product_categories ) ) {
-
+// Check if any top-level categories were found
+if ( ! empty( $product_categories ) && ! is_wp_error( $product_categories ) ) {
 	// Output the category tabs
 	echo '<div class="row mt-lg-5 mx-lg-5 mx-3 category-tabs-mobile">';
 	echo '<div class="col-12">';
@@ -86,55 +88,87 @@ get_template_part('template-parts/layouts/sticky-socials');
 
 	foreach ( $product_categories as $category ) {
 		$active = ( $category === reset( $product_categories ) ) ? 'active' : ''; // Set the first category as active
-		$class = ( $category->parent === 0 ) ? 'nav-pill-main-category' : 'nav-pill-sub-category'; // Add a custom class to main categories
-		echo '<button class="nav-link ' . $active . ' ' . $class . '" id="v-pills-' . $category->slug . '-tab" data-bs-toggle="pill" data-bs-target="#v-pills-' . $category->slug . '" type="button" role="tab" aria-controls="v-pills-' . $category->slug . '" aria-selected="' . ( $active ? 'true' : 'false' ) . '">' . $category->name . '</button>';
-	  }
-	  
-	
+		echo '<button class="nav-link ' . $active . ' nav-pill-main-category" id="v-pills-' . $category->slug . '-tab" data-bs-toggle="pill" data-bs-target="#v-pills-' . $category->slug . '" type="button" role="tab" aria-controls="v-pills-' . $category->slug . '" aria-selected="' . ( $active ? 'true' : 'false' ) . '">' . $category->name . '</button>';
+
+		// Get the child categories
+$child_categories = get_terms( array(
+    'taxonomy' => 'product_cat',
+    'parent'   => $category->term_id,
+) );
+
+if ( ! empty( $child_categories ) && ! is_wp_error( $child_categories ) ) {
+    foreach ( $child_categories as $child_category ) {
+        $child_active = ( get_queried_object()->term_id === $child_category->term_id ) ? 'active' : ''; // Check if the child category is currently active
+        echo '<button class="nav-link ' . $child_active . ' nav-pill-sub-category" id="v-pills-' . $child_category->slug . '-tab" data-bs-toggle="pill" data-bs-target="#v-pills-' . $child_category->slug . '" type="button" role="tab" aria-controls="v-pills-' . $child_category->slug . '" aria-selected="' . ( $child_active ? 'true' : 'false' ) . '">' . $child_category->name . '</button>';
+    }
+}
+
+	}
+
 	echo '</div>';
-	
 	echo '</div>';
 	echo '<div class="col-12 col-lg-7 offset-lg-1">';
 
 	// Output the category content
 	echo '<div class="tab-content" id="v-pills-tabContent">';
-
+	$product_categories = get_terms( array(
+		'taxonomy' => 'product_cat',
+	) );
 	foreach ( $product_categories as $category ) {
 		$active = ( $category === reset( $product_categories ) ) ? 'show active' : ''; // Set the first category as active
 		echo '<div class="tab-pane fade ' . $active . '" id="v-pills-' . $category->slug . '" role="tabpanel" aria-labelledby="v-pills-' . $category->slug . '-tab">';
 
-		// Get the products for this category
-		$products = new WP_Query( array(
-		'post_type' => 'product',
-		'tax_query' => array(
+	// Get the products for this category and its child categories
+	$categories = get_term_children( $category->term_id, 'product_cat' );
+	$categories[] = $category->term_id;
+
+	// Get the child categories
+	$child_categories = get_terms( array(
+		'taxonomy' => 'product_cat',
+		'parent'   => $category->term_id,
+	) );
+
+	// Get the IDs of child categories
+	$child_category_ids = array();
+	foreach ( $child_categories as $child_category ) {
+		$child_category_ids[] = $child_category->term_id;
+	}
+
+	// Include the parent category ID and child category IDs in the tax_query
+	$categories = array_merge( array( $category->term_id ), $child_category_ids );
+
+	$products = new WP_Query( array(
+		'post_type'      => 'product',
+		'tax_query'      => array(
 			array(
-			'taxonomy' => 'product_cat',
-			'field' => 'slug',
-			'terms' => $category->slug
-			)
-		)
-		) );
+				'taxonomy' => 'product_cat',
+				'field'    => 'terms',
+				'terms'    => $categories,
+			),
+		),
+	) );
 
-		// Check if any products were found
-		if ( $products->have_posts() ) {
+	// Check if any products were found
+	if ( $products->have_posts() ) {
+		woocommerce_product_loop_start();
 
+		while ( $products->have_posts() ) {
+			$products->the_post();
 
-			woocommerce_product_loop_start();
-			
-			while ( $products->have_posts() ) {
-				$products->the_post();
-		
-				// Hook: woocommerce_shop_loop.
-				do_action( 'woocommerce_shop_loop' );
-				// Include the product content template.
-				wc_get_template_part( 'content', 'product' );
-			}
-		
-			woocommerce_product_loop_end();
-		} else {
-			echo '<p>No products found for this category.</p>';
+			// Hook: woocommerce_shop_loop.
+			do_action( 'woocommerce_shop_loop' );
+			// Include the product content template.
+			wc_get_template_part( 'content', 'product' );
 		}
-		
+
+		woocommerce_product_loop_end();
+		wp_reset_postdata(); // Reset the query
+	} else {
+		echo '<p>No products found for this category.</p>';
+	}
+
+
+
 
 		echo '</div>';
 	}
@@ -144,8 +178,20 @@ get_template_part('template-parts/layouts/sticky-socials');
 	echo '</div>';
 	echo '</div>';
 	echo '</div>';
-	}
+}
 ?>
+
+<script>
+    // Scroll to the top of the pane when a category is clicked
+    jQuery('.nav-link').on('click', function() {
+        var paneTop = jQuery('.category-tabs-mobile').offset().top;
+        var breathingRoom = 200; // Adjust the value to control the breathing room
+        
+        jQuery('html, body').animate({
+            scrollTop: paneTop - breathingRoom
+        }, 500);
+    });
+</script>
 
 
 <?php
