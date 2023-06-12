@@ -15,11 +15,11 @@
 
         <div class="row mt-5 mb-5 pb-5 pt-5">
 
-            <div class="col-2">
+            <div class="col-2 col-lg-3">
                 <img src="<?= wp_get_attachment_image_url($illu_eins, 'large');?>">
             </div>
 
-            <div class="col-8 text-center ps-5 pe-5">
+            <div class="col-8 col-lg-6 text-center ps-5 pe-5">
 
                 <div class="h2 text-uppercase text-white">
                     <?= $headline; ?>
@@ -39,7 +39,7 @@
 
             </div>
 
-            <div class="col-2 text-end">
+            <div class="col-2 col-lg-3 text-end">
                 <img src="<?= wp_get_attachment_image_url($illu_zwei, 'large');?>">
             </div>
         

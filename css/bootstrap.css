@@ -12499,6 +12499,7 @@ a.added_to_cart.wc-forward {
   border-radius: 0;
   border: solid 1px #000;
   height: 37px;
+  width: 6.2rem;
 }
 
 .woocommerce a.button.alt {
@@ -12531,6 +12532,11 @@ a.added_to_cart.wc-forward {
   margin-bottom: 1rem;
   min-width: 50%;
   max-width: 50%;
+}
+
+input[type=number i] {
+  padding-right: 0 !important;
+  padding-left: 0 !important;
 }
 
 .woocommerce div.product form.cart .variations {
@@ -13140,7 +13146,7 @@ li.woocommerce-MyAccount-navigation-link.woocommerce-MyAccount-navigation-link.i
     margin-bottom: -1.5rem;
   }
 }
-.alleinstellungsmerkmale .col-3 {
+.alleinstellungsmerkmale .col-3, .alleinstellungsmerkmale .col-lg-3 {
   background-image: url("/wp-content/uploads/2022/11/Hintergrundfarbfläche-grau-für-textboxen.png");
   background-position: right;
   background-size: 500px 100%;
