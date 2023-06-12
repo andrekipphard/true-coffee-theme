@@ -24,22 +24,37 @@ if ( empty( $product ) || ! $product->is_visible() ) {
 	return;
 }
 ?>
-<?php 
+<?php
 $id = $product->get_id();
-$image = wp_get_attachment_image_src( get_post_thumbnail_id( $id ), 'single-post-thumbnail' );
+$image = wp_get_attachment_image_src(get_post_thumbnail_id($id), 'single-post-thumbnail');
 $permalink = $product->get_permalink();
 $attachment_ids = $product->get_gallery_image_ids();
-$firstGalleryImageUrl = wp_get_attachment_image_url($attachment_ids[0], 'single-post-thumbnail')
+$firstGalleryImageUrl = '';
 
+if (!empty($attachment_ids)) {
+    $firstGalleryImageUrl = wp_get_attachment_image_url($attachment_ids[0], 'single-post-thumbnail');
+}
+
+// Check if $image[0] is empty, and if so, assign the placeholder image URL
+if (empty($image[0])) {
+    $placeholderImage = wc_placeholder_img_src('single-post-thumbnail');
+} else {
+    $placeholderImage = $image[0];
+}
+
+$hoverImage = !empty($firstGalleryImageUrl) ? $firstGalleryImageUrl : $placeholderImage;
+
+// Generate unique CSS class for each product
+$product_css_class = 'product-' . $id;
 ?>
 
 <style>
-    .hover-product:hover {
-        background-image: url('<?= $firstGalleryImageUrl;?>') !important;
-    }
+.hover-product.<?= $product_css_class ?>:hover {
+    background-image: url('<?= $hoverImage; ?>') !important;
+}
 </style>
 
-<li <?php wc_product_class('d-flex p-5 justify-content-center align-items-center hover-product position-relative', $product);?> style="background-image: url('<?= $image[0];?>'); background-size:cover; background-position:center; background-repeat:no-repeat; height:300px; width:300px;">
+<li <?php wc_product_class('d-flex p-5 justify-content-center align-items-center hover-product position-relative ' . $product_css_class, $product); ?> style="background-image: url('<?= $placeholderImage; ?>'); background-size:cover; background-position:center; background-repeat:no-repeat; height:300px; width:300px;">
 
     <div class="row product-btn-wishlist p-5 d-flex justify-content-center align-items-center">
         <div class="col-6 buy-btn-col">
