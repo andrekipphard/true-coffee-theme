@@ -27,20 +27,20 @@
 ?>
     <!-- display product html -->
     
-        <div class="col-12 col-lg-4 d-flex mb-5 mb-lg-0 ms-5 me-5 p-4 p-lg-5 border-dark border flex-column bg-white">
-            <img class="img-fluid" src="<?php echo wp_get_attachment_url( $product->get_image_id(), 'large' ); ?>" />
-            <div class="h3">
+        <div class="col-12 col-lg-3 d-flex mb-5 mb-lg-5 ms-5 me-5 p-4 p-lg-5 border-dark border flex-column bg-white">
+            <img class="img-fluid mb-3" src="<?php echo wp_get_attachment_url( $product->get_image_id(), 'large' ); ?>" />
+            <div class="h3" style="font-size:2rem; line-height: 2.5rem">
                 <?= $product_title;?>
             </div>
             <div class="p mb-5">
                 <?= $product_desc;?>
             </div>
             <div class="row row-btn mt-auto">
-                <div class="col-6 col-lg-7 align-self-center">
+                <div class="col-6 col-lg-6 align-self-center">
                     <img class="img-fluid" src="/wp-content/uploads/2022/11/Pfeli-nach-links.png">
                 </div>
-                <div class="col-6 col-lg-5">
-                    <a href="<?=$product_permalink; ?>"><div class="btn btn-no-border">Mehr erfahren</div></a>
+                <div class="col-6 col-lg-6">
+                    <a href="<?=$product_permalink; ?>"><div class="btn ps-0 pe-0 btn-no-border" style="font-size:1.2rem">Mehr erfahren</div></a>
                 </div>
             </div>
             
