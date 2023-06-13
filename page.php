@@ -117,6 +117,14 @@ get_template_part('template-parts/layouts/sticky-socials');
 
 								get_template_part('template-parts/layouts/'. get_row_layout() );
 
+							elseif( get_row_layout() == 'title_left_products'):
+
+								get_template_part('template-parts/layouts/'. get_row_layout() );
+
+							elseif( get_row_layout() == 'title_right_products'):
+
+								get_template_part('template-parts/layouts/'. get_row_layout() );
+
 							endif; 
 
 						endwhile;

@@ -56,7 +56,7 @@ get_template_part('template-parts/layouts/sticky-socials');
 			</div>
 			
 			<div class="row">
-				<div class="col single-hero-col bg-white p-5" style="--bs-bg-opacity:1;">
+				<div class="col offset-1 offset-lg-0 single-hero-col bg-white p-5" style="--bs-bg-opacity:1;">
 				<?php
 
 				woocommerce_output_all_notices();	?>

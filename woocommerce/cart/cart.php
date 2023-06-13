@@ -26,9 +26,11 @@ defined( 'ABSPATH' ) || exit;
 <div class="row cart-hero" style="background-image:url('/wp-content/uploads/2022/12/Produktebild-1.jpg'); background-size:contain; background-position:right; background-repeat:no-repeat">
     
     <div class="row">
-        <div class="col-1"></div>
+        <div class="col-1">
+
+        </div>
         <div class="col-6">
-            <div class="text-end pt-5 mt-5">
+            <div class="text-end pt-5 mt-5 mobile-hide">
                 <img src="/wp-content/uploads/2022/11/Herobild-produkt.png">
             </div>
         </div>
@@ -43,9 +45,10 @@ defined( 'ABSPATH' ) || exit;
         </div>
 
         <div class="col-11 bg-white d-flex">
-            <div class="col-7">
+            <div class="row">
+            <div class="col-12 col-lg-7">
                 
-                <div class="col bg-white p-5" style="--bs-bg-opacity:1;">
+                <div class="col bg-white p-lg-5 p-3" style="--bs-bg-opacity:1;">
                 <?php do_action( 'woocommerce_before_cart' );?>
                     <div class="h1 text-center text-uppercase mb-3">
                         Warenkorb
@@ -212,9 +215,9 @@ defined( 'ABSPATH' ) || exit;
                 </div>
             </div>
 
-            <div class="col-5 p-5 bg-white">
+            <div class="col-12 col-lg-5 p-lg-5 bg-white">
                 
-                    <div class="col p-5 border-start border-dark" style="--bs-bg-opacity:1;">
+                    <div class="col p-lg-5 p-3 border-lg-start border-dark" style="--bs-bg-opacity:1;">
                         <?php do_action( 'woocommerce_before_cart_collaterals' ); ?>
 
                         <div class="cart-collaterals">
@@ -232,6 +235,8 @@ defined( 'ABSPATH' ) || exit;
                     </div>
                 
             </div>
+            </div>
+            
                    
         </div>
 
