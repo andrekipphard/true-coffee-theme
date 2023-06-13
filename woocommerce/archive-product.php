@@ -67,7 +67,55 @@ get_template_part('template-parts/layouts/sticky-socials');
     </div>
 
 </div>
+<div class="row desktop-hide text-center" style="margin-top:-30rem; margin-bottom:5rem; z-index:999; position:relative">
+	<div class="col">
+		<button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#sidebarModal">
+            Kategorien anzeigen
+        </button>
+		<div class="modal fade" id="sidebarModal" tabindex="1" aria-labelledby="sidebarModalLabel" aria-hidden="true">
+			<div class="modal-dialog modal-dialog-centered">
+				<div class="modal-content">
+					<div class="modal-header">
+						<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Schließen"></button>
+					</div>
+					<div class="modal-body">
+    <div class="nav flex-column nav-pills me-3" id="v-pills-tab" role="tablist" aria-orientation="vertical">
+        <?php
+        // Get all top-level product categories
+        $product_categories = get_terms(array(
+            'taxonomy' => 'product_cat',
+            'parent'   => 0,
+        ));
 
+        // Check if any top-level categories were found
+        if (!empty($product_categories) && !is_wp_error($product_categories)) {
+            foreach ($product_categories as $category) {
+                $active = ($category === reset($product_categories)) ? 'active' : ''; // Set the first category as active
+                echo '<button class="nav-link ' . $active . ' nav-pill-main-category" id="v-pills-' . $category->slug . '-tab" data-bs-toggle="pill" data-bs-target="#v-pills-' . $category->slug . '" type="button" role="tab" aria-controls="v-pills-' . $category->slug . '" aria-selected="' . ($active ? 'true' : 'false') . '">' . $category->name . '</button>';
+
+                // Get the child categories
+                $child_categories = get_terms(array(
+                    'taxonomy' => 'product_cat',
+                    'parent'   => $category->term_id,
+                ));
+
+                if (!empty($child_categories) && !is_wp_error($child_categories)) {
+                    foreach ($child_categories as $child_category) {
+                        $child_active = (get_queried_object()->term_id === $child_category->term_id) ? 'active' : ''; // Check if the child category is currently active
+                        echo '<button class="nav-link ' . $child_active . ' nav-pill-sub-category" id="v-pills-' . $child_category->slug . '-tab" data-bs-toggle="pill" data-bs-target="#v-pills-' . $child_category->slug . '" type="button" role="tab" aria-controls="v-pills-' . $child_category->slug . '" aria-selected="' . ($child_active ? 'true' : 'false') . '">' . $child_category->name . '</button>';
+                    }
+                }
+            }
+        }
+        ?>
+    </div>
+</div>
+
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
 
 
 <?php
@@ -83,7 +131,7 @@ if ( ! empty( $product_categories ) && ! is_wp_error( $product_categories ) ) {
 	echo '<div class="row mt-lg-5 mx-lg-5 mx-3 category-tabs-mobile">';
 	echo '<div class="col-12">';
 	echo '<div class="row d-flex align-items-start">';
-	echo '<div class="col-12 col-lg-4">';
+	echo '<div class="col-12 col-lg-4 sidebar-categories mobile-hide">';
 	echo '<div class="nav flex-column nav-pills me-3" id="v-pills-tab" role="tablist" aria-orientation="vertical">';
 
 	foreach ( $product_categories as $category ) {
@@ -107,7 +155,7 @@ if ( ! empty( $child_categories ) && ! is_wp_error( $child_categories ) ) {
 
 	echo '</div>';
 	echo '</div>';
-	echo '<div class="col-12 col-lg-7 offset-lg-1">';
+	echo '<div class="col-12 col-lg-7 offset-lg-1" style="margin-bottom:5rem">';
 
 	// Output the category content
 	echo '<div class="tab-content" id="v-pills-tabContent">';
@@ -193,6 +241,19 @@ if ( ! empty( $child_categories ) && ! is_wp_error( $child_categories ) ) {
     });
 </script>
 
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+    var navLinks = document.querySelectorAll('.nav-link');
+
+    navLinks.forEach(function(link) {
+      link.addEventListener('click', function() {
+        var modal = document.querySelector('.modal');
+        var bsModal = bootstrap.Modal.getInstance(modal);
+        bsModal.hide();
+      });
+    });
+  });
+</script>
 
 <?php
 
