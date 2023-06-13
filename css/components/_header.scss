@@ -74,4 +74,15 @@ body.scrolled .logo {
         width:10px;
         height: 10px;
     }
+    .socials-sticky {
+        position: fixed!important;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        z-index: 999;
+      }
+      .hamburger-btn{
+        position: fixed!important;
+        margin-top:2rem;
+    }
 }

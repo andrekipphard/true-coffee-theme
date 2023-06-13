@@ -50,7 +50,7 @@ defined( 'ABSPATH' ) || exit;
         </div>
 
         <div class="col-11  d-flex">
-            <div class="col-7 bg-white">
+            <div class="col-12 col-lg-7 bg-white">
                 <div class="col p-5" style="--bs-bg-opacity:1;">
                     <div class="h1 text-center text-uppercase mb-3">
                         Warenkorb

@@ -11049,6 +11049,17 @@ body.scrolled .logo {
     width: 10px;
     height: 10px;
   }
+  .socials-sticky {
+    position: fixed !important;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 999;
+  }
+  .hamburger-btn {
+    position: fixed !important;
+    margin-top: 2rem;
+  }
 }
 /* *** Hero *** */
 .hero-text {
@@ -13103,6 +13114,9 @@ li.woocommerce-MyAccount-navigation-link.woocommerce-MyAccount-navigation-link.i
   .single-hero-text {
     order: 2;
     margin-top: 0;
+  }
+  .single-product .single-hero-text {
+    margin-top: -10rem;
   }
   .single-hero {
     margin-top: 10rem;
