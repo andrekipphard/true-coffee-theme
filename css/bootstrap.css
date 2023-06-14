@@ -13282,6 +13282,28 @@ input.invalid {
   letter-spacing: 1px !important;
 }
 
+.form-check {
+  padding-left: 0;
+}
+
+@media (max-width: 991.98px) {
+  .leadform-hero {
+    margin-top: 3rem;
+  }
+  .leadform-box {
+    height: 218px !important;
+  }
+  .leadform-phone-field {
+    width: 100% !important;
+  }
+  .leadform-submit {
+    width: 100%;
+  }
+  #leadform h3, #leadform .h3 {
+    font-size: 1.75rem;
+    line-height: 2.25rem;
+  }
+}
 @media (max-width: 991.98px) {
   .category-tabs-mobile {
     z-index: 2;

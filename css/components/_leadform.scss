@@ -33,3 +33,24 @@ input.invalid {
 .tab h4{
     letter-spacing: 1px!important;
 }
+.form-check{
+    padding-left:0;
+}
+@include media-breakpoint-down(lg){
+    .leadform-hero{
+        margin-top:3rem;
+    }
+    .leadform-box{
+        height: 218px!important;
+    }
+    .leadform-phone-field{
+        width:100%!important;
+    }
+    .leadform-submit{
+        width:100%;
+    }
+    #leadform h3{
+        font-size:1.75rem;
+        line-height: 2.25rem;
+    }
+}
