@@ -26,7 +26,7 @@ if ( ! defined( 'YITH_WCWL' ) ) {
         <div class="col-1"></div>
         <div class="col-6">
             <div class="text-end pt-5 mt-5">
-                <img src="/wp-content/uploads/2022/11/Herobild-produkt.png">
+                <img src="/wp-content/uploads/2022/11/Herobild-produkt.png" class="mobile-hide">
             </div>
         </div>
         <div class="col-5">
@@ -39,9 +39,11 @@ if ( ! defined( 'YITH_WCWL' ) ) {
 
         </div>
 
-        <div class="col-11  d-flex">
-            <div class="col-7 bg-white">
-                <div class="col p-5" style="--bs-bg-opacity:1;">
+        <div class="col-11">
+            <div class="row">
+            <div class="col-lg-7 col-12 bg-white">
+                <div class="row">
+                <div class="col-11 offset-1 offset-lg-0 p-5" style="--bs-bg-opacity:1;">
                     <div class="h1 text-center text-uppercase mb-3">
                         Wunschliste
                     </div>
@@ -68,7 +70,11 @@ if ( ! defined( 'YITH_WCWL' ) ) {
                     <?php do_action( 'yith_wcwl_wishlist_after_wishlist_content', $var ); ?>
 
                 </div>
+                </div>
+                
             </div>
+            </div>
+            
                    
         </div>
 
