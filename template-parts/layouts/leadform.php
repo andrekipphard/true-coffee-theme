@@ -9,7 +9,15 @@
     </div>
     <div class="row pt-5">
         <div class="col">
-            <form id="leadform" action="">
+            <?php if ( filter_input( INPUT_GET, 'kontaktformular' ) === 'gesendet' ) : ?>
+
+                <div class="alert alert-success" role="alert">
+                    Das Formular wurde erfolgreich gesendet.
+                </div>
+
+            <?php endif ?>
+            <?php #$errors = validate_contact(); print_r($errors); ?>
+            <form id="leadform" action="<?php echo esc_url( admin_url('admin-post.php') ); ?>" method="post">
                 <div class="tab">
                     <div class="h3 text-uppercase text-center">
                         Wie viele Personen können sich über echten Kaffee freuen?

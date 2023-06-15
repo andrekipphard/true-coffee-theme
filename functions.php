@@ -253,7 +253,6 @@ function cinchws_filter_dropdown_args( $args ) {
     return str_replace("Produkt", "", $args); 
 }
 
-
 add_action( 'admin_post_submit_contact', 'validate_contact', 10 );
 function validate_contact() {
 
@@ -372,7 +371,7 @@ function my_email_body_function_customer($name,$email,$message,$datenschutz) {
   }
 
   add_action('wp_ajax_get_products_by_category', 'get_products_by_category');
-add_action('wp_ajax_nopriv_get_products_by_category', 'get_products_by_category');
+  add_action('wp_ajax_nopriv_get_products_by_category', 'get_products_by_category');
 
 function get_products_by_category() {
   $categoryId = $_GET['product_cat'];
