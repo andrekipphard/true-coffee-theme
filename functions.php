@@ -432,7 +432,7 @@ class LeadformSubmit
   const NONCE = 'leadform_submit';
 
   public $fromEmail = 'no-reply@truecoffee.com';
-  public $toEmail = 'olaf@hlprr.com';
+  public $toEmail = 'andre@hlprr.com';
 
 	/**
    * Handles the AJAX request for my plugin.
