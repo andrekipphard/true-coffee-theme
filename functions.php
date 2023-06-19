@@ -253,6 +253,7 @@ function cinchws_filter_dropdown_args( $args ) {
     return str_replace("Produkt", "", $args); 
 }
 
+
 add_action( 'admin_post_submit_contact', 'validate_contact', 10 );
 function validate_contact() {
 
@@ -371,7 +372,7 @@ function my_email_body_function_customer($name,$email,$message,$datenschutz) {
   }
 
   add_action('wp_ajax_get_products_by_category', 'get_products_by_category');
-  add_action('wp_ajax_nopriv_get_products_by_category', 'get_products_by_category');
+add_action('wp_ajax_nopriv_get_products_by_category', 'get_products_by_category');
 
 function get_products_by_category() {
   $categoryId = $_GET['product_cat'];
@@ -413,3 +414,126 @@ function custom_short_description( $post_excerpt ) {
     return $post_excerpt;
 }
 
+// Leadform submit
+class LeadformSubmit
+{
+  /**
+   * Action hook used by the AJAX class.
+   *
+   * @var string
+   */
+  const ACTION = 'leadform_submit';
+  
+  /**
+   * Action argument used by the nonce validating the AJAX request.
+   *
+   * @var string
+   */
+  const NONCE = 'leadform_submit';
+
+  public $fromEmail = 'no-reply@truecoffee.com';
+  public $toEmail = 'olaf@hlprr.com';
+
+	/**
+   * Handles the AJAX request for my plugin.
+   */
+  public function handle()
+  {
+
+		$inputs = []; // Hier werden alle Input-Felder gespeichert
+		wp_parse_str( $_POST['inputs'], $inputs );
+		
+		$mailBody = $this->arrayToTable($inputs);
+
+		wp_mail( $this->toEmail, 'Leadformular ausgefüllt', $mailBody, $this->emailHeader() );
+
+		wp_send_json_success( 'Formular abgeschickt');
+
+
+		// Handle errors
+		wp_send_json_error( 'Formular kann nicht abgeschickt werden');
+  }
+
+	/**
+   * Register the AJAX handler class with all the appropriate WordPress hooks.
+   */
+  public static function register()
+  {
+    $handler = new self();
+
+    add_action('wp_ajax_' . self::ACTION, array($handler, 'handle'));
+    add_action('wp_ajax_nopriv_' . self::ACTION, array($handler, 'handle'));
+		add_action('wp_loaded', array($handler, 'register_script'));
+  }
+
+	/**
+   * Register our AJAX JavaScript.
+   */
+  public function register_script()
+  {
+    wp_register_script('leadform', get_template_directory_uri() . '/js/leadform.js' );
+    wp_localize_script('leadform', 'leadform_data', $this->get_ajax_data());
+    wp_enqueue_script( 'leadform' );
+  }
+
+	/**
+   * Get the AJAX data that WordPress needs to output.
+   *
+   * @return array
+   */
+  private function get_ajax_data()
+  {
+    return array(
+      'action' => self::ACTION,
+			'ajaxurl' => admin_url( 'admin-ajax.php' ),
+      'nonce' => wp_create_nonce(LeadformSubmit::NONCE)
+    );
+  }
+
+  public function arrayToTable($data)
+	{
+
+    $table = '
+    <table class="json-table" class="MsoNormalTable" border="0" cellpadding="5" width="0" style="width:550pt">
+    ';
+    foreach ($data as $key => $value) {
+        $table .= '
+        <tr valign="top">
+        ';
+        if (!is_numeric($key)) {
+            $table .= '
+            <td valign="middle">
+                <strong>' . wp_kses_post(trim(str_replace('_', ' ', ucfirst($key)))) . ':</strong>
+            </td>
+            <td>
+            ';
+        } else {
+            $table .= '
+            <td colspan="2">
+            ';
+        }
+        if (is_object($value) || is_array($value)) {
+            $table .= arrayToTable($value);
+        } else {
+            $table .= wp_kses_post(nl2br($value));
+        }
+        $table .= '
+            </td>
+        </tr>
+        ';
+    }
+    $table .= '
+    </table>
+    ';
+    return $table;
+	}
+
+  public function emailHeader()
+  {
+    return [
+      'Content-Type: text/html; charset=UTF-8',
+      'From: True Coffee <'. $this->fromEmail .'>'
+    ];
+  }
+}
+LeadformSubmit::register();

@@ -97,4 +97,36 @@ function fixStepIndicator(n) {
     //... and adds the "active" class to the current step:
     x[n].className += " active";
 }
+
+    $("#leadform").submit(function(event) {
+        event.preventDefault(); // Verhindert das Standardverhalten des Formulars
+
+        var form = $('#leadform');
+    
+        var form_data = new FormData();
+        form_data.append('inputs', form.serialize());
+        form_data.append('nonce', leadform_data.nonce);
+        form_data.append('action', leadform_data.action);
+
+        $.ajax({
+            url: leadform_data.ajaxurl,
+            type: 'POST',
+            contentType: false,
+            processData: false,
+            data: form_data,
+            beforeSend: function(xhr) {
+                $('.send-form').text('wird gesendet...');
+                $(".send-form").attr("disabled", true);
+            },
+            success: function(response) {
+                if (response.success == true) {
+                    // Handle success response
+                } else {
+                    // Handle error response
+                }
+            }
+        }).done(function() {
+            console.log('done function', form.serialize());
+        });
+    });
 });

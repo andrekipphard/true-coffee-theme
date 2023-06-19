@@ -9,15 +9,10 @@
     </div>
     <div class="row pt-5">
         <div class="col">
-            <?php if ( filter_input( INPUT_GET, 'kontaktformular' ) === 'gesendet' ) : ?>
+            
+            <div id="leadform-response"></div>
 
-                <div class="alert alert-success" role="alert">
-                    Das Formular wurde erfolgreich gesendet.
-                </div>
-
-            <?php endif ?>
-            <?php #$errors = validate_contact(); print_r($errors); ?>
-            <form id="leadform" action="<?php echo esc_url( admin_url('admin-post.php') ); ?>" method="post">
+            <form id="leadform" method="post">
                 <div class="tab">
                     <div class="h3 text-uppercase text-center">
                         Wie viele Personen können sich über echten Kaffee freuen?
@@ -27,13 +22,13 @@
                             <div class="border border-dark h-100 leadform-box">
                                 <div class="form-check d-flex flex-column align-items-center" style="height: 100%;">
                                     <div class="flex-grow-1 d-flex flex-column align-items-center justify-content-center">
-                                        <input class="form-check-input d-none" type="radio" name="imgbackground" id="eins-bis-neunzehn" value="">
+                                        <input class="form-check-input d-none" type="radio" name="Anzahl Personen" id="eins-bis-neunzehn" value="1-19">
                                         <label class="align-self-center" for="eins-bis-neunzehn">
                                             <img src="/wp-content/uploads/2023/06/1truecoffee_leadgenerator-1-1.png" alt="1-19" class="img-fluid">
                                         </label>
                                     </div>
                                     <div class="h4 text-uppercase mt-auto">
-                                    1 - 19
+                                        1 - 19
                                     </div>
                                 </div>
                             </div>
@@ -42,13 +37,13 @@
                             <div class="border border-dark h-100 leadform-box">
                                 <div class="form-check d-flex flex-column align-items-center" style="height: 100%;">
                                     <div class="flex-grow-1 d-flex flex-column align-items-center justify-content-center">
-                                        <input class="form-check-input d-none" type="radio" name="imgbackground" id="zwanzig-bis-fuenfzig" value="">
+                                        <input class="form-check-input d-none" type="radio" name="Anzahl Personen" id="zwanzig-bis-fuenfzig" value="20-50">
                                         <label class="align-self-center" for="zwanzig-bis-fuenfzig">
                                             <img src="/wp-content/uploads/2023/06/3truecoffee_leadgenerator-1-1.png" alt="20-50" class="img-fluid">
                                         </label>
                                     </div>
                                     <div class="h4 text-uppercase mt-auto">
-                                    20 - 50
+                                        20 - 50
                                     </div>
                                 </div>
                             </div>
@@ -57,13 +52,13 @@
                             <div class="border border-dark h-100 leadform-box">
                                 <div class="form-check d-flex flex-column align-items-center" style="height: 100%;">
                                     <div class="flex-grow-1 d-flex flex-column align-items-center justify-content-center">
-                                        <input class="form-check-input d-none" type="radio" name="imgbackground" id="mehr-als-fuenfzig" value="">
+                                        <input class="form-check-input d-none" type="radio" name="Anzahl Personen" id="mehr-als-fuenfzig" value="50+">
                                         <label class="align-self-center" for="mehr-als-fuenfzig">
                                             <img src="/wp-content/uploads/2023/06/2truecoffee_leadgenerator-1-1.png" alt="Mehr als 50" class="img-fluid">
                                         </label>
                                     </div>
                                     <div class="h4 text-uppercase mt-auto">
-                                    Mehr als 50
+                                        Mehr als 50
                                     </div>
                                 </div>
                             </div>
@@ -80,7 +75,7 @@
                             <div class="border border-dark h-100 leadform-box">
                                 <div class="form-check d-flex flex-column align-items-center" style="height: 100%;">
                                     <div class="flex-grow-1 d-flex flex-column align-items-center justify-content-center">
-                                        <input class="form-check-input d-none" type="radio" name="imgbackground" id="eine" value="">
+                                        <input class="form-check-input d-none" type="radio" name="Anzahl Kaffeeautomaten" id="eine" value="1">
                                         <label class="align-self-center" for="eine">
                                             <img src="/wp-content/uploads/2023/06/1_maschine-1.png" alt="Eine" class="img-fluid">
                                         </label>
@@ -95,7 +90,7 @@
                             <div class="border border-dark h-100 leadform-box">
                                 <div class="form-check d-flex flex-column align-items-center" style="height: 100%;">
                                     <div class="flex-grow-1 d-flex flex-column align-items-center justify-content-center">
-                                        <input class="form-check-input d-none" type="radio" name="imgbackground" id="zweibisfunf" value="">
+                                        <input class="form-check-input d-none" type="radio" name="Anzahl Kaffeeautomaten" id="zweibisfunf" value="2-5">
                                         <label class="align-self-center" for="zweibisfunf">
                                             <img src="/wp-content/uploads/2023/06/maschinen-ansammlung-neu-1.png" alt="Zwei bis Fünf" class="img-fluid">
                                         </label>
@@ -110,7 +105,7 @@
                             <div class="border border-dark h-100 leadform-box">
                                 <div class="form-check d-flex flex-column align-items-center" style="height: 100%;">
                                     <div class="flex-grow-1 d-flex flex-column align-items-center justify-content-center">
-                                        <input class="form-check-input d-none" type="radio" name="imgbackground" id="mehralsfunf" value="">
+                                        <input class="form-check-input d-none" type="radio" name="Anzahl Kaffeeautomaten" id="mehralsfunf" value="5+">
                                         <label class="align-self-center" for="mehralsfunf">
                                         <img src="/wp-content/uploads/2023/06/maschinen-ansammlung-fuenf-1.png" alt="Mehr als Fünf" class="img-fluid">
                                         </label>
@@ -134,10 +129,10 @@
                             <img src="/wp-content/uploads/2023/03/leadform_coffee.png">
                         </div>
                         <div class="col-12 col-lg-6">
-                            <p><input type="text" placeholder="Firma"></p>
-                            <p><input type="text" placeholder="Name"></p>
-                            <p><input type="email" placeholder="E-Mail"></p>
-                            <p><input class="leadform-phone-field" type="number" placeholder="Telefonnummer" style="padding-left:20px!important; padding-right:20px!important;"></p>
+                            <p><input type="text" name="Firma" placeholder="Firma"></p>
+                            <p><input type="text" name="name" placeholder="Name"></p>
+                            <p><input type="email" name="E-Mail" placeholder="E-Mail"></p>
+                            <p><input class="leadform-phone-field" name="Telefonnummer" type="number" placeholder="Telefonnummer" style="padding-left:20px!important; padding-right:20px!important;"></p>
                             <button type="submit" class="btn btn-primary mt-5 leadform-submit">Senden</button>
                         </div>
                     </div>
