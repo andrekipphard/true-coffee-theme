@@ -13,7 +13,7 @@
             <?= $titel; ?>
         </div>
         <div class="p">
-            <?= $beschreibung; ?>
+            <?= apply_filters('the_content', $beschreibung); ?>
         </div>
         <div class="h4 text-uppercase pt-5 pb-4">
             <?= $subtitel; ?>
