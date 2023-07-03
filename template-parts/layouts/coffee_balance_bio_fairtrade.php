@@ -23,7 +23,7 @@
 
             <div class="col-4 col-lg-2 true-coffee-siegel d-flex align-items-end">
                 <img src="<?= wp_get_attachment_image_url($siegel, 'large');?>" style="margin-left:-90px; width: 200px; height: auto;" class="desktop-hide">
-                <img src="<?= wp_get_attachment_image_url($siegel, 'large');?>" class="mobile-hide" style="width: 450px; margin-left:-19rem;">
+                <img src="<?= wp_get_attachment_image_url($siegel, 'large');?>" class="mobile-hide" style="width: 450px;">
             </div>
 
         </div>

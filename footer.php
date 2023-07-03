@@ -26,9 +26,9 @@
 
 			</div>
 
-			<div class="row pb-lg-5 mb-lg-5">
+			<div class="row connect-arrow pb-lg-5 mb-lg-5">
 
-				<div class="col-6 col-lg-9 d-flex">
+				<div class="col-6 col-lg-9 position-relative">
 					<img src="/wp-content/uploads/2022/11/Kontaktanfrage-1.png" class="img-fluid mobile-hide">
 					<img src="/wp-content/uploads/2022/11/Kontaktanfrage-1.png" class="desktop-hide contact-arrow">
 				</div>

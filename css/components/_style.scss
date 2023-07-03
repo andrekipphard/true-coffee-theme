@@ -101,7 +101,7 @@ body{
 .h4{
     font-size: 16px;
     color:#000;
-    letter-spacing: 0.3rem;
+    letter-spacing: 0.2rem;
     font-family:'Bebas Neue';
 }
 .btn:disabled{
@@ -177,7 +177,25 @@ body{
 }
 
 // *** Kontakt ***
-
+.page-id-219 .connect{
+    display:none;
+}
+.page-id-219 .connect-arrow{
+    display:none;
+}
+.contact .form-check .form-check-input{
+    margin-left:0;
+    margin-right:10px;
+}
+.contact input[type=text i], .contact input[type=email i], .contact input[type=number i]{
+    width:100%;
+}
+textarea{
+    padding-left: 20px;
+    font-family: "Bebas Neue";
+    font-size: 1rem;
+    letter-spacing: .2rem;
+}
 .form-control{
     border-color:#000;
     border-radius: 0px;

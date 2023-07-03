@@ -34,6 +34,14 @@
 .footer-col-arrow-to-top{
     margin-bottom: -5rem;
 }
+.img-fluid.mobile-hide{
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    left: 0;
+    right: 0;
+    margin: auto;
+}
 @include media-breakpoint-down(lg){
     .btn-no-border{
         padding-left:0!important;
@@ -44,6 +52,7 @@
     .contact-arrow{
         margin-left:-77rem;
         max-width: none!important;
+        
     }
     .footer-siegel{
         width:100%!important;
