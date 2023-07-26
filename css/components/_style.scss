@@ -302,6 +302,75 @@ a.added_to_cart.wc-forward {
     display:block;
     margin-top:18px;
 }
+.archive .mobile-wishlist .yith-wcwl-wishlistaddedbrowse a::before, .archive .mobile-wishlist .yith-wcwl-wishlistexistsbrowse a::before, .related-products .mobile-wishlist .yith-wcwl-wishlistexistsbrowse a::before{
+    background-color:black!important;
+    padding:0.5rem;
+    padding-bottom:0.3rem;
+    margin-top:0;
+    content: ''; /* Clear the default content as it's not required for background image */
+    background-image: url("data:image/svg+xml;base64, ICAgIDxzdmcgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB3aWR0aD0iMzIiIGhlaWdodD0iMzIiIGZpbGw9IiNmZmYiIGNsYXNzPSJiaSBiaS1jdXAiIHZpZXdCb3g9IjAgMCAxNiAxNiI+CiAgPHBhdGggZmlsbC1ydWxlPSJldmVub2RkIiBkPSJNLjExIDMuMTg3QS41LjUgMCAwIDEgLjUgM2gxM2EuNS41IDAgMCAxIC40ODguNjA4bC0uMjIuOTkxYTMuMDAxIDMuMDAxIDAgMCAxLTEuMyA1Ljg1NGwtLjEzMi41OUEyLjUgMi41IDAgMCAxIDkuODk2IDEzSDQuMTA0YTIuNSAyLjUgMCAwIDEtMi40NC0xLjk1OEwuMDEyIDMuNjA4YS41LjUgMCAwIDEgLjA5OC0uNDJabTEyLjU3NCA2LjI4OGEyIDIgMCAwIDAgLjg2Ni0zLjg5OWwtLjg2NiAzLjlaTTEuMTI0IDRsMS41MTYgNi44MjVBMS41IDEuNSAwIDAgMCA0LjEwNCAxMmg1Ljc5MmExLjUgMS41IDAgMCAwIDEuNDY0LTEuMTc1TDEyLjg3NyA0SDEuMTIzWiIvPgo8L3N2Zz4=");
+    width: 24px;
+    height: 24px;
+    background-size: 24px 24px; /* Set the width and height of the background image */
+    margin-left:.5rem;
+}
+.archive .mobile-wishlist .yith-wcwl-wishlistexistsbrowse, .archive .mobile-wishlist .yith-wcwl-wishlistaddedbrowse{
+    background-color:black!important;
+}
+.archive .mobile-wishlist .yith-wcwl-wishlistexistsbrowse a, .archive .mobile-wishlist .yith-wcwl-wishlistaddedbrowse a{
+    display:inline-block;
+    margin-top:.5rem!important;
+    padding-bottom:.5rem;
+}
+.related-products .mobile-wishlist .yith-wcwl-add-button, .related-products .mobile-wishlist .yith-wcwl-wishlistaddedbrowse, .related-products .mobile-wishlist .yith-wcwl-wishlistexistsbrowse{
+    background-color:black;
+}
+.related-products .mobile-wishlist .yith-wcwl-add-button a, .related-products .mobile-wishlist .yith-wcwl-wishlistaddedbrowse a, .related-products .mobile-wishlist .yith-wcwl-wishlistexistsbrowse a{
+    visibility: visible!important;
+    display:flex!important;
+    justify-content:center!important;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+.related-products .mobile-wishlist .yith-wcwl-wishlistaddedbrowse a, .related-products .mobile-wishlist .yith-wcwl-wishlistexistsbrowse{
+    padding-top:.5rem;
+    padding-bottom:.5rem;
+}
+.related-products .mobile-wishlist a::before{
+    margin-left:0!important;
+}
+.archive .mobile-wishlist .add_to_wishlist::before, .related-products .mobile-wishlist .yith-wcwl-add-button a::before, .related-products .mobile-wishlist .yith-wcwl-wishlistaddedbrowse a::before{
+    background-color:black!important;
+    padding:0.5rem;
+    padding-bottom:0.3rem;
+    margin-top:0;
+    content: ''; /* Clear the default content as it's not required for background image */
+    background-image: url("data:image/svg+xml;base64, ICAgIDxzdmcgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB3aWR0aD0iMzIiIGhlaWdodD0iMzIiIGZpbGw9IiNmZmYiIGNsYXNzPSJiaSBiaS1jdXAiIHZpZXdCb3g9IjAgMCAxNiAxNiI+CiAgPHBhdGggZmlsbC1ydWxlPSJldmVub2RkIiBkPSJNLjExIDMuMTg3QS41LjUgMCAwIDEgLjUgM2gxM2EuNS41IDAgMCAxIC40ODguNjA4bC0uMjIuOTkxYTMuMDAxIDMuMDAxIDAgMCAxLTEuMyA1Ljg1NGwtLjEzMi41OUEyLjUgMi41IDAgMCAxIDkuODk2IDEzSDQuMTA0YTIuNSAyLjUgMCAwIDEtMi40NC0xLjk1OEwuMDEyIDMuNjA4YS41LjUgMCAwIDEgLjA5OC0uNDJabTEyLjU3NCA2LjI4OGEyIDIgMCAwIDAgLjg2Ni0zLjg5OWwtLjg2NiAzLjlaTTEuMTI0IDRsMS41MTYgNi44MjVBMS41IDEuNSAwIDAgMCA0LjEwNCAxMmg1Ljc5MmExLjUgMS41IDAgMCAwIDEuNDY0LTEuMTc1TDEyLjg3NyA0SDEuMTIzWiIvPgo8L3N2Zz4=");
+    width: 24px;
+    height: 24px;
+    background-size: 24px 24px; /* Set the width and height of the background image */
+    margin-left:.5rem;
+}
+.related-products .mobile-wishlist .yith-wcwl-add-button a::before{
+    background-position: center center!important;
+}
+.archive .mobile-wishlist a{
+    visibility: visible!important;
+    border:solid 0 #fff!important;
+    background-color:black!important;
+    margin-top:1rem!important;
+}
+.archive .mobile-wishlist .yith-wcwl-add-to-wishlist{
+    margin-top:0;
+    margin-left:0;
+}
+.mobile-wishlist .add_to_wishlist.single_add_to_wishlist.button.alt{
+    margin-top:0!important;
+    padding-left:0!important;
+    padding-right:0!important;
+    width:100%;
+}
 .archive .add_to_wishlist{
     background-color:transparent!important;
 }
@@ -874,6 +943,7 @@ li.woocommerce-MyAccount-navigation-link.woocommerce-MyAccount-navigation-link.i
     color:#fff;
 }
 
+  
 
 // *** Thank you ***
 .woocommerce .woocommerce-customer-details address{
@@ -904,6 +974,7 @@ li.woocommerce-MyAccount-navigation-link.woocommerce-MyAccount-navigation-link.i
 .single-product .single-hero{
     margin-top:-10rem;
 }
+
 @include media-breakpoint-down(lg){
     .mobile-hide{
         display:none!important;
@@ -1015,7 +1086,7 @@ li.woocommerce-MyAccount-navigation-link.woocommerce-MyAccount-navigation-link.i
     .cart-hero{
         // height: 70rem;
         // transform:translateY(-10rem);
-         margin-top:3rem;
+         margin-top:7rem;
         // margin-bottom: -10rem;
      }
      .woocommerce #content table.cart .product-thumbnail, .woocommerce table.cart .product-thumbnail, .woocommerce-page #content table.cart .product-thumbnail, .woocommerce-page table.cart .product-thumbnail{
@@ -1061,4 +1132,28 @@ li.woocommerce-MyAccount-navigation-link.woocommerce-MyAccount-navigation-link.i
         font-size:1rem;
         line-height: 1.5rem;
      }
-}
+     .woocommerce div.product .product_title{
+        font-size:25px!important;
+        line-height: 2rem!important;
+     }
+     .coupon .btn-primary{
+        width:100%;
+        margin-top:1.5rem;
+     }
+     .woocommerce-billing-fields h3, .woocommerce-additional-fields h3, .woocommerce-checkout-review-order h3, .woocommerce-shipping-fields h3, .woocommerce-Address-title.title h3, .woocommerce-notices-wrapper h3, #post-197 > div > div > div > div > div:nth-child(2) > div.col-12.offset-lg-0 > div > div.col-12.col-lg-7.bg-white > div > div > form > h3{
+        font-size:25px;
+        line-height: 1.5rem;
+     }
+     #ship-to-different-address > label > span{
+        line-height: 2!important;
+        font-size: 1rem!important;
+        font-weight: 400!important;
+     }
+     #ship-to-different-address-checkbox{
+        margin-right: 6px!important;
+margin-left: 3px!important;
+     }
+     .woocommerce .wishlist-title h2{
+        font-size:1.5rem!important;
+     }
+}    

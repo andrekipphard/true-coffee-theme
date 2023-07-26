@@ -6,8 +6,16 @@
 .socials-sticky{
     position: -webkit-sticky; /* Safari */
  position:sticky!important;
- top:20vw;
+ top: 50%;
+    transform: translate(-50%, -50%);
 
+}
+.woocommerce-sticky{
+    position: -webkit-sticky; /* Safari */
+    position:sticky!important;
+    top: 50%;
+    left: 100%; /* Sticky on the right side */
+    transform: translate(-100%, -50%);
 }
 
 .sticky-row{
@@ -25,10 +33,11 @@
     top: 20;
     left: 20;
     opacity: 1;
-    transition: opacity 0s ease-out;
+    transition: opacity .5s ease-in-out;
 }
 body.scrolled .logo {
     opacity: 0;
+    transition: opacity .5s ease-in-out;
   }
 .logo img{
     width: 5rem;
@@ -37,17 +46,11 @@ body.scrolled .logo {
     width: 4rem;
 }
 @include media-breakpoint-down(lg){
-    .socials-sticky{
-        top:30vh;
-    }
     .hamburger-btn{
         margin-top:7%;
     }
 }
 @include media-breakpoint-down(md){
-    .socials-sticky{
-        top:50vh;
-    }
     .logo img{
         width: 3rem;
     }
@@ -74,13 +77,34 @@ body.scrolled .logo {
         width:10px;
         height: 10px;
     }
-    .socials-sticky {
-        position: fixed!important;
-        bottom: 0;
-        left: 0;
-        right: 0;
-        z-index: 999;
-      }
+    /* Update the styles for sticky social links */
+/* Update the .socials-sticky-container class */
+.socials-sticky-bottom {
+    position: sticky;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 99;
+}
+
+/* Other styles remain the same */
+
+.sticky-row {
+    margin-top: 0;
+    max-width: 100%;
+    transform: translate(0, 0);
+}
+
+/* Make the <ul> horizontal */
+.socials-sticky-bottom ul.list-group {
+    padding: 0; /* Remove default vertical padding */
+}
+
+.socials-sticky-bottom ul.list-group li {
+    display: inline-block; /* Display list items horizontally */
+}
+
+  
       .hamburger-btn{
         position: fixed!important;
         margin-top:2rem;

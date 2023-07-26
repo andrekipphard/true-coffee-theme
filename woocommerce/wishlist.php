@@ -43,8 +43,8 @@ if ( ! defined( 'YITH_WCWL' ) ) {
             <div class="row">
             <div class="col-lg-7 col-12 bg-white">
                 <div class="row">
-                <div class="col-11 offset-1 offset-lg-0 p-5" style="--bs-bg-opacity:1;">
-                    <div class="h1 text-center text-uppercase mb-3">
+                <div class="col-11 offset-lg-0 p-lg-5" style="--bs-bg-opacity:1;">
+                    <div class="h1 mt-5 mt-lg-0 text-center text-uppercase mb-3" style="font-size:2rem;">
                         Wunschliste
                     </div>
                     <?php

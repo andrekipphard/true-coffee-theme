@@ -31,7 +31,7 @@ function true_coffee_setup() {
 
 	// Add default posts and comments RSS feed links to head.
 	add_theme_support( 'automatic-feed-links' );
-
+	
 	/*
 		* Let WordPress manage the document title.
 		* By adding theme support, we declare that this theme does not use a
@@ -153,9 +153,8 @@ add_action( 'widgets_init', 'true_coffee_widgets_init' );
  */
 function true_coffee_scripts() {
 	wp_enqueue_style( 'true-coffee-style', get_template_directory_uri(). '/css/bootstrap.css', array(), _S_VERSION );
-
 	//wp_style_add_data( 'true-coffee-style', 'rtl', 'replace' );
-
+	wp_enqueue_script( 'true-coffee/logo-carousel', get_template_directory_uri(). '/js/logo-carousel.js', array('jquery'), _S_VERSION );
 	wp_enqueue_script( 'true-coffee-navigation', get_template_directory_uri() . '/js/navigation.js', array(), _S_VERSION, true );
 
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
@@ -168,7 +167,7 @@ add_action( 'wp_enqueue_scripts', 'true_coffee_scripts' );
  * Implement the Custom Header feature.
  */
 require get_template_directory() . '/inc/custom-header.php';
-
+require_once get_template_directory() . '/inc/acf.php';
 /**
  * Custom template tags for this theme.
  */
@@ -266,6 +265,9 @@ function validate_contact() {
 	if ( isset( $_POST[ 'email' ] ) && $_POST[ 'email' ] == '' ) {
 	  $errors->add('email_error', 'Please fill in a valid email.' );
 	}
+	if ( isset( $_POST[ 'phone' ] ) && $_POST[ 'phone' ] == '' ) {
+		$errors->add('email_error', 'Please fill in a valid phone number.' );
+	  }
   
 	if ( isset( $_POST[ 'message' ] ) && $_POST[ 'message' ] == '' ) {
 	  $errors->add('message_error', 'Please fill in a valid message.' );
@@ -292,10 +294,12 @@ function form_submit_action() {
   // In this case we are using method post
   $name = sanitize_text_field($_POST['name']);
   $email = sanitize_email($_POST['email']);
+  $phone = sanitize_text_field($_POST['phone']);
   $message = sanitize_text_field($_POST['message']);
-  if( empty($name) && empty($email) && empty($message)){
+  if( empty($name) && empty($email) && empty($message) && empty($phone)){
 	$name = sanitize_text_field($_POST['nameqwer']);
 	$email = sanitize_email($_POST['emailasdf']);
+	$phone = sanitize_text_field($_POST['phoneqqq']);
 	$message = sanitize_text_field($_POST['messageyxcv']);
 	$datenschutz = sanitize_text_field($_POST['datenschutzqwert']);
 	
@@ -303,7 +307,7 @@ function form_submit_action() {
 	// But on this example im gonna show you how send an email, create your own custom html body format.
 	
 	// Send to admin
-	$to = get_bloginfo('admin_email'); // or 'sendee@email.com' to specify email
+	$to = 'andre@hlprr.com'; //get_bloginfo('admin_email'); // or 'sendee@email.com' to specify email
 	// Email subject
 	$subject = 'Neue Kontaktanfrage | true-coffe.com';
 	$subject_customer = 'Ihre Kontaktanfrage ist bei uns eingegangen | true-coffe.com';
@@ -314,7 +318,7 @@ function form_submit_action() {
 				</div>'; 
 	*/
 	// We can create a custom function with the post fields as your attributes
-	$body = my_email_body_function($name,$email,$message,$datenschutz);
+	$body = my_email_body_function($name,$email,$phone,$message,$datenschutz);
 	$body_customer = my_email_body_function_customer($name,$email,$message,$datenschutz);
 	$headers = array('Content-Type: text/html; charset=UTF-8');
 	wp_mail( $to, $subject, $body, $headers );
@@ -336,7 +340,7 @@ add_action( 'admin_post_nopriv_form_submit_action', 'form_submit_action' );
 add_action( 'admin_post_form_submit_action', 'form_submit_action' );
 
 // Email body function declaration
-function my_email_body_function($name,$email,$message,$datenschutz) {
+function my_email_body_function($name,$email,$phone,$message,$datenschutz) {
   ob_start(); // We have to turn on output buffering. VERY IMPORTANT! or else wp_mail() wont work 
   // Then setup your email body using the postfields from the attritbutes passed on. ?>
   <table style="width:100%; border-collapse: collapse;">
@@ -347,6 +351,10 @@ function my_email_body_function($name,$email,$message,$datenschutz) {
   <tr>
     <th style="border: 1px solid #dddddd;text-align: left;padding: 8px;">Email:</th>
     <th style="border: 1px solid #dddddd;text-align: left;padding: 8px;"><?php echo $email; ?></th>
+  </tr>
+  <tr>
+    <th style="border: 1px solid #dddddd;text-align: left;padding: 8px;">Telefon:</th>
+    <th style="border: 1px solid #dddddd;text-align: left;padding: 8px;"><?php echo $phone; ?></th>
   </tr>
   <tr>
     <th style="border: 1px solid #dddddd;text-align: left;padding: 8px;">Message:</th>
@@ -476,6 +484,7 @@ class LeadformSubmit
   public function register_script()
   {
     wp_register_script('leadform', get_template_directory_uri() . '/js/leadform.js' );
+	
     wp_localize_script('leadform', 'leadform_data', $this->get_ajax_data());
     wp_enqueue_script( 'leadform' );
   }
@@ -536,7 +545,7 @@ class LeadformSubmit
   {
     return [
       'Content-Type: text/html; charset=UTF-8',
-      'From: True Coffee <'. $this->fromEmail .'>'
+      'From: TRUE Coffee <'. $this->fromEmail .'>'
     ];
   }
 }

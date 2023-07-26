@@ -22,12 +22,15 @@
 .row-verantwortung{
     margin-top:-20rem;
 }
+.row-verantwortung-text-top{
+    margin-bottom:-10rem;
+}
 .col-verantwortung-kategorie{
     background-image: url('/wp-content/uploads/2022/11/schwarzer-Rahmen.png');
     background-size: contain;
     background-repeat:no-repeat;
     height: 550px;
-    margin-top:-5rem;
+    margin-top:-12rem;
     margin-left: 5rem;
     z-index: -1;
 }
@@ -75,6 +78,9 @@
     z-index:3;
 }
 @include media-breakpoint-down(lg){
+    .col-verantwortung-kategorie{
+        margin-top:-5rem;
+    }
     .row-verantwortung{
         margin-top:-10rem;
     }

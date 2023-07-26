@@ -48,8 +48,9 @@ get_template_part('template-parts/layouts/sticky-socials');
             <div class="col-12 offset-1 offset-lg-0 single-hero-col bg-white p-5" style="--bs-bg-opacity:1;">
                 <div class="h1 text-center text-uppercase mb-3">
 					<?php woocommerce_page_title(); ?>
+					
                 </div>
-
+				
                 <div class="h4 text-center text-uppercase mb-5">
                     Social - Ecological - Zero Packaging
                 </div>
@@ -57,6 +58,7 @@ get_template_part('template-parts/layouts/sticky-socials');
                 <div class="p mb-3">
 				Hinter TRUE Coffee steht die Idee, Menschen mit Genuss, Qualität und Nachhaltigkeit zu begeistern. Unsere Kaffees werden biologisch angebaut und fair gehandelt. Doch wir gehen noch weiter. Lerne unseren Weg kennen und werde Teil unserer Idee, die Welt auf genussvolle Weise zu verbessern.
                 </div>
+				
             </div>
         </div>
     

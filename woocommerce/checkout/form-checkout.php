@@ -44,7 +44,7 @@ if ( ! defined( 'ABSPATH' ) ) {
        
             <div class="col-11 col-lg-10 offset-1 bg-white">
                 <div class="row">
-                    <div class="col-12 col-lg-7 pt-5 pe-5 ps-5">
+                    <div class="col-12 col-lg-7 pt-5 pe-lg-5 ps-lg-5">
                         <div class="h1 text-center text-uppercase mb-3">
                             Kasse
                         </div>
@@ -54,7 +54,7 @@ if ( ! defined( 'ABSPATH' ) ) {
                 <form name="checkout" method="post" class="checkout woocommerce-checkout" action="<?php echo esc_url( wc_get_checkout_url() ); ?>" enctype="multipart/form-data">
                 <div class="row d-flex">
                     
-                        <div class="col-12 col-lg-7 p-5" style="--bs-bg-opacity:1;">
+                        <div class="col-12 col-lg-7 p-lg-5" style="--bs-bg-opacity:1;">
                             
                             
                             <?php // If checkout registration is disabled and not logged in, the user cannot checkout.
@@ -81,7 +81,7 @@ if ( ! defined( 'ABSPATH' ) ) {
                         </div>
 
 
-                    <div class="col-12 col-lg-5 p-5 bg-white border-lg-start border-dark">
+                    <div class="col-12 col-lg-5 p-lg-5 mt-5 mt-lg-0 bg-white border-lg-start border-dark">
                     
 
                         <?php do_action( 'woocommerce_checkout_before_order_review_heading' ); ?>

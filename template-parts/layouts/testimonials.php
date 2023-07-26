@@ -10,19 +10,13 @@
         <div class="bg-white p-4 p-lg-5 col-testimonials-2">
             <div id="carouselExampleDesktop" class="carousel carousel-dark slide mobile-hide">
                 <div class="carousel-inner">
-                    <?php $loop = 1; ?>
-                    <?php while ( have_rows( 'testimonials' ) ) :?>
-                        <?php $testimonial_index = 1;?>
-                        <div class="carousel-item<?php if($loop==1):?> active<?php endif;?>">
-                            <?php while($testimonial_index<=3):?>
-                                <div class="p fst-italic ms-3 mb-5 mt-5 pt-5 pb-5 me-5">
-                                    <?php the_row(); $testimonial = get_sub_field('testimonial');?>
-                                    <?= $testimonial; ?>
-                                </div>
-                                <?php $testimonial_index++;?>
-                            <?php endwhile;?>
+                    <?php while ( have_rows( 'testimonials' ) ) : the_row();?>
+                        <?php $testimonial = get_sub_field('testimonial');?>
+                        <div class="carousel-item<?php if(get_row_index()==1):?> active<?php endif;?>">
+                            <div class="p fst-italic mx-5 pt-5 pb-5">
+                                <?= $testimonial;?>
+                            </div>
                         </div>
-                        <?php $loop++;?>
                     <?php endwhile; ?>
                     </div>
                 <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleDesktop" data-bs-slide="prev">

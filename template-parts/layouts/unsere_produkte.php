@@ -56,7 +56,7 @@
 
     </div>
 
-    <div class="col-5 produkte-img">
+    <div class="col-5 produkte-img text-center">
         <img src="<?= wp_get_attachment_image_url($deco_image, 'large');?>" class="desktop-hide img-fluid">
         <img src="<?= wp_get_attachment_image_url($deco_image, 'large');?>" class="mobile-hide">
     </div>
@@ -65,7 +65,7 @@
 
 <div class="row pt-5">
 
-    <div class="col-12 col-lg-7 produkte-bild-bg" style="background-image:url('<?= wp_get_attachment_image_url($headline_black_image, 'large');?>');">
+    <div class="col-12 col-lg-7 produkte-bild-bg" style="background-image:url('<?= wp_get_attachment_image_url($headline_white_image, 'large');?>');">
 
     </div>
 
@@ -121,8 +121,8 @@
 
 <div class="row row-punkte-linie mobile-hide">
     
-    <div class="col-5 text-center">
-        <img src="<?= wp_get_attachment_image_url($deco_image_zwei, 'large');?>">
+    <div class="col-5">
+        <img src="<?= wp_get_attachment_image_url($deco_image_zwei, 'large');?>" style="margin-left:30%;">
     </div>
 
     <div class="col">

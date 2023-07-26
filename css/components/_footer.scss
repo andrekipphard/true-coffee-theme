@@ -42,7 +42,14 @@
     right: 0;
     margin: auto;
 }
+
 @include media-breakpoint-down(lg){
+    .order-mobile-1{
+        order:1;
+    }
+    .order-mobile-2{
+        order:2;
+    }
     .btn-no-border{
         padding-left:0!important;
         padding-right:0!important;

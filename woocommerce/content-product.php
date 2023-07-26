@@ -54,15 +54,24 @@ $product_css_class = 'product-' . $id;
 }
 </style>
 
-<li <?php wc_product_class('d-flex p-5 justify-content-center align-items-center hover-product position-relative ' . $product_css_class, $product); ?> style="background-image: url('<?= $placeholderImage; ?>'); background-size:cover; background-position:center; background-repeat:no-repeat; height:300px; width:300px;">
+<div class="mobile-hide">
+    <li <?php wc_product_class('mobile-hide d-flex p-5 justify-content-center align-items-center hover-product position-relative flex-column ' . $product_css_class, $product); ?> style="background-image: url('<?= $placeholderImage; ?>'); background-size:cover; background-position:center; background-repeat:no-repeat; height:300px;">
 
     <div class="row product-btn-wishlist p-5 d-flex justify-content-center align-items-center">
+        <div class="col-12 product-title-hover text-white">
+            <?php 
+                $product_name = $product->get_title();
+                $product_price = $product->get_price_html();
+            ?>
+            <h5><?= $product_name;?></h5>
+            <h5><?= $product_price;?></h5>
+        </div>
         <div class="col-6 buy-btn-col">
             
             <a href="<?php echo esc_url($product->add_to_cart_url()); ?>" data-quantity="1" data-product_id="<?php echo esc_attr( $product->id ) ?>" data-product_sku="<?php echo esc_attr( $product->sku ) ?>" class="add_to_cart_button ajax_add_to_cart <?php echo $class; ?>">
-            <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="#fff" class="bi bi-cart" viewBox="0 0 16 16">
-  <path d="M0 1.5A.5.5 0 0 1 .5 1H2a.5.5 0 0 1 .485.379L2.89 3H14.5a.5.5 0 0 1 .491.592l-1.5 8A.5.5 0 0 1 13 12H4a.5.5 0 0 1-.491-.408L2.01 3.607 1.61 2H.5a.5.5 0 0 1-.5-.5zM3.102 4l1.313 7h8.17l1.313-7H3.102zM5 12a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm7 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm-7 1a1 1 0 1 1 0 2 1 1 0 0 1 0-2zm7 0a1 1 0 1 1 0 2 1 1 0 0 1 0-2z"/>
-</svg>
+                <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="#fff" class="bi bi-cart" viewBox="0 0 16 16">
+                    <path d="M0 1.5A.5.5 0 0 1 .5 1H2a.5.5 0 0 1 .485.379L2.89 3H14.5a.5.5 0 0 1 .491.592l-1.5 8A.5.5 0 0 1 13 12H4a.5.5 0 0 1-.491-.408L2.01 3.607 1.61 2H.5a.5.5 0 0 1-.5-.5zM3.102 4l1.313 7h8.17l1.313-7H3.102zM5 12a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm7 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm-7 1a1 1 0 1 1 0 2 1 1 0 0 1 0-2zm7 0a1 1 0 1 1 0 2 1 1 0 0 1 0-2z"/>
+                </svg>
             </a>
         </div>
         <div class="col-6 wishlist-btn-col">
@@ -71,8 +80,26 @@ $product_css_class = 'product-' . $id;
     </div>
 
     <a href="<?= $permalink; ?>" class="stretched-link"></a>
-    
-</li>
+
+    </li>
+</div>
+<div class="desktop-hide w-50">
+    <li <?php wc_product_class('' . $product_css_class, $product); ?>>
+        <?php 
+            $product_name = $product->get_title();
+            $product_price = $product->get_price_html();
+        ?>
+        <div class="row mt-3">
+            <div class="col-12">
+                <a href="<?= $permalink; ?>" style="visibility:visible;"><img src="<?= $placeholderImage; ?>" class="img-fluid"></a>
+                <a href="<?= $permalink; ?>" style="visibility:visible;"><h5 style="font-size:16px"><?= $product_name;?></h5></a>
+                <h5 style="font-size:16px"><?= $product_price;?></h5>
+                
+            </div>
+        </div>
+        
+    </li>
+</div>
 
 
 

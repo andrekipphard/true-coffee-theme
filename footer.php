@@ -44,25 +44,25 @@
 			</div>
 			<!-- *** Partner *** -->
 			<div class="row mt-lg-5 pt-5 pb-5 mb-lg-5">
+				<!-- Slider main container -->
+				<div class="swiper">
+					<!-- Additional required wrapper -->
+					<div class="swiper-wrapper">
+						<!-- Slides -->
+						<?php if ( have_rows( 'logo_carousel', 'options' ) ) : ?>
+							<?php while ( have_rows( 'logo_carousel', 'options' ) ) :
+								the_row(); ?>
+								
+								<?php $image = get_sub_field( 'image', 'options' );?>
+								<div class="swiper-slide">
+									<div class="col border-lg-end border-dark text-center" style="padding-right:25px; padding-left:25px;">
+										<img src="<?= wp_get_attachment_image_url($image, 'large');?>" style="height: 75px; width: auto;">
+									</div>
+								</div>	
+							<?php endwhile; ?>
+						<?php endif; ?>
+					</div>
 
-				<div class="col border-end border-dark text-center">
-					<img src="/wp-content/uploads/2022/11/Partner-logos.png" class="img-fluid">
-				</div>
-
-				<div class="col border-end border-dark text-center">
-					<img src="/wp-content/uploads/2022/11/Partner-logos-4.png" class="img-fluid">
-				</div>
-
-				<div class="col border-end border-dark text-center">
-					<img src="/wp-content/uploads/2022/11/Partner-logos-3.png" class="img-fluid">
-				</div>
-
-				<div class="col border-end border-dark text-center">
-					<img src="/wp-content/uploads/2022/11/Partner-logos-2.png" class="img-fluid">
-				</div>
-
-				<div class="col text-center">
-					<img src="/wp-content/uploads/2022/11/Partner-logos-1.png" class="img-fluid">
 				</div>
 
 			</div>
@@ -116,12 +116,13 @@
 
 				</div>
 
-				<div class="col-12 col-lg-2 footer-socials d-flex justify-content-start align-self-center">
+				<div class="col-12 col-lg-2 footer-socials d-flex justify-content-start align-self-center mobile-hide">
 
 					<ul class="list-group pt-5 pb-5 pe-2">
-						<li class="list-group-item bg-transparent border-0 text-dark mb-3"><a href="#"><i class="bi bi-facebook"></i></a></li>
-						<li class="list-group-item bg-transparent border-0 text-dark mb-3"><a href="#"><i class="bi bi-instagram"></i></a></li>
-						<li class="list-group-item bg-transparent border-0 text-dark"><a href="#"><i class="bi bi-twitter"></i></a></li>
+						<li class="list-group-item bg-transparent border-0 text-dark mb-3"><a href="https://www.facebook.com/truecoffee.de/" target="_blank"><i class="bi bi-facebook"></i></a></li>
+						<li class="list-group-item bg-transparent border-0 text-dark mb-3"><a href="https://www.instagram.com/true_coffee_germany/?hl=de" target="_blank"><i class="bi bi-instagram"></i></a></li>
+						<li class="list-group-item bg-transparent border-0 text-dark mb-3"><a href="tel:+49 (0)2 15 13 87 46 00" target=""><i class="bi bi-telephone"></i></a></li>
+            			<li class="list-group-item bg-transparent border-0 text-dark"><a href="mailto:kontakt@true-coffee.de"><i class="bi bi-envelope"></i></a></li>
 					</ul>
 
 				</div>
@@ -139,10 +140,20 @@
 				</div></a>
 
 			</div>
-			<div class="row text-center pb-5 pt-lg-5">
-				<div class="col-12">
-					<div class="h4 text-uppercase">Copyright 2023 by True Coffee</div>
+			<div class="row pb-5 pt-lg-5 d-flex flex-row mb-4 mb-lg-0">
+				<div class="col-12 d-flex justify-content-center flex-lg-row flex-column ps-lg-3 ps-4">
+					<h4 class="h4 text-uppercase mb-lg-0 mb-3 order-mobile-2" style="font-size:14px;">Copyright © 2023 by True Coffee <span class="mobile-hide">-</span></h4>
+					<ul class="d-lg-flex mb-0 ps-lg-2 ps-0 order-mobile-1" style="font-family: 'Bebas Neue'; font-size: 14px;
+	letter-spacing: 0.2rem; line-height:1.2;">
+						<li class="me-3 mb-3 mb-lg-0"><a href="/agb/">AGB</a></li>
+						<li class="me-3 mb-3 mb-lg-0"><a href="/datenschutzerklaerung/">Datenschutzerklärung</a></li>
+						<li class="me-3 mb-3 mb-lg-0"><a href="/impressum/">Impressum</a></li>
+						<li class="me-3 mb-3 mb-lg-0"><a href="/versandarten/">Versandarten</a></li>
+						<li class="me-3 mb-3 mb-lg-0"><a href="http://localhost:10018/widerrufsbelehrung/">Widerrufsbelehrung</a></li>
+						<li class="mb-3 mb-lg-0"><a href="http://localhost:10018/bezahlmoeglichkeiten/">Zahlungsarten</a></li>
+					</ul>
 				</div>
+				
 				
 			</div>
 		</div><!-- .site-info -->
@@ -153,6 +164,9 @@
 
 
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
-    
+
+
+
+
 </body>
 </html>

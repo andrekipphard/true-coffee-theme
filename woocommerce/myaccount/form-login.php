@@ -37,9 +37,7 @@ do_action( 'woocommerce_before_customer_login_form' ); ?>
         <div class="col-6">
             <div class="text-end pt-5 mt-5">
                 <img src="/wp-content/uploads/2022/11/Herobild-produkt.png">
-                <div class="h1 text-start ps-5 text-uppercase mb-3">
-                        Anmelden / Registrieren
-                </div>
+                
             </div>
         </div>
         <div class="col-5">
@@ -55,9 +53,11 @@ do_action( 'woocommerce_before_customer_login_form' ); ?>
 
         <?php if ( 'yes' === get_option( 'woocommerce_enable_myaccount_registration' ) ) : ?>
 
-        <div class="col-11 pt-5 bg-white d-flex" id="customer_login">
-
-            <div class="col-5 bg-white p-5">
+        <div class="col-11 pt-5 bg-white d-flex flex-column flex-lg-row" id="customer_login">
+        <div class="h1 text-start ps-5 text-uppercase mb-3">
+                        Anmelden / Registrieren
+                </div>
+            <div class="col-12 col-lg-5 bg-white p-5">
 
         <?php endif; ?>
 
@@ -97,7 +97,7 @@ do_action( 'woocommerce_before_customer_login_form' ); ?>
 
             </div>
 
-            <div class="col-5 p-5 bg-white border-start border-dark">
+            <div class="col-12 col-lg-5 p-5 bg-white border-lg-start border-dark">
 
                 <h2><?php esc_html_e( 'Register', 'woocommerce' ); ?></h2>
 

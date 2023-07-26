@@ -20,7 +20,13 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="profile" href="https://gmpg.org/xfn/11"> 
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-
+	<link
+	rel="stylesheet"
+	href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css"
+	/>
+	<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
+	<script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
 	<?php wp_head(); ?>
 </head>
 
@@ -82,9 +88,10 @@
 								<div class="col-1 d-flex flex-row-reverse justify-content-end align-self-center ps-0">
 									
 									<ul class="list-group border-top border-end border-bottom rounded-0 pt-5 pb-5 pe-2 ps-lg-5">
-										<li class="list-group-item bg-transparent border-0 text-white mb-3 ps-lg-5"><a href="#!"><i class="bi bi-facebook"></i></a></li>
-										<li class="list-group-item bg-transparent border-0 text-white mb-3 ps-lg-5"><a href="#!"><i class="bi bi-instagram"></i></a></li>
-										<li class="list-group-item bg-transparent border-0 text-white ps-lg-5"><a href="#!"><i class="bi bi-twitter"></i></a></li>
+										<li class="list-group-item bg-transparent border-0 text-white mb-3 ps-lg-5"><a href="https://www.facebook.com/truecoffee.de/" target="_blank"><i class="bi bi-facebook"></i></a></li>
+										<li class="list-group-item bg-transparent border-0 text-white mb-3 ps-lg-5"><a href="https://www.instagram.com/true_coffee_germany/?hl=de" target="_blank"><i class="bi bi-instagram"></i></a></li>
+										<li class="list-group-item bg-transparent border-0 text-white mb-3 ps-lg-5"><a href="tel:+49 (0)2 15 13 87 46 00" target=""><i class="bi bi-telephone"></i></a></li>
+										<li class="list-group-item bg-transparent border-0 text-white ps-lg-5"><a href="mailto:kontakt@true-coffee.de"><i class="bi bi-envelope"></i></a></li>
 									</ul>
 
 								</div>

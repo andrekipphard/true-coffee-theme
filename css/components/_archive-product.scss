@@ -1,4 +1,23 @@
+.product-title-hover{
+    visibility: hidden;
+}
+.woocommerce ul.products li.product:hover .product-title-hover{
+    visibility: visible;
+}
+.related-products ul.products li.last, .related-products ul.products li.last{
+    margin: 0 3.8% 2.992em 0;
+}
+div.row.related-products.text-center.mt-lg-5.ms-lg-5.me-lg-5.pt-lg-5.pb-5 > section > ul > div:nth-child(14) > li{
+    margin-right:0;
+}
 @include media-breakpoint-down(lg){
+    .related-products{
+        margin-left:0.9rem;
+    }
+    .woocommerce .products ul, .woocommerce ul.products{
+        display: flex;
+    flex-wrap: wrap;
+    }
     .category-tabs-mobile{
         z-index: 2;
         position: relative;
@@ -26,5 +45,25 @@
             width:1rem;
             height: 1rem;
         }
+    }
+    .woocommerce ul.products[class*=columns-] li.product, .woocommerce-page ul.products[class*=columns-] li.product{
+        width: 85%;
+    }
+    .woocommerce ul.products[class*=columns-] li.product, .woocommerce-page ul.products[class*=columns-] li.product{
+        margin-bottom:.5rem;
+    }
+    a.added_to_cart.wc-forward{
+        margin-top:-20px;
+        display:none;
+    }
+    .add_to_wishlist.single_add_to_wishlist.button.alt{
+        z-index:900
+    }
+    .bg-black .woocommerce-message{
+        position: absolute;
+        z-index: 999;
+    }
+    .woocommerce .woocommerce-message a{
+        visibility: visible!important;
     }
 }

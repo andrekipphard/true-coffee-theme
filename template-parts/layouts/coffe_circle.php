@@ -261,7 +261,7 @@
 
         </div>
     </div>
-    <div class="row" style="margin-top:-60px;">
+    <div class="row" style="margin-top:-100px;">
         <div class="col-2 align-self-center">
             <div class="row">
 

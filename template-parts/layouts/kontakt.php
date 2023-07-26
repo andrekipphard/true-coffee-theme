@@ -38,6 +38,9 @@
                             <input type="email" class="form-control" id="emailasdf" aria-describedby="emailHelp" placeholder="Email" name="emailasdf" required>
                         </div>
                         <div class="mb-3">
+                            <input type="tel" class="form-control" autocomplete="off" id="phoneqqq" name="phoneqqq"  placeholder="Telefonnummer" style="padding-left:20px!important;">
+                        </div>
+                        <div class="mb-3">
                             <textarea class="form-control" id="messageyxcv" rows="3" placeholder="Nachricht" name="messageyxcv"></textarea>
                         </div>
                         <div class="mb-3 form-check">
@@ -52,6 +55,10 @@
                         <div class="mb-3">
                             <input type="email" class="ohnohoney" autocomplete="off" id="email" aria-describedby="emailHelp" placeholder="Email" name="email">
                         </div>
+                        <div class="mb-3">
+                            <input type="tel" class="ohnohoney" autocomplete="off" id="phone" name="Telefonnummer"  placeholder="Telefonnummer">
+                        </div>
+                        
                         <div class="mb-3">
                             <textarea class="ohnohoney" autocomplete="off" id="message" rows="3" placeholder="Nachricht" name="message"></textarea>
                         </div>

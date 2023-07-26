@@ -26,9 +26,7 @@ defined( 'ABSPATH' ) || exit;
             <div class="col-lg-6 col-11">
                 <div class="text-end pt-5 mt-5">
                     <img src="/wp-content/uploads/2022/11/Herobild-produkt.png" class="mobile-hide">
-                    <div class="h1 text-start ps-4 ms-1 text-uppercase mb-3">
-                            Mein Konto
-                    </div>
+                    
                 </div>
             </div>
             <div class="col-5">
@@ -41,9 +39,13 @@ defined( 'ABSPATH' ) || exit;
 
             </div>
 
-            <div class="col-11 offset-1 offset-lg-0">
+            <div class="col-12 offset-lg-0">
+            
                 <div class="row">
                 <div class="col-12 col-lg-3 pe-5 pt-5 bg-white border-end border-dark">
+                <div class="h1 text-start ps-4 ms-1 text-uppercase mb-3">
+                            Mein Konto
+                    </div>
                     <?php /**
                          * My Account navigation.
                          *
@@ -53,7 +55,8 @@ defined( 'ABSPATH' ) || exit;
                     ?>
                 </div>
                 <div class="col-12 col-lg-7 bg-white">
-                    <div class="col p-5" style="--bs-bg-opacity:1;">
+                    
+                    <div class="col p-lg-5" style="--bs-bg-opacity:1;">
                         
                         <div class="woocommerce-MyAccount-content">
                         <?php

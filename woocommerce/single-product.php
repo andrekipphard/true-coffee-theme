@@ -31,6 +31,35 @@ $prev = get_adjacent_post(false,'',true);
 $next = get_adjacent_post(false,'',false);
 $prev_url = get_permalink($prev->ID);
 $next_url = get_permalink($next->ID);
+// Assuming $product is a valid WooCommerce product object
+$attachment_ids = $product->get_gallery_image_ids();
+
+$gallery_image_urls = array(); // Array to store the image URLs
+
+// Get the featured image ID of the product
+$featured_image_id = get_post_thumbnail_id($product->get_id());
+
+// Get the featured image URL and add it at index 0
+if ($featured_image_id) {
+    $featured_image_data = wp_get_attachment_image_src($featured_image_id, 'full');
+    if ($featured_image_data) {
+        $gallery_image_urls[] = $featured_image_data[0];
+    }
+}
+
+foreach ($attachment_ids as $attachment_id) {
+    // Get the image URL using the attachment ID
+    $image_data = wp_get_attachment_image_src($attachment_id, 'full');
+    
+    // Check if the image data was retrieved successfully
+    if ($image_data) {
+        // $image_data[0] contains the URL of the image
+        $gallery_image_urls[] = $image_data[0];
+    }
+}
+
+// Now $gallery_image_urls contains the featured image URL at index 0 and all the gallery image URLs
+
 
 $geschmackprofil = get_field('geschmackprofil');
 $ursprung = get_field('ursprung');
@@ -56,7 +85,7 @@ get_template_part('template-parts/layouts/sticky-socials');
 			</div>
 			
 			<div class="row">
-				<div class="col offset-1 offset-lg-0 single-hero-col bg-white p-5" style="--bs-bg-opacity:1;">
+				<div class="col offset-1 offset-lg-0 single-hero-col bg-white p-lg-5" style="--bs-bg-opacity:1;">
 				<?php
 
 				woocommerce_output_all_notices();	?>
@@ -110,34 +139,41 @@ get_template_part('template-parts/layouts/sticky-socials');
 		
 		</div>
 
-		<div class="col-12 col-lg-6 d-flex align-items-end justify-content-end single-hero-col-3" style="background-image:url('<?php
-			$product = wc_get_product();
-			$image_html = $product->get_image();
-			preg_match('/<img.+src=[\'"](?P<src>.+?)[\'"].*>/i', $image_html, $matches);
-			echo isset($matches['src']) ? $matches['src'] : '';
-			?>');">
+		<div class="col-12 col-lg-6 d-flex flex-column align-items-lg-center justify-content-end single-hero-col-3" style="background-image:url('');">
+    <div class="row">
+        <div class="col">
+            <div class="product-gallery">
+                <?php
+                // Check if there are gallery images, if not, use the placeholder image
+                if (!empty($gallery_image_urls)) {
+                    ?>
+                    <img src="<?php echo $gallery_image_urls[0]; ?>" class="current-product-image img-fluid" style="max-height:500px;"/>
+                    <?php
+                } else {
+                    ?>
+                    <img src="<?php echo wc_placeholder_img_src(); ?>" class="current-product-image img-fluid" style="max-height:500px;"/>
+                    <?php
+                }
+                ?>
+            </div>
+        </div>
+    </div>
 
-
-			<div class="row me-5 mb-5">
-				<?php if(!empty($prev)&&!empty($next)):?>
-					<div class="col-6">		
-						<a href="<?=$prev_url;?>"><img src="/wp-content/uploads/2022/11/Vorher-Button-mit-Pfeil--e1669375427843.png" class="img-fluid" size="large"></a>
-					</div>
-					<div class="col-6">
-						<a href="<?=$next_url;?>"><img src="/wp-content/uploads/2022/11/Nacher-Button-mit-Pfeil-e1669375406723.png" class="img-fluid" size="large"></a>
-					</div>
-				<?php else:?>
-					<div class="col-12">
-						<?php if(!empty($prev)):?>
-							<a href="<?=$prev_url;?>"><img src="/wp-content/uploads/2022/11/Vorher-Button-mit-Pfeil--e1669375427843.png" class="img-fluid" size="large"></a>
-						<?php endif;
-						if(!empty($next)):?>
-								<a href="<?=$next_url;?>"><img src="/wp-content/uploads/2022/11/Nacher-Button-mit-Pfeil-e1669375406723.png" class="img-fluid" size="large"></a>
-						<?php endif;?>
-					</div>
-				<?php endif;?>
+    <div class="row me-lg-5 mb-5">
+		<?php if (count($gallery_image_urls) > 1) : ?> <!-- Check if there are more than one image in the gallery -->
+			<div class="col-6">
+				<a href="#" class="previous-button"><img src="/wp-content/uploads/2022/11/Vorher-Button-mit-Pfeil--e1669375427843.png" class="img-fluid" size="large"></a>
 			</div>
-		</div>
+			<div class="col-6">
+				<a href="#" class="next-button"><img src="/wp-content/uploads/2022/11/Nacher-Button-mit-Pfeil-e1669375406723.png" class="img-fluid" size="large"></a>
+			</div>
+		<?php endif; ?>
+	</div>
+
+
+</div>
+
+
 
 	</div>
 	<div class="row ms-lg-5 me-lg-5">
@@ -154,38 +190,46 @@ get_template_part('template-parts/layouts/sticky-socials');
 						<?php echo $excerpt;?>
 						</div>
 					</div>
-					<div class="row pt-lg-5">
-						<div class="col-12 col-lg-4 ps-5 pe-5 pb-5 pb-lg-0 border-end border-bottom border-lg-bottom-0 border-light">
-							<div class="p h4 text-white mb-4">
-								Geschmackprofil
-							</div>
-							<div class="p">
-								<?= $geschmackprofil; ?>
-							</div>
+					<?php if($geschmackprofil || $ursprung || $geeignet_fur):?>
+						<div class="row pt-lg-5">
+							<?php if($geschmackprofil):?>
+								<div class="col-12 col-lg-4 ps-5 pe-5 pb-5 pb-lg-0 border-end border-bottom border-lg-bottom-0 border-light">
+									<div class="p h4 text-white mb-4">
+										Geschmackprofil
+									</div>
+									<div class="p">
+										<?= $geschmackprofil; ?>
+									</div>
+								</div>
+							<?php endif;?>
+							<?php if($ursprung):?>
+								<div class="col-12 col-lg-4 ps-5 pe-5 border-end border-bottom border-lg-bottom-0 pt-5 pt-lg-0 pb-5 pb-lg-0 border-light">
+									<div class="p h4 text-white mb-4">
+										Ursprung
+									</div>
+									<div class="p">
+										<?= $ursprung; ?>
+									</div>
+								</div>
+							<?php endif;?>
+							<?php if($geeignet_fur):?>
+								<div class="col-12 col-lg-4 ps-5 pe-5 pt-5 pt-lg-0">
+									<div class="p h4 text-white mb-4">
+										Geeignet für
+									</div>
+									<div class="p">
+										<?= $geeignet_fur; ?>
+									</div>
+								</div>
+							<?php endif;?>
 						</div>
-						<div class="col-12 col-lg-4 ps-5 pe-5 border-end border-bottom border-lg-bottom-0 pt-5 pt-lg-0 pb-5 pb-lg-0 border-light">
-							<div class="p h4 text-white mb-4">
-								Ursprung
-							</div>
-							<div class="p">
-								<?= $ursprung; ?>
-							</div>
-						</div>
-						<div class="col-12 col-lg-4 ps-5 pe-5 pt-5 pt-lg-0">
-							<div class="p h4 text-white mb-4">
-								Geeignet für
-							</div>
-							<div class="p">
-								<?= $geeignet_fur; ?>
-							</div>
-						</div>
-					</div>
+					<?php endif;?>
 				</div>
 			</div>
 		</div>
 	</div>
-	<div class="row ms-lg-5 me-lg-5 p-lg-5 p-2 bg-black">
-		<div class="col-12 col-lg-8 p-5 mb-5">
+	<div class="row ms-lg-5 me-lg-5 <?php if($geschmackprofil || $ursprung || $geeignet_fur):?>p-lg-5<?php else:?>ps-lg-5 pb-lg-5 pe-lg-5<?php endif;?> p-2 bg-black">
+		<div class="col-12 col-lg-8 <?php if($geschmackprofil || $ursprung || $geeignet_fur):?>p-5<?php else:?>ps-5 pb-5 pe-5<?php endif;?> mb-5">
 			<div class="versprechen text-white mb-3">
 				Unser Qualitäts- und Nachhaltigkeits&shy;versprechen
 			</div>
@@ -251,7 +295,47 @@ get_template_part('template-parts/layouts/sticky-socials');
 
 	</div>
 </div>
+
+<script>
+  var galleryImages = <?php echo json_encode($gallery_image_urls); ?>;
+  console.log(galleryImages); // Check the output in the browser console
+  // Rest of the JavaScript code...
+</script>
+<script>
+  jQuery(document).ready(function($) {
+	var galleryImages = <?php echo json_encode($gallery_image_urls); ?>;
+    var currentImageIndex = 0;
+
+    // Function to set the current image as the product gallery image
+    function setCurrentImage() {
+      var currentImage = galleryImages[currentImageIndex];
+      $('.current-product-image').attr('src', currentImage);
+    }
+
+    // Show next image on clicking the "Next" button
+    $('.next-button').on('click', function(event) {
+      event.preventDefault();
+      currentImageIndex = (currentImageIndex + 1) % galleryImages.length;
+      setCurrentImage();
+    });
+
+    // Show previous image on clicking the "Previous" button
+    $('.previous-button').on('click', function(event) {
+      event.preventDefault();
+      currentImageIndex = (currentImageIndex - 1 + galleryImages.length) % galleryImages.length;
+      setCurrentImage();
+    });
+
+    // Set the initial product gallery image
+    setCurrentImage();
+  });
+</script>
+
+
 <?php
 get_footer( 'shop' );
 
 /* Omit closing PHP tag at the end of PHP files to avoid "headers already sent" issues. */
+
+
+
