@@ -307,7 +307,7 @@ function form_submit_action() {
 	// But on this example im gonna show you how send an email, create your own custom html body format.
 	
 	// Send to admin
-	$to = 'andre@hlprr.com'; //get_bloginfo('admin_email'); // or 'sendee@email.com' to specify email
+	$to = get_bloginfo('admin_email'); // or 'sendee@email.com' to specify email
 	// Email subject
 	$subject = 'Neue Kontaktanfrage | true-coffe.com';
 	$subject_customer = 'Ihre Kontaktanfrage ist bei uns eingegangen | true-coffe.com';
