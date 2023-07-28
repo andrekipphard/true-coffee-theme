@@ -56,7 +56,7 @@
 								<?php $image = get_sub_field( 'image', 'options' );?>
 								<div class="swiper-slide">
 									<div class="col border-lg-end border-dark text-center" style="padding-right:25px; padding-left:25px;">
-										<img src="<?= wp_get_attachment_image_url($image, 'large');?>" style="height: 75px; width: auto;">
+										<img src="<?= wp_get_attachment_image_url($image, 'large');?>" style="height: 40px; width: auto;">
 									</div>
 								</div>	
 							<?php endwhile; ?>
