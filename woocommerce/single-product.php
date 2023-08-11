@@ -81,7 +81,7 @@ get_template_part('template-parts/layouts/sticky-socials');
 		<div class="col-10 col-lg-5 single-hero-text">
 			
 			<div class="text-end pt-5 mt-5 mobile-hide">
-				<img src="/wp-content/uploads/2022/11/Herobild-produkt.png">
+				<img src="/wp-content/uploads/2023/08/Gruppe-579.png">
 			</div>
 			
 			<div class="row">
@@ -99,7 +99,7 @@ get_template_part('template-parts/layouts/sticky-socials');
 						font-family:'Bebas Neue';"
 					>
 					<?php if ( $product->is_type( 'variable' ) )
-						echo 'Inhalt: <div class="var_info"></div> Gamm';
+						echo 'Inhalt: <div class="var_info"></div> Gramm';
 						wc_enqueue_js( "
 							$(document).on('found_variation', 'form.cart', function( event, variation ) {   
 								$('.var_info').html(variation.weight); 

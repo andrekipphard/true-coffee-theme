@@ -309,8 +309,8 @@ function form_submit_action() {
 	// Send to admin
 	$to = get_bloginfo('admin_email'); // or 'sendee@email.com' to specify email
 	// Email subject
-	$subject = 'Neue Kontaktanfrage | true-coffe.com';
-	$subject_customer = 'Ihre Kontaktanfrage ist bei uns eingegangen | true-coffe.com';
+	$subject = 'Neue Kontaktanfrage | true-coffe.de';
+	$subject_customer = 'Ihre Kontaktanfrage ist bei uns eingegangen | true-coffe.de';
 	// Email body/content (tricky part)
 	/* Instead of:
 		$body = '<div>
@@ -439,7 +439,7 @@ class LeadformSubmit
    */
   const NONCE = 'leadform_submit';
 
-  public $fromEmail = 'no-reply@truecoffee.com';
+  public $fromEmail = 'no-reply@truecoffee.de';
   public $toEmail;
 
   public function __construct()
