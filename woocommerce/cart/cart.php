@@ -31,7 +31,7 @@ defined( 'ABSPATH' ) || exit;
         </div>
         <div class="col-6">
             <div class="text-end pt-5 mt-5 mobile-hide">
-                <img src="/wp-content/uploads/2022/11/Herobild-produkt.png">
+                <img src="/wp-content/uploads/2023/08/Gruppe-579.png">
             </div>
         </div>
         <div class="col-5">

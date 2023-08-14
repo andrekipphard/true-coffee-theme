@@ -36,7 +36,7 @@ do_action( 'woocommerce_before_customer_login_form' ); ?>
         </div>
         <div class="col-6">
             <div class="text-end pt-5 mt-5">
-                <img src="/wp-content/uploads/2022/11/Herobild-produkt.png">
+                <img src="/wp-content/uploads/2023/08/Gruppe-579.png">
                 
             </div>
         </div>
